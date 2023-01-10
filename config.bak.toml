@@ -1,0 +1,7 @@
+baseURL = 'https://aming.xyz/'
+# languageCode = 'en-us'
+languageCode = 'zh-cn'
+title = '阿明的博客'
+
+
+theme='even'
