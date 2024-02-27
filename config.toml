@@ -2,7 +2,7 @@ baseURL = "https://aming.xyz"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 # title = "阿明 - 收集生活的感悟"
-title = "安静-放松"
+title = "知识"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -36,11 +36,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   weight = 10
   identifier = "home"
   url = "/"
-[[menu.main]]             # config your menu              # 配置目录
-  name = "科技资讯"
-  weight = 30
-  identifier = "information"
-  url = "/information/"
+# [[menu.main]]             # config your menu              # 配置目录
+#   name = "科技资讯"
+#   weight = 30
+#   identifier = "information"
+#   url = "/information/"
 
 # [[menu.main]]
 #   name = "归纳"
@@ -48,11 +48,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 #   identifier = "categories"
 #   url = "/categories/"
 
-[[menu.main]]
-  name = "搬运工"
-  weight = 80
-  identifier = "carry"
-  url = "/carry/"
+# [[menu.main]]
+  # name = "搬运工"
+  # weight = 80
+  # identifier = "carry"
+  # url = "/carry/"
 # [[menu.main]]
 #   name = "Tags"
 #   weight = 30
@@ -69,7 +69,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   gitRepo = ""
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "放松，安静 ，搬运工 2023"        # default: the title value    # 默认值: 上面设置的 title 值
+  logoTitle = "知识"        # default: the title value    # 默认值: 上面设置的 title 值
   keywords = ["阿明博客","记录生活"]
   description = "收集生活的感悟."
 
