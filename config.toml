@@ -36,23 +36,22 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   weight = 10
   identifier = "home"
   url = "/"
-#[[menu.main]]             # config your menu              # 配置目录
-# name = "科技资讯"
-# weight = 30
-# identifier = "information"
-# url = "/information/"
-
+[[menu.main]]             # config your menu              # 配置目录
+ name = "科技资讯"
+ weight = 30
+ identifier = "information"
+ url = "/information/"
 # [[menu.main]]
 #   name = "归纳"
 #   weight = 50
 #   identifier = "categories"
 #   url = "/categories/"
 
-#[[menu.main]]
-# name = "搬运工"
-# weight = 80
-# identifier = "carry"
-# url = "/carry/"
+# [[menu.main]]
+  # name = "搬运工"
+  # weight = 80
+  # identifier = "carry"
+  # url = "/carry/"
 # [[menu.main]]
 #   name = "Tags"
 #   weight = 30
