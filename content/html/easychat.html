@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easychat布局</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #e7f8ff;
+            display: flex;
+        }
+
+        .container {
+            /* display: flex; */
+            padding-top: 45px;
+            padding-right: 20px;
+            padding-left: 20px;
+            color: #303030;
+            font-size: 13px;
+
+        }
+
+        .container .title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .block div {
+            width: 49%;
+            background-color: white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #e5f6fd;
+            border-radius: 10px;
+        }
+
+        .talk {
+            margin-top: 20px;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .talk .title {
+            font-weight: bolder;
+            font-size: 15px;
+        }
+
+        .talk .title~div {
+            color: #a6a6a6;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media only screen and (min-width:600px){
+            .container1 {
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            <div class="left">
+                <h2>EasyChat</h2>
+                <div>最简单的ChatGPT使用方式</div>
+            </div>
+            <div class="right">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43"
+                    height="44" fill="none">
+                    <defs>
+                        <path id="chatgpt_svg__a" d="M0 0h43v43.58H0z"></path>
+                    </defs>
+                    <g>
+                        <mask id="chatgpt_svg__b" fill="#fff">
+                            <use xlink:href="#chatgpt_svg__a"></use>
+                        </mask>
+                        <g mask="url(#chatgpt_svg__b)">
+                            <path fill-rule="evenodd"
+                                d="M40.17 17.84c.36-1.11.55-2.27.55-3.43 0-1.93-.51-3.83-1.49-5.49a10.98 10.98 0 0 0-9.52-5.51c-.77 0-1.55.08-2.3.24A10.87 10.87 0 0 0 19.29 0h-.1c-4.76 0-8.98 3.07-10.45 7.6-3.06.63-5.71 2.55-7.26 5.27a10.99 10.99 0 0 0 1.35 12.87c-.36 1.11-.55 2.27-.55 3.43 0 1.93.51 3.83 1.49 5.49a10.97 10.97 0 0 0 11.82 5.27c2.06 2.32 5.02 3.65 8.12 3.65h.1c4.76 0 8.99-3.07 10.45-7.61a10.82 10.82 0 0 0 7.26-5.26 10.995 10.995 0 0 0-1.35-12.87M18.817 38.695c-.09.05-.17.1-.26.15a8.15 8.15 0 0 0 5.22 1.89h.01c4.5-.01 8.15-3.67 8.16-8.17v-10.13a.15.15 0 0 0-.07-.1l-3.67-2.12v12.24c0 .51-.27.98-.72 1.23zm-1.424-2.472 8.77-5.06c.04-.03.06-.07.06-.11h-.01v-4.24l-10.59 6.12c-.44.25-.98.25-1.42 0l-8.68-5.01c-.08-.05-.2-.12-.26-.16a8.19 8.19 0 0 0 .97 5.47 8.18 8.18 0 0 0 7.08 4.08c1.43 0 2.84-.37 4.08-1.09m-9.187-25.21v-.3c-1.79.66-3.3 1.93-4.25 3.58a8.2 8.2 0 0 0-1.09 4.08c0 2.92 1.55 5.61 4.08 7.07l8.77 5.07c.04.02.09.02.12-.01l3.67-2.12-10.59-6.11c-.44-.25-.71-.72-.71-1.23v-10.03m27.849 7.117-8.77-5.07a.13.13 0 0 0-.12.01l-3.67 2.12 10.59 6.12c.44.25.71.71.71 1.22v10.33a8.17 8.17 0 0 0 5.35-7.66 8.16 8.16 0 0 0-4.09-7.07m-19.22-5.718a.16.16 0 0 0-.05.11v4.24l10.59-6.12c.22-.12.47-.19.72-.19s.49.07.71.19l8.68 5.02c.08.05.17.1.25.15q.12-.69.12-1.38c0-4.51-3.66-8.17-8.17-8.17-1.43 0-2.83.38-4.08 1.09zM19.22 2.85c-4.51 0-8.17 3.65-8.17 8.16v10.13c.01.05.03.08.07.1l3.67 2.12.01-12.23v-.01c0-.5.27-.97.71-1.22l8.68-5.01c.07-.05.19-.11.25-.15a8.15 8.15 0 0 0-5.22-1.89M16.783 24.51l4.72 2.73 4.72-2.73v-5.45l-4.72-2.72-4.72 2.73z"
+                                opacity="0.27" style="fill: rgb(139, 202, 224);"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="block">
+            <div>面具</div>
+            <div>插件</div>
+        </div>
+
+        <div class="talk">
+            <div class="title">闲聊</div>
+            <div>
+                <div>2条对话</div>
+                <div>2024/3/23</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container1">
+        这里是容器1框架方式
+    </div>
+
+</body>
+
+</html>

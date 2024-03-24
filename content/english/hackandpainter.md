@@ -16,3 +16,20 @@ why? To someone in school now, that may seem an odd question to ask. The mere fa
 Being smart doesn't make you an outcast in elementary school. Nor, as far  as I can tell ,is the problem so bad in most other countries. But in a typical American secondary school,being smart is likely to make your life difficult. Why?
 
 The key to this mystery is to rephrase the question slightly . why don't smart kids make themselves popular?
+
+so far I've been finessing the relationship between smart and nerd, using them as if they were interchangeable. 
+
+In fact it's only the context that makes them so.
+
+A nerd is someone who isn't socially adept enough.
+
+few smart kids can spare the  attention that popularity requires.
+
+unless they also happen to be good looking,natural athletes, or siblings of popular kids, they'll tend to become nerds.
+
+
+
+
+
+
+
