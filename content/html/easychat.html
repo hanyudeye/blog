@@ -67,9 +67,24 @@
             justify-content: space-between;
         }
 
-        @media only screen and (min-width:600px){
+        /* 当屏幕尺寸小于 600px 时 */
+        @media only screen and (max-width:600px) {
+            .container {
+                width: 100%;
+            }
+            .container1 {
+                /* background-color: #fff; */
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:900px) {
+            .container{
+                flex:1;
+            }
             .container1 {
                 background-color: #fff;
+                flex: 1;
             }
         }
     </style>
