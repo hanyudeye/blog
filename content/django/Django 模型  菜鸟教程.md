@@ -8,10 +8,6 @@ categories: ['']
 
 Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。
 
-Django 为这些数据库提供了统一的调用API。 我们可以根据自己业务需求选择不同的数据库。
-
-MySQL 是 Web 应用中最常用的数据库。本章节我们将以 Mysql 作为实例进行介绍。你可以通过本站的 [MySQL 教程](https://www.runoob.com/django/mysql/mysql-tutorial.html) 了解更多 MySQL 的基础知识。
-
 如果你没安装 mysql 驱动，可以执行以下命令安装：
 
 ```
@@ -27,8 +23,6 @@ Django 模型使用自带的 ORM。
 ORM 在业务逻辑层和数据库层之间充当了桥梁的作用。
 
 ORM 是通过使用描述对象和数据库之间的映射的元数据，将程序中的对象自动持久化到数据库中。
-
-![](https://www.runoob.com/wp-content/uploads/2020/05/django-orm1.png)
 
 使用 ORM 的好处：
 
@@ -46,20 +40,15 @@ ORM 解析过程:
 -   2、SQL 语句通过 pymysql 传送到数据库服务端。
 -   3、在数据库中执行 SQL 语句并将结果返回。
 
-ORM 对应关系表：
-
-![](https://www.runoob.com/wp-content/uploads/2020/05/orm-object.png)
-
-___
-
 ## 数据库配置
 
 ### Django 如何使用 mysql 数据库
 
-创建 MySQL 数据库( ORM 无法操作到数据库级别，只能操作到数据表)语法：
+创建 MySQL 数据库(ORM 无法操作到数据库级别，只能操作到数据表)语法：
 
 ```
-<span>create database </span><span>数据库名称</span><span> </span><span>default</span><span> charset</span><span>=</span><span>utf8</span><span>;</span><span> </span><span># 防止编码问题，指定为 utf8</span>
+create database 数据库名称
+default charset=utf8;# 防止编码问题，指定为 utf8
 ```
 
 例如我们创建一个名为 runoob 数据库，编码指定为 utf8：
