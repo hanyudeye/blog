@@ -7,11 +7,6 @@ categories: ['']
 ---
 
 
-[Tiago](https://twitter.com/wbepodcast?ref=levels.io) from [Wannabe Entrepreneur](https://wannabe-entrepreneur.com/?ref=levels.io) interviewed about the origins of my bootstrapping and moving to Portugal (as he's Portuguese) and starting Rebase.  
-来自Wannabe Entrepreneur的Tiago采访了我的白手起家和搬到葡萄牙的起源（因为他是葡萄牙人）并开始Rebase。
-
-**Tiago (00:00:00): 蒂亚戈（00：00：00）：**  
-Hello, and welcome to another episode of Wannabe Entrepreneur, the podcast about what's really like to bootstrap a company. And today I have a new person in the business, a newbie in bootstrapping. His name is Pieter Levels. What's up Pieter? Everything good with you?  
 大家好，欢迎来到另一集《想成为企业家》，这是一个关于如何真正引导一家公司的播客。今天我有一个新的人在业务，一个新手在自助。他叫彼得·莱维怎么了，彼得？你还好吗？
 
 **Pieter Levels (00:00:17):  
