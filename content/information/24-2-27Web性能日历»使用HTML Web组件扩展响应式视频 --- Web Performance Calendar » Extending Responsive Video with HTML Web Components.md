@@ -1,7 +1,7 @@
 ---
 layout: default
 toc: false
-title: Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components
+title: 使用HTML Web组件扩展响应式视频 
 date:  2024-02-27T18:57:35+08:00
 categories: ['']
 ---
