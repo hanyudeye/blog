@@ -41,4 +41,10 @@ categories: ['']
 - t 换贴膜
 - t 安装 gpt 命令行工具 https://github.com/nomic-ai/gpt4all .
 - x  查看显存大小  输入命令 dxdiag 或者任务管理器里面看
-- 
+- Steps to Reproduce 重现步骤
+Pull the latest code from the branch.
+从分支提取最新的代码。
+Run the app.py script using the command: python app.py repl --device=gpu
+使用以下命令运行app.py脚本：python app.py repl --device=gpu
+Observe the model running on the specified GPU device.
+观察在指定GPU设备上运行的模型。
