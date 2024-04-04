@@ -37,14 +37,12 @@ categories: ['']
 - t 家里配置vim 
 - t 查询电话费
 - x 话费充值 50
-- http是无状态的，session保存在服务器中，记录当前用户，可以针对当前用户处理任务,客户端用 cookie 记录 session ID，服务器以此判断，一般实现自动登录。
+- x http是无状态的，session保存在服务器中，记录当前用户，可以针对当前用户处理任务,客户端用 cookie 记录 session ID，服务器以此判断，一般实现自动登录。
 - t 换贴膜
-- t 安装 gpt 命令行工具 https://github.com/nomic-ai/gpt4all .
-- x  查看显存大小  输入命令 dxdiag 或者任务管理器里面看
-- Steps to Reproduce 重现步骤
-Pull the latest code from the branch.
-从分支提取最新的代码。
-Run the app.py script using the command: python app.py repl --device=gpu
-使用以下命令运行app.py脚本：python app.py repl --device=gpu
-Observe the model running on the specified GPU device.
-观察在指定GPU设备上运行的模型。
+- x 安装 gpt 命令行工具 https://github.com/nomic-ai/gpt4all [无法实现]
+- x 查看显存大小  输入命令 dxdiag 或者任务管理器里面看 vram 是 6G
+
+4/4
+- x 列表进行翻倍，使用乘法
+- x 对列表进行排序  sort ，key 指定排序元素执行函数后的值，进行特定排序
+- 
