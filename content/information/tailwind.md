@@ -38,7 +38,11 @@ module.exports = {
 
 ## 响应式设计
 
-Tailwind CSS 提供了一系列的响应式类，可以根据屏幕尺寸来调整样式。例如，你可以使用 sm:、md:、lg:、xl: 等前缀来指定不同屏幕尺寸下的样式。
+- sm 适用于最小宽度为 640px 的设备；
+- md 适用于最小宽度为 768px 的设备；
+- lg 适用于最小宽度为 1024px 的设备；
+- xl 适用于最小宽度为 1280px 的设备；
+- 2xl 适用于最小宽度为 1536px 的设备。
 
 ``` html
 <div class="bg-blue-500 sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500 xl:bg-purple-500">
