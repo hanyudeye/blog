@@ -1,4 +1,3 @@
-
 ---
 layout: default
 toc: false
@@ -37,6 +36,3 @@ categories: ['']
 
 4/11 
 - 每周对生活进行反思，修正，以便更好前进。
-
-5/24
-- 哥
