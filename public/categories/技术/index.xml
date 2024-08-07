@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 阿明</title>
+    <link>https://aming.xyz/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 阿明</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Dec 2023 18:17:33 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机</title>
+      <link>https://aming.xyz/other/%E8%AE%A1%E6%9C%BA/</link>
+      <pubDate>Sat, 02 Dec 2023 18:17:33 +0800</pubDate>
+      
+      <guid>https://aming.xyz/other/%E8%AE%A1%E6%9C%BA/</guid>
+      <description>计算机的产生 人类需要一种辅助工作，娱乐的工具，便创造了它。</description>
+    </item>
+    
+  </channel>
+</rss>

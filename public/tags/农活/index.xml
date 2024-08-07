@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>农活 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E5%86%9C%E6%B4%BB/</link>
+    <description>Recent content in 农活 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Apr 2021 15:06:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E5%86%9C%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>农田 - Farmland</title>
+      <link>https://aming.xyz/post/farmland/</link>
+      <pubDate>Sun, 18 Apr 2021 15:06:23 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/farmland/</guid>
+      <description>&lt;p&gt;今天早上去农田里面锄了点地（糊弄了以下），拍了几张乡野的照片。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jQuery on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/jquery/</link>
+    <description>Recent content in jQuery on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Feb 2020 20:46:44 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jQuery简介</title>
+      <link>https://aming.xyz/technology/jquery/</link>
+      <pubDate>Tue, 11 Feb 2020 20:46:44 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/jquery/</guid>
+      <description>&lt;p&gt;
+jQuery 是一个 JavaScript 库，主要对 &lt;strong&gt;DOM&lt;/strong&gt; 进行了封装， 例如对节点的遍历和操作，
+事件处理，动画和 Ajax 等，使得操作极为简化。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

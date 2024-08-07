@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>命令行 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+    <description>Recent content in 命令行 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Aug 2023 19:52:18 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>命令行指令</title>
+      <link>https://aming.xyz/post/commandline/</link>
+      <pubDate>Mon, 07 Aug 2023 19:52:18 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/commandline/</guid>
+      <description>计算机的基本功能 (用命令说明) 开机，启动计算机系统 开机电源键 关机，关闭系统 关机电源键或关机命令 shutdown 执行命令 列出计算机资源 ls (list) 显示资源内容 cat ,vi 删</description>
+    </item>
+    
+  </channel>
+</rss>

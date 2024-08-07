@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="Responsive HTML video is a web standard again, and with recent patches to Firefox (oh hey!) and Chrome that match Safari’s preexisting support, it now works across all modern browsers! That means you can use media queries for delivering your videos and potentially save your users some precious bytes. 响应式HTML视频再次成为网" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.117.0 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/information/24-2-27web%E6%80%A7%E8%83%BD%E6%97%A5%E5%8E%86%E4%BD%BF%E7%94%A8html-web%E7%BB%84%E4%BB%B6%E6%89%A9%E5%B1%95%E5%93%8D%E5%BA%94%E5%BC%8F%E8%A7%86%E9%A2%91---web-performance-calendar-extending-responsive-video-with-html-web-components/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components" />
+<meta property="og:description" content="Responsive HTML video is a web standard again, and with recent patches to Firefox (oh hey!) and Chrome that match Safari’s preexisting support, it now works across all modern browsers! That means you can use media queries for delivering your videos and potentially save your users some precious bytes. 响应式HTML视频再次成为网" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/information/24-2-27web%E6%80%A7%E8%83%BD%E6%97%A5%E5%8E%86%E4%BD%BF%E7%94%A8html-web%E7%BB%84%E4%BB%B6%E6%89%A9%E5%B1%95%E5%93%8D%E5%BA%94%E5%BC%8F%E8%A7%86%E9%A2%91---web-performance-calendar-extending-responsive-video-with-html-web-components/" /><meta property="article:section" content="information" />
+<meta property="article:published_time" content="2024-02-27T18:57:35+08:00" />
+<meta property="article:modified_time" content="2024-02-27T18:57:35+08:00" />
+<meta itemprop="name" content="Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components">
+<meta itemprop="description" content="Responsive HTML video is a web standard again, and with recent patches to Firefox (oh hey!) and Chrome that match Safari’s preexisting support, it now works across all modern browsers! That means you can use media queries for delivering your videos and potentially save your users some precious bytes. 响应式HTML视频再次成为网"><meta itemprop="datePublished" content="2024-02-27T18:57:35+08:00" />
+<meta itemprop="dateModified" content="2024-02-27T18:57:35+08:00" />
+<meta itemprop="wordCount" content="8291">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components"/>
+<meta name="twitter:description" content="Responsive HTML video is a web standard again, and with recent patches to Firefox (oh hey!) and Chrome that match Safari’s preexisting support, it now works across all modern browsers! That means you can use media queries for delivering your videos and potentially save your users some precious bytes. 响应式HTML视频再次成为网"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Web性能日历»使用HTML Web组件扩展响应式视频 --- Web Performance Calendar » Extending Responsive Video with HTML Web Components</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-02-27 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+          <span class="more-meta"> 约 8291 字 </span>
+          <span class="more-meta"> 预计阅读 17 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>Responsive HTML video is a web standard again, and with recent patches to Firefox (<a href="https://phabricator.services.mozilla.com/D189416"><em>oh hey!</em></a>) and Chrome that match Safari’s preexisting support, it now works across all modern browsers! That means you can use media queries for delivering your videos and potentially save your users some precious bytes.<br>
+响应式HTML视频再次成为网络标准，最近Firefox的补丁（哦，嘿！）和Chrome，符合Safari的预先存在的支持，它现在工作在所有现代浏览器！这意味着您可以使用媒体查询来交付视频，并可能为用户节省保存一些宝贵的字节。</p>
+<p>As I’ve noted in <a href="https://scottjehl.com/posts/using-responsive-video/">prior</a> <a href="https://scottjehl.com/posts/responsive-video/">articles</a>, this is great news for web performance fans, as video is by far the heaviest type of media used on websites (the median weight of just the video files on pages that use video <a href="https://httparchive.org/reports/page-weight#bytesVideo">is <strong>almost 5 megabytes per page</strong> on mobile devices</a>), and that weight has a huge impact on performance, users’ data costs, sites’ hosting costs, and overall energy usage. Using an HTML video element to display a static video file is one of the most common and portable ways to drop a video into a webpage today, so it’s great we now have options to do it more responsibly.<br>
+正如我在之前的文章中所指出的，这对Web性能粉丝来说是个好消息，因为视频是目前为止网站上使用的最重的媒体类型（仅使用视频的页面上的视频文件的平均重量在移动的设备上几乎是每页5 MB），并且该重量对性能，用户的数据成本，网站的托管成本和整体能源使用有巨大的影响。使用HTML视频元素来显示静态视频文件是当今将视频放入网页的最常见和最便携的方法之一，所以我们现在可以更负责任地选择这样做。</p>
+<p>If you haven’t yet caught up on how responsive video works, I’d recommend reading <a href="https://scottjehl.com/posts/using-responsive-video/">How to Use Responsive Video (…and Audio!)</a> first as a primer, because it’s loaded with examples of how to use it and also when to consider alternatives, like HTTP Live Streaming.<br>
+如果你还没有了解响应式视频是如何工作的，我建议你阅读如何使用响应式视频（.和音频！）首先作为入门，因为它加载了如何使用它的示例，以及何时考虑替代方案，如HTTP Live Streaming。</p>
+<h2 id="what-youll-learn-today">What You’ll Learn Today…</h2>
+<p>今天你会学到什么…</p>
+<p>In this post, I’m going to talk briefly about responsive video, but most of the post will be about using HTML web components to extend native video behavior in very helpful ways. But even if you’re not particularly interested in video development, stick around as I’ll demonstrate how to build an HTML Web Component to progressively enhance anything you need.<br>
+在这篇文章中，我将简要地讨论响应式视频，但大部分内容都是关于使用HTML Web组件以非常有用的方式扩展原生视频行为。但是，即使您对视频开发不是特别感兴趣，也可以继续阅读，因为我将演示如何构建HTML Web组件来逐步增强您所需要的任何内容。</p>
+<h2 id="how-responsive-video-works-_and-doesnt_">How Responsive Video Works (<em>…and doesn’t</em>)</h2>
+<p>响应式视频如何工作（&hellip;&hellip;和不工作）</p>
+<p>To start, let’s recap what responsive video <em>is</em>. I’ll start with some example HTML and then explain what we’re looking at…<br>
+首先，让我们回顾一下什么是响应式视频。我将从一些示例HTML开始，然后解释我们正在看的内容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;&amp;lt;video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/small.mp4&#34;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;(max-width: 599px)&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/large.mp4&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That’s a basic responsive video element. It’s responsive because one of the <code>source</code> elements has a <code>media</code> attribute on it that includes a media query, making its source selection conditional to the browser’s viewport size. If you’ve used the <code>picture</code> element before, that <code>media</code> attribute is going to look familiar, because <code>picture</code> <strong>was actually designed</strong> based on how this works in HTML <code>video</code> (<em>back when responsive video was supported the first time around, which is a long story</em>).<br>
+这是一个基本的响应式视频元素。它是响应式的，因为其中一个 <code>source</code> 元素上有一个包含媒体查询的 <code>media</code> 属性，使其源选择取决于浏览器的视口大小。如果你以前使用过 <code>picture</code> 元素，那么 <code>media</code> 属性看起来会很熟悉，因为 <code>picture</code> 实际上是基于HTML <code>video</code> 中的工作原理设计的（回到第一次支持响应式视频的时候，这是一个很长的故事）。</p>
+<p>Here’s that <code>video</code> element live in the page. The latest versions of common browsers will see a video that says “small video source” at small viewport sizes and a video that says “large video source” at wider viewport sizes. Unsupporting, older browsers will simply select the first source suitable they find (small.mp4 in this case) because those browsers ignore the media attribute and pick the first source that matches, ignoring any that come after it.<br>
+这是页面中的 <code>video</code> 元素。最新版本的普通浏览器将看到一个视频，说“小视频源”在小视口大小和一个视频，说“大视频源”在更宽的视口大小。不支持，旧的浏览器将简单地选择他们找到的第一个合适的源（在这种情况下是small.mp4），因为这些浏览器忽略了媒体属性，并选择匹配的第一个源，忽略它之后的任何源。</p>
+<p>So that’s the basics of how a responsive video element works.<br>
+这就是响应式视频元素的基本工作原理。</p>
+<h3 id="how-it-doesnt-work">How It Doesn’t Work</h3>
+<p>如何不工作</p>
+<p>One thing that folks (me included!) tend to find surprising about responsive video is that unlike other “responsive” features in web design–CSS Media Queries or the <code>picture</code> element for example–responsive video sources are only assessed once, when the video (and typically the entire page) first loads.<br>
+有一件事是人们（包括我在内！）关于响应式视频，一个令人惊讶的发现是，与网页设计中的其他“响应式”功能（例如CSS媒体播放器或 <code>picture</code> 元素）不同，响应式视频源仅在视频（通常是整个页面）首次加载时评估一次。</p>
+<p>That means that while you’ll still enjoy the performance benefits of an appropriately selected source at page load, it won’t be reassessed <em>after</em> page load when media conditions change (when, for example, when the user resizes their browser window). It’s entirely possible that could change one day, but there are a number of reasons this behavior was not included in the initial implementation, such as complications involved in syncing up the timecode after a source is swapped, as well as the reasonable goal of matching the behavior of the existing implementation in Safari.<br>
+这意味着，虽然您仍然可以在页面加载时享受适当选择的源的性能优势，但在页面加载后，当媒体条件发生变化时（例如，当用户调整浏览器窗口大小时），它不会重新评估。这完全有可能在某一天发生变化，但是有很多原因导致这种行为没有包括在最初的实现中，例如在交换源代码后同步时间码所涉及的复杂性，以及匹配Safari中现有实现的行为的合理目标。</p>
+<p>Regardless of all that, folks are right to find this part of the feature a little… unexpected.<br>
+不管这一切，人们是正确的发现这一部分的功能有点.意外。</p>
+<p>Which got me thinking, what would it take to make that behavior work on top of what we already have in browsers today?<br>
+这让我想到，在我们今天已经拥有的浏览器之上，需要什么才能让这种行为发挥作用？</p>
+<p>Let’s find out. 让我们来看看。</p>
+<h2 id="extending-video-with-an-html-web-component">Extending Video with an HTML Web Component</h2>
+<p>使用HTML Web组件扩展视频</p>
+<p>Web Components are having a moment right now, and particularly, “HTML Web Components”, which is a term being used to describe web components that add behavior to regular old HTML by wrapping it in a custom element and applying a little JavaScript to enhance that markup further.<br>
+Web组件现在有一个时刻，特别是“HTML Web组件”，这是一个术语，用于描述通过将其包装在自定义元素中并应用一点JavaScript来进一步增强标记的方式向常规旧HTML添加行为的Web组件。</p>
+<p>An HTML Web Component is an ideal tool for extending the functionality of standard HTML, like say, a video element for example! I’m going to walk through how I built one that’ll make responsive video <em>even responsiver</em>, so it reacts to media changes after page load, should they occur.<br>
+HTML Web组件是扩展标准HTML功能的理想工具，例如，视频元素！我将介绍我如何构建一个可以使响应式视频更加响应的视频，以便在页面加载后对媒体更改做出反应。</p>
+<h3 id="first-a-custom-element">First, a Custom Element</h3>
+<p>第一，自定义元素</p>
+<p>To start, we will need a custom element, which is just an HTML element that you invent that has at least one dash in its name. I’ll go with <code>responsive-video</code>, like this:<br>
+首先，我们需要一个自定义元素，它只是一个您创建的HTML元素，其名称中至少有一个破折号。我会用 <code>responsive-video</code> ，像这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;&amp;lt;responsive-video&amp;gt;&amp;lt;/responsive-video&amp;gt;&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Nice. So that’s a custom element, and with a little added JavaScript it could become a web component. But in order to make it an “HTML Web Component,” we’ll want to wrap that component around some HTML that is already meaningful and functional on its own, such as our <code>video</code> element above.<br>
+不错啊所以这是一个自定义元素，加上一点JavaScript，它就可以成为一个Web组件。但是为了使它成为一个“HTML Web组件”，我们需要将该组件包装在一些已经有意义和功能的HTML上，例如上面的 <code>video</code> 元素。</p>
+<p>Here’s that <code>video</code> element wrapped in a <code>responsive-video</code> custom element.<br>
+下面是包装在 <code>responsive-video</code> 自定义元素中的 <code>video</code> 元素。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;&amp;lt;responsive-video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;video&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;controls&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;autoplay&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;loop&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/small.mp4&#34;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;(max-width: 599px)&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/large.mp4&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;&amp;lt;/responsive-video&amp;gt;&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That’s about it for the HTML part of this article. Based on what I’ve done so far, browsers will just ignore that custom element, (<em>though you can style it with CSS already if you want to</em>).<br>
+这就是本文HTML部分的内容。根据我到目前为止所做的，浏览器将忽略该自定义元素，（尽管如果你想的话，你已经可以用CSS来设计它了）。</p>
+<p>To get browsers to recognize this as an element with its own unique properties and behavior, you’ll need to write a web component in JavaScript. Let’s do that.<br>
+要让浏览器将其识别为具有自己独特属性和行为的元素，您需要用JavaScript编写一个Web组件。那就这么办吧</p>
+<h3 id="adding-the-javascript添加javascript">Adding the JavaScript 添加JavaScript</h3>
+<p>To enhance this HTML, we’ll create and load a JavaScript module that will contain our web component code. That code will live in a new file called <code>responsivevideo.js</code>.<br>
+为了增强这个HTML，我们将创建并加载一个包含Web组件代码的JavaScript模块。该代码将存在于名为 <code>responsivevideo.js</code> 的新文件中。</p>
+<p>Please note the last line of the code below to see how we can import that script into our page:<br>
+请注意下面代码的最后一行，看看我们如何将该脚本导入到我们的页面中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;&amp;lt;responsive-video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;video&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;controls&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;autoplay&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;loop&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/small.mp4&#34;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;(max-width: 599px)&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&amp;lt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;/sandbox/video-media/large.mp4&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;&amp;lt;/responsive-video&amp;gt;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;&amp;lt;script&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;type&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;module&#34;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;src&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;&#34;responsivevideo.js&#34;&lt;/span&gt;&lt;span&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now let’s look at the code we’ll put inside that file.<br>
+现在让我们看看我们将放在该文件中的代码。</p>
+<h3 id="writing-the-web-component-logic">Writing the Web Component Logic</h3>
+<p>编写Web组件逻辑</p>
+<p>Web Components are designed for Progressive Enhancement. They come with a series of lifecycle events that are incredibly helpful for applying behavior to elements at moments such as when they’re created or when they’re appended to the DOM, and also for removing behavior and event handlers when an element is removed from the DOM or destroyed altogether.<br>
+Web组件是为渐进式增强而设计的。它们附带了一系列生命周期事件，这些事件对于在创建元素或将元素附加到DOM时将行为应用于元素以及在从DOM中删除元素或完全销毁元素时删除行为和事件处理程序非常有用。</p>
+<p>Before we get ahead of ourselves on that, let’s start with some boilerplate code for our <code>responsive-video</code> component.<br>
+在我们开始之前，让我们先从 <code>responsive-video</code> 组件的样板代码开始。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HTMLElement&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That’s not a lot of code, but it is already doing a lot of work. To start, it defines a class called <code>ResponsiveVideo</code>, which extends the <code>HTMLElement</code> class, which is the same class that all standard HTML elements–you know, <code>&lt;p&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;input&gt;</code>, etc.–use for their own behavior in the browser. After that, we’re using <code>customElements.define</code> to actually define a new HTML element (the tag part) called <code>&lt;responsive-video&gt;</code> that will inherit the class’s logic and behavior.<br>
+这不是很多代码，但它已经做了很多工作。首先，它定义了一个名为 <code>ResponsiveVideo</code> 的类，它扩展了 <code>HTMLElement</code> 类，这个类是所有标准HTML元素（如 <code>&lt;p&gt;</code> 、 <code>&lt;select&gt;</code> 、 <code>&lt;input&gt;</code> 等）在浏览器中用于其自身行为的同一个类。之后，我们使用 <code>customElements.define</code> 来实际定义一个名为 <code>&lt;responsive-video&gt;</code> 的新HTML元素（标记部分），它将继承类的逻辑和行为。</p>
+<p>So now we have a Web Component, but it’s still not doing anything. Inside our class, we can start to use those lifecycle events I had mentioned to add (and remove) behavior and event handlers to the HTML at appropriate moments. I recommend <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">reading up on all of the features of web components</a>, but for the purpose of this article I’ll cover just a few lifecycle events that are relevant to adding the behavior we want:<br>
+所以现在我们有了一个Web组件，但它仍然没有做任何事情。在我们的类中，我们可以开始使用我提到的那些生命周期事件来在适当的时候向HTML添加（和删除）行为和事件处理程序。我建议您阅读Web组件的所有功能，但出于本文的目的，我将只介绍一些与添加我们想要的行为相关的生命周期事件：</p>
+<ul>
+<li>constructor 构造函数</li>
+<li>connectedCallback</li>
+<li>disconnectedCallback 已断开回调</li>
+</ul>
+<h4 id="the-constructor构造函数">The Constructor 构造函数</h4>
+<p>The <code>constructor</code> of a web component is called when an instance of its HTML element is created. It’s useful for establishing some upfront variables within the element that’ll be useful to later events and internal logic. It’s often not the best place for all of our initialization code though because when the constructor is called, the element may not be appended to the DOM quite yet, so the many conditions relating to the page around it or even inside it won’t yet be accessible.<br>
+Web组件的 <code>constructor</code> 在创建其HTML元素的实例时被调用。它对于在元素中建立一些前期变量很有用，这些变量对后面的事件和内部逻辑很有用。它通常不是我们所有初始化代码的最佳位置，因为当构造函数被调用时，元素可能还没有被追加到DOM中，因此与它周围甚至内部页面相关的许多条件还无法访问。</p>
+<p>Here’s our code with a constructor call added:<br>
+下面是添加了构造函数调用的代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HTMLElement&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;super&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    console&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;log&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Inside the constructor, I started by calling <code>super()</code>. Generally, it’s advised that we include this step first because it allows the component to gain access to the base class’s (that is, <code>HTMLElement</code>) properties. Just after the <code>super()</code>, I’m logging <code>this</code> to the browser console, which refers to the HTML element we’re enhancing.<br>
+在构造函数中，我首先调用 <code>super()</code> 。一般来说，建议我们首先包括这一步，因为它允许组件访问基类（即 <code>HTMLElement</code> ）的属性。在 <code>super()</code> 之后，我将 <code>this</code> 登录到浏览器控制台，它指的是我们正在增强的HTML元素。</p>
+<p>If you were to check the browser console at this point, you would see that the HTML element itself was logged: “responsive-video”<br>
+如果您在此时检查浏览器控制台，您将看到HTML元素本身被记录：“responsive-video”</p>
+<p>For now, I won’t use the constructor for anything, but in my final component I am going to use it to define some upfront variables that other events and methods will use.<br>
+现在，我不会使用构造函数来做任何事情，但在我的最后一个组件中，我将使用它来定义一些其他事件和方法将使用的前期变量。</p>
+<h2 id="using-connectedcallback--disconnectedcallback">Using connectedCallback &amp; disconnectedCallback</h2>
+<p>使用connectedCallback和disconnectedCallback</p>
+<p>Next, I’ll use some special lifecycle events to apply behavior to any <code>responsive-video</code> element when it is added to the DOM, and also remove behavior when/if it’s ever removed from the DOM. It’s worth pointing out here that in contrast to the days when we needed to wait for “DOM Ready” to query the DOM for elements to make our enhancements, these events are a major upgrade!<br>
+接下来，我将使用一些特殊的生命周期事件，在任何 <code>responsive-video</code> 元素被添加到DOM时将行为应用于该元素，并在它从DOM中删除时删除行为。这里值得指出的是，与我们需要等待“DOM Ready”来查询DOM元素以进行增强的日子相比，这些事件是一个重大的升级！</p>
+<p>I know I’m going to use these two events, so first I’ll add them with some console logs to show how they look.<br>
+我知道我将使用这两个事件，所以首先我将添加它们和一些控制台日志，以显示它们的外观。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HTMLElement&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;super&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// upfront variables will go here&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  connectedCallback&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    console&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;log&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;`${this} is in the DOM`&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  disconnectedCallback&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    console&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;log&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;`${this} has been removed from the DOM`&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Above, we’re logging to the browser console whenever a <code>responsive-video</code> element shows up in the DOM (including when the page first loads), and whenever one is removed from the DOM.<br>
+在上面的例子中，每当 <code>responsive-video</code> 元素出现在DOM中时（包括页面首次加载时），以及每当从DOM中删除时，我们都会记录到浏览器控制台。</p>
+<p>connectedCallback is a good place to create useful references to elements inside my component. For example, many of my methods will reference the <code>video</code> element inside the component, so I can make a reference to it inside <code>connectedCallback</code> like so, using <code>this.querySelector</code> to search within the scope of the component itself instead of the entire document.<br>
+connectedCallback是一个很好的地方来创建对组件内元素的有用引用。例如，我的许多方法将引用组件内部的 <code>video</code> 元素，因此我可以像这样在 <code>connectedCallback</code> 中引用它，使用 <code>this.querySelector</code> 在组件本身的范围内搜索，而不是整个文档。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;connectedCallback&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;querySelector&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;video&#34;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>With these handy methods, we now have the tools we need to add some logic.<br>
+有了这些方便的方法，我们现在就有了添加一些逻辑所需的工具。</p>
+<h3 id="adding-custom-behavior添加自定义行为">Adding Custom Behavior 添加自定义行为</h3>
+<p>The rest of our component’s code will serve one purpose: instructing the <code>video</code> element to select and load a new, appropriate source for the video element whenever/if media conditions change in a way that’s relevant to its <code>source</code> elements.<br>
+我们组件的其余代码将用于一个目的：指示 <code>video</code> 元素为视频元素选择和加载一个新的，适当的源，无论何时/如果媒体条件以与其 <code>source</code> 元素相关的方式发生变化。</p>
+<p>To do that, we’ll write some code that applies this general flow:<br>
+为此，我们将编写一些应用此通用流程的代码：</p>
+<ul>
+<li>Find all of the <code>source</code> elements inside the <code>video</code> that have <code>media</code> attributes, and pass those media attribute values (which will be media queries or types) to <code>matchMedia</code>, which we can use to start listening to the media queries for relevant changes. Once listening, <code>matchMedia</code>‘s “change” event will fire whenever those media queries start or stop matching the media conditions of the browser, which can happen when a user resizes their browser to a different size, for example.<br>
+找到 <code>video</code> 中所有具有 <code>media</code> 属性的 <code>source</code> 元素，并将这些媒体属性值（将是媒体查询或类型）传递给 <code>matchMedia</code> ，我们可以使用它来开始监听媒体查询以获取相关更改。一旦监听，#4 #的“更改”事件将在这些媒体查询开始或停止匹配浏览器的媒体条件时触发，例如，当用户将浏览器调整为不同大小时可能会发生这种情况。</li>
+<li>When any of the media queries inside the video fire a change event, check if the currently playing video source is coming from a <code>source</code> element prior to the <code>source</code> element whose media just changed. If it is, then we can ignore that particular media change because any sources after the source that’s currently playing are irrelevant to selection. On the other hand, if the currently playing source of the video happens to be the source whose media did just change (presumably by no longer matching), then we should instruct the video element to load again (using <code>video.load()</code>) using its native selection to find the best source.<br>
+当视频中的任何媒体查询触发更改事件时，检查当前播放的视频源是否来自媒体刚刚更改的 <code>source</code> 元素之前的 <code>source</code> 元素。如果是，那么我们可以忽略特定的媒体更改，因为当前正在播放的源之后的任何源都与选择无关。另一方面，如果当前播放的视频源恰好是其媒体刚刚改变的源（可能不再匹配），那么我们应该指示video元素使用其原生选择再次加载（使用 <code>video.load()</code> ）以找到最佳源。</li>
+</ul>
+<p>That’s mostly it! 差不多就是这样！</p>
+<p>Here’s how that logic will be structured in the code in our component, with our <code>connectedCallback</code> and <code>disconnectedCallback</code> events applying code at opportune moments. In addition to those lifecycle events , I’ve also added 4 custom methods for my own code to use: <code>bindMediaListeners</code>, <code>unbindMediaListeners</code>, <code>previousSiblingIsPlaying</code>, and <code>reloadVideo</code>.<br>
+下面是该逻辑在组件代码中的结构，我们的 <code>connectedCallback</code> 和 <code>disconnectedCallback</code> 事件在适当的时候应用代码。除了这些生命周期事件之外，我还为自己的代码添加了4个自定义方法：用途： <code>bindMediaListeners</code> 、 <code>unbindMediaListeners</code> 、 <code>previousSiblingIsPlaying</code> 和 <code>reloadVideo</code> 。</p>
+<p>I’ve replaced some of the code inside those methods below with comments that describe how it flows.<br>
+我已经用注释替换了下面这些方法中的一些代码，这些注释描述了它是如何流动的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HTMLElement&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;super&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// upfront variables will go here&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  connectedCallback&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;querySelector&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#39;video&#39;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;bindMediaListeners&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  disconnectedCallback&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;unbindMediaListeners&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  bindMediaListeners&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// loop through the source elements inside this.video and set up listeners for their media queries&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// when any of those listeners fire a change event,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// make sure the source element of the event is relevant using previousSiblingIsPlaying&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// if it&#39;s relevant, call reloadVideo to find a new source&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  unbindMediaListeners&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// unbind the media query listeners&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  previousSiblingIsPlaying&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;elem&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// a helper function that will return true or false for whether a previous source element is currently selected&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  reloadVideo&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// capture the currentTime of the video&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// reload the video, let the browser choose the best current source&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;// set the current time of the video to where it last was&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That was a big chunk of code, but it should give you an idea of the flow for how it works.<br>
+这是一个很大的代码块，但它应该给你一个给予它是如何工作的流程的想法。</p>
+<h2 id="completing-the-enhancements">Completing the Enhancements</h2>
+<p>完成增强功能</p>
+<p>Next, let’s populate that scaffolding with the actual logic. Here’s our full web component code.<br>
+接下来，让我们用实际的逻辑填充这个脚手架。这是我们完整的Web组件代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;class&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;extends&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HTMLElement&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;constructor&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;super&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;listenedMedia &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;[];&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;reloadQueued &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  connectedCallback&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;querySelector&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#39;video&#39;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;bindMediaListeners&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  disconnectedCallback&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;unbindMediaListeners&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  bindMediaListeners&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;querySelectorAll&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#39;source&#39;&lt;/span&gt;&lt;span&gt;).&lt;/span&gt;&lt;span&gt;forEach&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">        &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; mqListener &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">          &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media &lt;/span&gt;&lt;span&gt;===&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;currentSrc &lt;/span&gt;&lt;span&gt;||&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;!&lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;previousSiblingIsPlaying&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;currentSrc&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;!&lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;reloadQueued&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">            &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;reloadVideo&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">          &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">        &lt;/span&gt;&lt;span&gt;};&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">        &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;listenedMedia&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;push&lt;/span&gt;&lt;span&gt;({&lt;/span&gt;&lt;span&gt; media&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; handler&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; mqListener &lt;/span&gt;&lt;span&gt;});&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">        window&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;matchMedia&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;).&lt;/span&gt;&lt;span&gt;addEventListener&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;change&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; mqListener&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;});&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  unbindMediaListeners&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;listenedMedia&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;forEach&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;listener &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      window&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;matchMedia&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;listener&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media&lt;/span&gt;&lt;span&gt;).&lt;/span&gt;&lt;span&gt;removeEventListener&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;change&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; listener&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;handler&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;});&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  previousSiblingIsPlaying&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;elem&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;let&lt;/span&gt;&lt;span&gt; prevSibling &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; elem&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;while&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;elem&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;previousElementSibling&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;if&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;prevSibling&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;src &lt;/span&gt;&lt;span&gt;===&lt;/span&gt;&lt;span&gt; src&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">        &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  reloadVideo&lt;/span&gt;&lt;span&gt;(){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;reloadQueued &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; currentTime &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;currentTime&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; playState &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;playState&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;load&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; videoLoaded &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;playState &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; playState&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;currentTime &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; currentTime&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;toString&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;reloadQueued &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;removeEventListener&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;loadeddata&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; videoLoaded&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;};&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;this&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;addEventListener&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;loadeddata&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; videoLoaded&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And it works! In about 50 lines of code, we’ve used a web component to extend HTML video to make it do much more.<br>
+而且它有效！在大约50行代码中，我们使用了一个Web组件来扩展HTML视频，使其做得更多。</p>
+<h2 id="check-out-the-demo-page">Check out the Demo Page</h2>
+<p>查看演示页面</p>
+<p>You can try a demo of this responsive video web component here.<br>
+您可以在这里尝试这个响应式视频Web组件的演示。</p>
+<p><a href="https://scottjehl.com/sandbox/video-media/reallyrwdvideo">Even Responsiver Video Demo Page<br>
+Even Responsiver视频演示页面</a></p>
+<p>But hey! Not so fast….<br>
+但是嘿！别这么快&hellip;.</p>
+<p>I still have another important thing to cover before this thing is ready to ship.<br>
+我还有一件重要的事要做在这东西准备好发货之前。</p>
+<h2 id="enhancing-reponsibly增强责任感">Enhancing Reponsibly 增强责任感</h2>
+<p>As I mentioned early in the post, the behavior we added with this component is something that many folks <em>expect</em> to already work when they start using responsive video. While there is no current proposal or plans for implementing this in web standards and browsers (that I know of, at least), this does seem like the sort of feature that could possibly become natively supported in browsers one day. I hope it does actually!<br>
+正如我在文章的前面提到的，我们在这个组件中添加的行为是许多人在开始使用响应式视频时期望已经工作的。虽然目前还没有在Web标准和浏览器中实现这一点的提议或计划（至少我知道），但这似乎是有一天可能在浏览器中原生支持的那种功能。我希望它确实如此！</p>
+<p>If that does ever happen, I really wouldn’t want this web component to be duplicating or worse, interfering with the behavior that a browser handles itself. I’d like this web component to act as a polyfill for this behavior if it’s not already supported, but if it is supported, I want this web component to make itself obsolete.<br>
+如果这种情况真的发生了，我真的不希望这个Web组件被复制或更糟，干扰浏览器处理自己的行为。我希望这个Web组件作为一个polyfill的行为，如果它还没有得到支持，但如果它是支持的，我希望这个Web组件，使自己过时。</p>
+<p>So just to be safe, we should check if the browser handles this behavior natively before we add it ourselves.<br>
+因此，为了安全起见，我们应该在自己添加之前检查浏览器是否能够处理此行为。</p>
+<p>It’s time for a feature test!<br>
+是时候进行功能测试了！</p>
+<h3 id="writing-a-video-media-change-feature-test">Writing a Video Media Change Feature Test</h3>
+<p>编写视频媒体更改功能测试</p>
+<p>I created the following feature test to check whether a browser performs this media switching behavior natively. It’s somewhat similar to <a href="https://github.com/web-platform-tests/wpt/pull/42361/commits/a2851bd8017fe88b5f391c1bb99c2486f27162cc">the test that I recently patched in the Web Platform Test suite</a> which modern browsers run as part of their builds to ensure they support standard responsive video behavior. Except that this one tests for behavior that is not currently standard, of course.<br>
+我创建了以下功能测试，以检查浏览器是否会执行此媒体切换行为。它有点类似于我最近在Web平台测试套件中修补的测试，现代浏览器作为其构建的一部分运行，以确保它们支持标准的响应视频行为。当然，除了这个测试目前还不是标准的行为。</p>
+<p>The test returns a promise that will quickly resolve to either <code>true</code> or <code>false</code> to describe if a browser supports changing video sources after page load, when source media changes.<br>
+该测试返回一个promise，它将快速解析为 <code>true</code> 或 <code>false</code> ，以描述浏览器是否支持在页面加载后更改视频源，当源媒体更改时。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;// feature test for native video media switching media&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; videoMediaChangeSupport &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;async&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;return&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Promise&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;resolve &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; iframe &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; document&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;createElement&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;iframe&#34;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; video &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; document&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;createElement&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;video&#34;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; source &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; document&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;createElement&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;source&#34;&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;const&lt;/span&gt;&lt;span&gt; mediaSource &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;new&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;MediaSource&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    mediaSource&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;addEventListener&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;sourceopen&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; resolve&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;true&lt;/span&gt;&lt;span&gt;));&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;src &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; URL&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;createObjectURL&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;mediaSource&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    source&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;media &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&#34;(min-width:10px)&#34;&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    video&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;append&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    iframe&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;width &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&#34;5&#34;&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    iframe&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;style&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;cssText &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;`position: absolute; visibility: hidden;`&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    document&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;documentElement&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;append&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;iframe&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    iframe&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;contentDocument&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;body&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;append&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;video&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    setTimeout&lt;/span&gt;&lt;span&gt;(()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt; iframe&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;width &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&#34;15&#34;&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;});&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    setTimeout&lt;/span&gt;&lt;span&gt;(()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;=&amp;gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;{&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      iframe&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;remove&lt;/span&gt;&lt;span&gt;();&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">      resolve&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;false&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;},&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1000&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  &lt;/span&gt;&lt;span&gt;});&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;};&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In case you’re curious, the test works by creating a <code>video</code> element with a child <code>source</code> element that has a media query, and appends that video to a generated <code>iframe</code> which is too narrow for the media query to match. Then, it resizes the iframe so that the relevant media query <em>will</em> match. If the video requests the source after the iframe is resized, we can trust that the browser is already handling media switching in video, so we don’t need to apply our web component at all!<br>
+如果你好奇的话，测试的工作原理是创建一个带有子元素 <code>source</code> 的 <code>video</code> 元素，该子元素具有一个媒体查询，并将该视频附加到生成的 <code>iframe</code> ，该 <code>iframe</code> 太窄，媒体查询无法匹配。然后，它调整iframe的大小，以便匹配相关的媒体查询。如果视频在iframe调整大小后请求源，我们可以相信浏览器已经在处理视频中的媒体切换，所以我们根本不需要应用我们的web组件！</p>
+<h3 id="conditional-web-components">Conditional Web Components</h3>
+<p>条件Web组件</p>
+<p>Lastly, it’s time to re-define our web component ONLY if that feature test happens to fail. I’m calling this pattern a <em>Conditional Web Component</em>, because everything seems to have cool names now.<br>
+最后，只有当功能测试失败时，才需要重新定义我们的Web组件。我将此模式称为条件Web组件，因为现在所有东西似乎都有很酷的名字。</p>
+<p>To make it conditional, the last line of our component will now look like this:<br>
+为了使它有条件，我们组件的最后一行现在看起来像这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;if&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;await&lt;/span&gt;&lt;span&gt; videoMediaChangeSupport&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;===&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;false&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;){&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">  customElements&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;define&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#34;responsive-video&#34;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ResponsiveVideo&lt;/span&gt;&lt;span&gt;);&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;}&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And again, that demo page has this latest example baked in!<br>
+同样，演示页面有这个最新的例子！</p>
+<p><a href="https://scottjehl.com/sandbox/video-media/reallyrwdvideo">Even Responsiver Video Demo page<br>
+Even Responsiver视频演示页面</a></p>
+<p>You can browse the source here on Github if you prefer:<br>
+如果你喜欢，你可以在Github上浏览源代码：</p>
+<p><a href="https://github.com/scottjehl/ResponsiveVideo/blob/main/responsivevideo.js">ResponsiveVideo.js file  ResponsiveVideo.js文件</a></p>
+<h2 id="using-responsivevideojs">Using ResponsiveVideo.js</h2>
+<p>使用ResponsiveVideo.js</p>
+<p>The script I’ve described is on Github, licensed open source under MIT. Feel free to use it, fork it, or send me issues to consider! And I’ll plan publish it to NPM soon as well.<br>
+我描述的脚本在Github上，在MIT下许可开源。请随意使用它，分叉它，或发送问题给我考虑！我也会很快把它发布到NPM上。</p>
+<p>Github Repo for <a href="https://github.com/scottjehl/ResponsiveVideo">ResponsiveVideo</a></p>
+<h2 id="thanks谢谢你谢谢">Thanks! 谢谢你，谢谢</h2>
+<p>Thank you for reading. Feel free to leave a comment or reach out on <a href="https://mstdn.social/@scottjehl">Mastodon</a> if you have ideas or questions.<br>
+感谢您的阅读。如果你有想法或问题，请随时留下评论或联系Mastodon。</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/information/24-2-28%E6%88%91%E5%9C%A812%E4%B8%AA%E6%9C%88%E5%86%85%E5%90%AF%E5%8A%A8%E4%BA%8612%E5%AE%B6%E5%88%9D%E5%88%9B%E5%85%AC%E5%8F%B8---im-launching-12-startups-in-12-months/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">我在12个月内启动了12家初创公司 --- I&#39;m Launching 12 Startups in 12 Months</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/information/1/">
+            <span class="next-text nav-default">1</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

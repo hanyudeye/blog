@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/css/</link>
+    <description>Recent content in css on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Feb 2020 18:20:43 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css 简介</title>
+      <link>https://aming.xyz/technology/css/</link>
+      <pubDate>Tue, 11 Feb 2020 18:20:43 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/css/</guid>
+      <description>&lt;p&gt;
+浏览器用 CSS 技术渲染 HTML 的外观&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+.textexbox {visibility: hidden;}
+
+.textexbox > .textex{opacity: 0;}
+
+@keyframes anime{
+    to{
+        opacity: 1;
+    }
+}

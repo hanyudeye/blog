@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/git/</link>
+    <description>Recent content in git on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Dec 2019 06:23:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>版本管理</title>
+<<<<<<< HEAD
+      <link>https://aming.xyz/technology/vc/</link>
+      <pubDate>Wed, 25 Dec 2019 06:23:31 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/vc/</guid>
+=======
+      <link>https://aming.xyz/post/vc/</link>
+      <pubDate>Wed, 25 Dec 2019 06:23:31 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/vc/</guid>
+>>>>>>> d5d1b30 (rebuilding site 2023年 08月 08日 星期二 07:50:40 CST)
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

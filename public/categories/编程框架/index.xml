@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程框架 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E7%BC%96%E7%A8%8B%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 编程框架 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Aug 2023 15:55:47 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E7%BC%96%E7%A8%8B%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TP6使用</title>
+      <link>https://aming.xyz/post/tp6%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 12 Aug 2023 15:55:47 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/tp6%E4%BD%BF%E7%94%A8/</guid>
+      <description>ThinkPHP 是 开源 的Web应用框架，用于快速构建Web应用程序。 Web 应用程序（Web Application）是一种通过网络（通常是互联网）访问和使用的软</description>
+    </item>
+    
+  </channel>
+</rss>

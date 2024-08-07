@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Dec 2019 05:32:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数学简介</title>
+      <link>https://aming.xyz/technology/math/</link>
+      <pubDate>Sun, 22 Dec 2019 05:32:47 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/math/</guid>
+      <description>&lt;p&gt;数学是人在处理东西的量时发明的一种技术，这种技术用一种简单的符号公式表示东西的量的改变情况，去掉了推理过程，只求结果，所以人光记忆公式的话难理解。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;造物主在造东西的时候，会有的东西造的快点，有的造的慢点吗？？&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

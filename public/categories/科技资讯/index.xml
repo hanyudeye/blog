@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>科技资讯 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E7%A7%91%E6%8A%80%E8%B5%84%E8%AE%AF/</link>
+    <description>Recent content in 科技资讯 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Nov 2023 10:10:30 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E7%A7%91%E6%8A%80%E8%B5%84%E8%AE%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://aming.xyz/post/ai/</link>
+      <pubDate>Mon, 06 Nov 2023 10:10:30 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/ai/</guid>
+      <description>AI正在改变我们的社会，为了省钱，很多领域用了AI生成。 创建方法是：机器学习，然后机器创建。 AI （机器学习）的发展非常的迅速，带动了科技的发展</description>
+    </item>
+    
+  </channel>
+</rss>

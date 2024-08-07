@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title> - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="Featured 特色 Why CPU Knowledge Is No Longer Enough 为什么CPU知识不再足够 In today&amp;rsquo;s AI age, the majority of developers train in the CPU way. This knowledge has been part of our academics as well, so it&amp;rsquo;s obvious to think and problem-solve in a CPU-oriented way. 在当今的AI时代，大多数开发" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.117.0 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/information/24-2-27ai%E6%97%B6%E4%BB%A3%E7%9A%84gpu%E7%94%9F%E5%AD%98%E5%B7%A5%E5%85%B7%E5%8C%85%E6%AF%8F%E4%B8%AA%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84%E6%9C%80%E4%BD%8E%E8%A6%81%E6%B1%82---gpu-survival-toolkit-for-the-ai-age-the-bare-minimum-every-developer-must-know/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Featured 特色 Why CPU Knowledge Is No Longer Enough 为什么CPU知识不再足够 In today&rsquo;s AI age, the majority of developers train in the CPU way. This knowledge has been part of our academics as well, so it&rsquo;s obvious to think and problem-solve in a CPU-oriented way. 在当今的AI时代，大多数开发" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/information/24-2-27ai%E6%97%B6%E4%BB%A3%E7%9A%84gpu%E7%94%9F%E5%AD%98%E5%B7%A5%E5%85%B7%E5%8C%85%E6%AF%8F%E4%B8%AA%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84%E6%9C%80%E4%BD%8E%E8%A6%81%E6%B1%82---gpu-survival-toolkit-for-the-ai-age-the-bare-minimum-every-developer-must-know/" /><meta property="article:section" content="information" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Featured 特色 Why CPU Knowledge Is No Longer Enough 为什么CPU知识不再足够 In today&rsquo;s AI age, the majority of developers train in the CPU way. This knowledge has been part of our academics as well, so it&rsquo;s obvious to think and problem-solve in a CPU-oriented way. 在当今的AI时代，大多数开发">
+
+<meta itemprop="wordCount" content="6847">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Featured 特色 Why CPU Knowledge Is No Longer Enough 为什么CPU知识不再足够 In today&rsquo;s AI age, the majority of developers train in the CPU way. This knowledge has been part of our academics as well, so it&rsquo;s obvious to think and problem-solve in a CPU-oriented way. 在当今的AI时代，大多数开发"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+          <span class="more-meta"> 约 6847 字 </span>
+          <span class="more-meta"> 预计阅读 14 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>Featured  特色</p>
+<ul>
+<li><a href="https://journal.hexmos.com/author/rijul/"><img src="https://journal.hexmos.com/content/images/size/w100/2023/08/3a30bb804e1845504626b40d9fb136d2.jpeg" alt="Rijul Rajesh"></a></li>
+</ul>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/a230a3ffafd791a0973337dbab3db132061e9d02787646049eb519aae1cb0f72.png" alt="GPU Survival Toolkit for the AI age: The bare minimum every developer must know"></p>
+<h3 id="why-cpu-knowledge-is-no-longer-enough">Why CPU Knowledge Is No Longer Enough</h3>
+<p>为什么CPU知识不再足够</p>
+<p>In today&rsquo;s AI age, the majority of developers train in the CPU way. This knowledge has been part of our academics as well, so it&rsquo;s obvious to think and problem-solve in a <strong>CPU-oriented way</strong>.<br>
+在当今的AI时代，大多数开发人员都是以CPU的方式进行培训的。这些知识也是我们学术的一部分，所以很明显，以面向CPU的方式思考和解决问题。</p>
+<p>However, the problem with CPUs is that they rely on a <strong>sequential architecture</strong>. In today&rsquo;s world, where we are dependent on numerous parallel tasks, CPUs are unable to work well in these scenarios.<br>
+然而，CPU的问题在于它们依赖于顺序架构。在当今世界，我们依赖于许多并行任务，CPU无法在这些场景中正常工作。</p>
+<p>Some problems faced by developers include:<br>
+开发人员面临的一些问题包括：</p>
+<h4 id="executing-parallel-tasks">Executing Parallel Tasks</h4>
+<p>执行并行任务</p>
+<p>CPUs traditionally operate linearly, executing one instruction at a time. This limitation stems from the fact that CPUs typically feature a few powerful cores optimized for single-threaded performance.<br>
+CPU传统上是线性运行的，每次执行一条指令。这种限制源于CPU通常具有几个针对单线程性能进行优化的强大内核。</p>
+<p>When faced with multiple tasks, a CPU allocates its resources to address each task one after the other, leading to a sequential execution of instructions. This approach becomes inefficient in scenarios where numerous tasks need simultaneous attention.<br>
+当面对多个任务时，CPU分配其资源以一个接一个地处理每个任务，从而导致指令的顺序执行。这种方法在需要同时关注多个任务的情况下变得低效。</p>
+<p>While we make efforts to enhance CPU performance through techniques like multi-threading, the fundamental design philosophy of CPUs prioritizes sequential execution.<br>
+虽然我们努力通过多线程等技术来增强CPU性能，但CPU的基本设计理念优先考虑顺序执行。</p>
+<h4 id="running-ai-models-efficiently">Running AI Models Efficiently</h4>
+<p>高效运行AI模型</p>
+<p>AI models, employing advanced architectures like transformers, leverage parallel processing to enhance performance. Unlike older <strong>recurrent neural networks (RNNs)</strong> that operate sequentially, modern transformers such as <strong>GPT</strong> can concurrently process multiple words, increasing efficiency and capability in training. Because when we train in parallel, it will result in bigger models, and bigger models will yield better outputs.<br>
+人工智能模型采用变压器等先进架构，利用并行处理来提高性能。与按顺序操作的旧递归神经网络（RNN）不同，GPT等现代转换器可以同时处理多个单词，从而提高训练效率和能力。因为当我们并行训练时，它会导致更大的模型，而更大的模型会产生更好的输出。</p>
+<p>The concept of parallelism extends beyond natural language processing to other domains like <strong>image recognition</strong>. For instance, <a href="https://medium.com/analytics-vidhya/concept-of-alexnet-convolutional-neural-network-6e73b4f9ee30?ref=journal.hexmos.com">AlexNet</a>, an architecture in image recognition, demonstrates the power of parallel processing by processing different parts of an image simultaneously, allowing for accurate pattern identification.<br>
+并行性的概念从自然语言处理扩展到其他领域，如图像识别。例如，AlexNet是一种图像识别架构，它通过同时处理图像的不同部分来展示并行处理的能力，从而实现准确的模式识别。</p>
+<p>However, CPUs, designed with a focus on single-threaded performance, struggle to fully exploit parallel processing potential. They face difficulties efficiently distributing and executing the numerous parallel computations required for intricate AI models.<br>
+然而，CPU设计的重点是单线程性能，努力充分利用并行处理的潜力。他们面临着有效分配和执行复杂AI模型所需的大量并行计算的困难。</p>
+<p>As a result, the development of GPUs has become prevalent to address the specific needs of parallel processing in AI applications, unlocking higher efficiency and faster computation.<br>
+因此，GPU的开发已经变得普遍，以解决AI应用中并行处理的特定需求，从而实现更高的效率和更快的计算。</p>
+<h4 id="how-gpu-driven-development-solves-these-issues">How GPU Driven Development Solves These Issues</h4>
+<p>GPU驱动开发如何解决这些问题</p>
+<p><strong>Massive Parallelism With GPU Cores<br>
+GPU核心的大规模并行化</strong></p>
+<p>Engineers design GPUs with <strong>smaller, highly specialized cores</strong> compared to the <strong>larger, more powerful cores</strong> found in CPUs. This architecture allows GPUs to execute a multitude of parallel tasks simultaneously.<br>
+工程师们设计的GPU具有更小、高度专业化的内核，而CPU中的内核则更大、更强大。这种架构允许GPU同时执行多个并行任务。</p>
+<p>The high number of cores in a GPU are well-suited for workloads depending on parallelism, such as graphics rendering and complex mathematical computations.<br>
+GPU中的大量内核非常适合依赖于并行性的工作负载，例如图形渲染和复杂的数学计算。</p>
+<p>We will soon demonstrate how using GPU parallelism can reduce the time taken for complex tasks.<br>
+我们将很快演示如何使用GPU并行性来减少复杂任务所需的时间。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/55f060b6b97ac9b7c285a8732c69829e12e3211339b992c18ec49716a6fac938.png" alt="GPUDemo1"></p>
+<p><strong>Parallelism Used In AI Models<br>
+人工智能模型中的相似性</strong></p>
+<p>AI models, particularly those built on deep learning frameworks like <a href="https://www.tensorflow.org/?ref=journal.hexmos.com">TensorFlow</a>, exhibit a high degree of parallelism. Neural network training involves numerous matrix operations, and GPUs, with their expansive core count, excel in parallelizing these operations. TensorFlow, along with other popular deep learning frameworks, optimizes to leverage GPU power for accelerating model training and inference.<br>
+人工智能模型，特别是那些建立在TensorFlow等深度学习框架上的模型，表现出高度的并行性。神经网络训练涉及大量矩阵运算，而GPU凭借其庞大的核心数量，擅长并行处理这些运算。TensorFlow与其他流行的深度学习框架沿着进行了优化，以利用GPU的能力来加速模型训练和推理。</p>
+<p>We will show a demo soon how to train a neural network using the power of the GPU.<br>
+我们将很快展示如何使用GPU的强大功能训练神经网络的演示。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/5078635f14fc266b48058cafe1f214608eecd89f0ddfebfc481df24704a7bba9.png" alt="GPUDemo1"></p>
+<h3 id="cpus-vs-gpus-whats-the-difference">CPUs Vs GPUs: What’s the Difference?</h3>
+<p>CPU VS GPU：有什么区别？</p>
+<h4 id="cpu">CPU</h4>
+<p><strong>Sequential Architecture 顺序架构</strong></p>
+<p>Central Processing Units (CPUs) are designed with a focus on sequential processing. They excel at executing a single set of instructions linearly.<br>
+中央处理器（CPU）的设计重点是顺序处理。他们擅长线性地执行一组指令。</p>
+<p>CPUs are optimized for tasks that require high single-threaded performance, such as<br>
+CPU针对需要高单线程性能的任务进行了优化，例如</p>
+<ul>
+<li>General-purpose computing<br>
+通用计算</li>
+<li>System operations 系统操作</li>
+<li>Handling complex algorithms that involve conditional branching<br>
+处理涉及条件分支的复杂算法</li>
+</ul>
+<p><strong>Limited Cores For Parallel Tasks<br>
+并行任务的有限内核</strong></p>
+<p>CPUs feature a smaller number of cores, often in the range of <strong>2-16</strong> cores in consumer-grade processors. Each core is capable of handling its own set of instructions independently.<br>
+CPU的核心数量较少，在消费级处理器中通常为2-16个核心。每个核心都能够独立处理自己的指令集。</p>
+<h4 id="gpu">GPU</h4>
+<p><strong>Parallelized Architecture<br>
+企业化建筑</strong></p>
+<p>Graphics Processing Units (GPUs) are designed with a parallel architecture, making them highly efficient for parallel processing tasks.<br>
+图形处理单元（GPU）采用并行架构设计，可高效执行并行处理任务。</p>
+<p>This is beneficial for<br>
+这有利于</p>
+<ul>
+<li>Rendering graphics 渲染图形</li>
+<li>Performing complex mathematical calculations<br>
+进行复杂的数学计算</li>
+<li>Running parallelizable algorithms<br>
+运行可并行化算法</li>
+</ul>
+<p>GPUs handle multiple tasks simultaneously by breaking them into smaller, parallel sub-tasks.</p>
+<p><strong>Thousands Of Cores For Parallel Tasks</strong></p>
+<p>Unlike CPUs, GPUs boast a significantly larger number of cores, often numbering in the thousands. These cores are organized into streaming multiprocessors (SMs) or similar structures.</p>
+<p>The abundance of cores allows GPUs to process a massive amount of data concurrently, making them well-suited for parallelisable tasks, such as image and video processing, deep learning, and scientific simulations.</p>
+<h3 id="aws-gpu-instances-a-beginners-guide">AWS GPU Instances: A Beginner&rsquo;s Guide</h3>
+<p>Amazon Web Services (AWS) offers a variety of GPU instances used for things like machine learning.</p>
+<p>Here are the different types of AWS GPU instances and their use cases:</p>
+<p><strong>General-Purpose Gpu Instances</strong></p>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/ec2/instance-types/p3/?ref=journal.hexmos.com">P3</a> and <a href="https://aws.amazon.com/ec2/instance-types/p4/?ref=journal.hexmos.com">P4</a> instances serve as versatile general-purpose GPU instances, well-suited for a broad spectrum of workloads.</p>
+</li>
+<li>
+<p>These include machine learning training and inference, image processing, and video encoding. Their balanced capabilities make them a solid choice for diverse computational tasks.</p>
+</li>
+<li>
+<p><strong>Pricing:</strong> The p3.2xlarge instance costs <strong>$3.06</strong> per hour.</p>
+</li>
+<li>
+<p>This provides 1 <a href="https://www.nvidia.com/en-gb/data-center/tesla-v100/?ref=journal.hexmos.com">NVIDIA Tesla V100 GPU</a> of 16 GB GPU memory</p>
+</li>
+</ul>
+<p><strong>Inference-optimized GPU instances</strong></p>
+<ul>
+<li>
+<p>Inference is the process of running live data through a trained AI model to make a prediction or solve a task.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/ec2/instance-types/p5/?ref=journal.hexmos.com">P5</a> and <a href="https://aws.amazon.com/ec2/instance-types/inf1/?ref=journal.hexmos.com">Inf1</a> instances specifically cater to machine learning inference, excelling in scenarios where low latency and cost efficiency are essential.</p>
+</li>
+<li>
+<p><strong>Pricing:</strong> the p5.48xlarge instance costs <strong>$98.32</strong> per hour.</p>
+</li>
+<li>
+<p>This provides 8 <a href="https://www.nvidia.com/en-in/data-center/h100/?ref=journal.hexmos.com">NVIDIA H100 GPUs</a> of 80 GB memory each, totalling upto 640 GB Video Memory.</p>
+</li>
+</ul>
+<p><strong>Graphics-optimized GPU instances</strong></p>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/ec2/instance-types/g4/?ref=journal.hexmos.com">G4 instances</a> instances are engineered to handle graphics-intensive tasks.</p>
+</li>
+<li>
+<p>A video game developer might use a G4 instance to render 3D graphics for a video game.</p>
+</li>
+<li>
+<p><strong>Pricing:</strong> g4dn.xlarge costs <strong>$0.526</strong> to run per hour.</p>
+</li>
+<li>
+<p>Uses 1 <a href="https://www.nvidia.com/en-in/data-center/tesla-t4/?ref=journal.hexmos.com">NVIDIA T4 GPU</a> of 16 GB Memory.</p>
+</li>
+</ul>
+<p><strong>Managed GPU Instances</strong></p>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/sagemaker/?ref=journal.hexmos.com">Amazon SageMaker</a> is a managed service for machine learning. It provides access to a variety of GPU-powered instances, including P3, P4, and P5 instances.</p>
+</li>
+<li>
+<p>SageMaker is a good choice for organizations that wants to begin machine learning easily without having to manage the underlying infrastructure.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/sagemaker/pricing/?ref=journal.hexmos.com">Pricing of Amazon Sagemaker</a></p>
+</li>
+</ul>
+<h3 id="using-nvidias-cuda-for-gpu-driven-development">Using Nvidia&rsquo;s CUDA for GPU-Driven Development</h3>
+<h4 id="what-is-cuda">What Is Cuda?</h4>
+<p><strong>CUDA</strong> is a parallel computing platform and programming model developed by NVIDIA, enabling developers to accelerate their applications by harnessing the power of GPU accelerators.</p>
+<p>The Practical examples in the demo will use CUDA.</p>
+<h4 id="how-to-setup-cuda-on-your-machine">How to Setup Cuda on Your Machine</h4>
+<p>To setup CUDA on your machine you can follow these steps.</p>
+<ul>
+<li>
+<p>Download <a href="https://developer.nvidia.com/cuda-downloads?ref=journal.hexmos.com">CUDA</a></p>
+</li>
+<li>
+<p>From the above link download the base installer as well as the driver installer<br>
+从上面的链接下载基本安装程序以及驱动程序安装程序</p>
+</li>
+<li>
+<p>Go to .bashrc in home folder<br>
+转到主文件夹中的.bashrc</p>
+</li>
+<li>
+<p>Add the following lines below<br>
+在下面添加以下行</p>
+</li>
+<li>
+<p><code>export PATH=&quot;/usr/local/cuda-12.3/bin:$PATH&quot;</code></p>
+</li>
+<li>
+<p><code>export LD_LIBRARY_PATH=&quot;/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH&quot;</code></p>
+</li>
+<li>
+<p>Execute the following commands<br>
+执行以下命令</p>
+</li>
+<li>
+<p><code>sudo apt-get install cuda-toolkit</code></p>
+</li>
+<li>
+<p><code>sudo apt-get install nvidia-gds</code></p>
+</li>
+<li>
+<p>Reboot the system for the changes to take effect<br>
+重新启动系统以使更改生效</p>
+</li>
+</ul>
+<h4 id="basic-commands-to-use">Basic Commands to Use</h4>
+<p>要使用的基本命令</p>
+<p>Once you have CUDA installed, here are some helpful commands.<br>
+一旦你安装了CUDA，这里有一些有用的命令。</p>
+<p><code>lspci | grep VGA</code></p>
+<p>The purpose of this command is to identify and list the GPUs in your system.此命令的目的是识别和列出系统中的GPU。 <img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/ea108a4de53720d8e4de22247f92b43481a000cfe41026826e52f4af020b9c0f.png" alt="Alt text"></p>
+<p><code>nvidia-smi</code></p>
+<p>It stands for &ldquo;NVIDIA System Management Interface&rdquo; It provides detailed information about the NVIDIA GPUs in your system, including utilization, temperature, memory usage and more.<br>
+它代表“NVIDIA系统管理接口”它提供有关系统中NVIDIA GPU的详细信息，包括利用率、温度、内存使用等。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/b467adbefdfe4fced1552ca63134994c2924dc648955adb585c80d1a6356f10f.png" alt="Alt text"></p>
+<p><code>sudo lshw -C display</code></p>
+<p>The purpose is to provide detailed information about the display controllers in your system, including graphics cards.目的是提供有关系统中显示控制器（包括图形卡）的详细信息。 <img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/0af5ca02e576f5da48a561ebffb4bd20e4051899cb1b1e69caca78aeff58cff7.png" alt="Alt text"></p>
+<p><code>inxi -G</code></p>
+<p>This command provides information about the graphics subsystem, including details about the GPU and the display.此命令提供有关图形子系统的信息，包括有关GPU和显示器的详细信息。 <img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/8352bf05d3be3b8085e837de0f69f244ab6c34041c6b462cf78513fcae6373c0.png" alt="Alt text"></p>
+<p><code>sudo hwinfo --gfxcard</code></p>
+<p>Its purpose is to obtain detailed information about the graphics cards in your system.<br>
+其目的是获取有关系统中图形卡的详细信息。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/70fa1b931593c213a1a949dbc700d47cca2e933cee331d63e03e0806d6327baa.png" alt="Alt text"></p>
+<h3 id="get-started-with-the-cuda-framework">Get Started with the Cuda Framework</h3>
+<p>Cuda框架入门</p>
+<p>As we have installed the CUDA Framework, let&rsquo;s start executing operations that showcases its functionality.<br>
+既然我们已经安装了CUDA框架，让我们开始执行展示其功能的操作。</p>
+<h4 id="array-addition-problem数组加法问题">Array Addition Problem 数组加法问题</h4>
+<p>A suitable problem to demonstrate the parallelization of GPUs is the <strong>Array addition problem</strong>.<br>
+演示GPU并行化的一个合适的问题是数组加法问题。</p>
+<p>Consider the following arrays:<br>
+考虑以下数组：</p>
+<ul>
+<li>
+<p>Array A = [1,2,3,4,5,6]<br>
+数组A = [1，2，3，4，5，6]</p>
+</li>
+<li>
+<p>Array B = [7,8,9,10,11,12]<br>
+数组B = [7，8，9，10，11，12]</p>
+</li>
+<li>
+<p>We need to store the sum of each element and store it in Array C.<br>
+我们需要存储每个元素的和，并将其存储在数组C中。</p>
+</li>
+<li>
+<p>Like C = [1+7,2+8,3+9,4+10,5+11,6+12] = [8,10,12,14,16,18]<br>
+如C = [1+ 7，2 + 8，3 + 9，4 + 10，5 + 11，6 +12] = [8，10，12，14，16，18]</p>
+</li>
+<li>
+<p>If the CPU is to execute such operation, it would be executing the operation like the below code.<br>
+如果CPU要执行这样的操作，它将像下面的代码一样执行操作。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">#include &lt;stdio.h&gt;
+</span></span><span class="line"><span class="cl">int a[] = {1,2,3,4,5,6};
+</span></span><span class="line"><span class="cl">int b[] = {7,8,9,10,11,12};
+</span></span><span class="line"><span class="cl">int c[6];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">int main() {
+</span></span><span class="line"><span class="cl">    int N = 6;  // Number of elements
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    for (int i = 0; i &lt; N; i++) {
+</span></span><span class="line"><span class="cl">        c[i] = a[i] + b[i];
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    for (int i = 0; i &lt; N; i++) {
+</span></span><span class="line"><span class="cl">        printf(&#34;c[%d] = %d&#34;, i, c[i]);
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The previous method involves traversing the array elements one by one and performing the additions sequentially. However, when dealing with a <strong>substantial volume of numbers</strong>, this approach becomes sluggish due to its <strong>sequential nature</strong>.<br>
+前面的方法涉及逐个遍历数组元素并顺序执行加法。然而，当处理大量的数字时，这种方法由于其顺序性而变得缓慢。</p>
+<p>To address this limitation, GPUs offer a solution by <strong>parallelizing the addition process</strong>. Unlike CPUs, which execute operations one after the other, GPUs can concurrently perform multiple additions.<br>
+为了解决这个问题，GPU提供了一个并行加法过程的解决方案。与一个接一个地执行操作的CPU不同，GPU可以同时执行多个加法。</p>
+<p>For instance, the operations 1+7, 2+8, 3+9, 4+10, 5+11 and 6+12 can be executed simultaneously through parallelization with the assistance of a GPU.<br>
+例如，操作1+7、2+8、3+9、4+10、5+11和6+12可以在GPU的辅助下通过并行化同时执行。</p>
+<p>Utilizing CUDA, the code to achieve this parallelized addition is as follows:<br>
+利用CUDA，实现这种并行加法的代码如下：</p>
+<p>We will use a kernel file (.cu) for the demonstration.<br>
+我们将使用内核文件（.cu）进行演示。</p>
+<p>Let&rsquo;s go through the code one by one.<br>
+让我们一个一个地检查代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">__global__ void vectorAdd(int* a, int* b, int* c)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    int i = threadIdx.x;
+</span></span><span class="line"><span class="cl">    c[i] = a[i] + b[i];
+</span></span><span class="line"><span class="cl">    return;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><code>__global__</code> specifier indicates that this function is a kernel function, which will be called on the GPU.<br>
+<code>__global__</code> 说明符表示此函数是内核函数，将在GPU上调用。</p>
+</li>
+<li>
+<p><code>vectorAdd</code> takes three integer pointers (a, b, and c) as arguments, representing vectors to be added.<br>
+<code>vectorAdd</code> 将三个整数指针（a、B和c）作为参数，表示要相加的向量。</p>
+</li>
+<li>
+<p><code>threadIdx.x</code> retrieves the index of the current thread (in a one-dimensional grid).<br>
+<code>threadIdx.x</code> 检索当前线程的索引（在一维网格中）。</p>
+</li>
+<li>
+<p>The sum of the corresponding elements from vectors a and b is stored in vector c.<br>
+来自向量a和B的对应元素的和存储在向量c中。</p>
+</li>
+</ul>
+<p>Now lets go through the main function.<br>
+现在让我们来看看main函数。</p>
+<p>Pointers <code>cudaA</code>, <code>cudaB</code> and <code>cudaC</code> are created to point to memory on the GPU.<br>
+创建指针 <code>cudaA</code> 、 <code>cudaB</code> 和 <code>cudaC</code> 以指向GPU上的存储器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// Uses CUDA to use functions that parallelly calculates the addition
+</span></span><span class="line"><span class="cl">int main(){
+</span></span><span class="line"><span class="cl">    int a[] = {1,2,3};
+</span></span><span class="line"><span class="cl">    int b[] = {4,5,6};
+</span></span><span class="line"><span class="cl">    int c[sizeof(a) / sizeof(int)] = {0};
+</span></span><span class="line"><span class="cl">    // Create pointers into the GPU
+</span></span><span class="line"><span class="cl">    int* cudaA = 0;
+</span></span><span class="line"><span class="cl">    int* cudaB = 0;
+</span></span><span class="line"><span class="cl">    int* cudaC = 0;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Using <code>cudaMalloc</code>, memory is allocated on the GPU for the vectors cudaA, cudaB, and cudaC.<br>
+使用 <code>cudaMalloc</code> ，在GPU上为向量cudaA、cudaB和cudaC分配内存。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// Allocate memory in the GPU
+</span></span><span class="line"><span class="cl">cudaMalloc(&amp;cudaA,sizeof(a));
+</span></span><span class="line"><span class="cl">cudaMalloc(&amp;cudaB,sizeof(b));
+</span></span><span class="line"><span class="cl">cudaMalloc(&amp;cudaC,sizeof(c));
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The content of vectors a and b is copied from the host to the GPU using <code>cudaMemcpy</code>.<br>
+使用 <code>cudaMemcpy</code> 将向量a和B的内容从主机复制到GPU。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// Copy the vectors into the gpu
+</span></span><span class="line"><span class="cl">cudaMemcpy(cudaA, a, sizeof(a), cudaMemcpyHostToDevice);
+</span></span><span class="line"><span class="cl">cudaMemcpy(cudaB, b, sizeof(b), cudaMemcpyHostToDevice);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The kernel function <code>vectorAdd</code> is launched with one block and a number of threads equal to the size of the vectors.<br>
+启动内核函数 <code>vectorAdd</code> 时使用一个块和与向量大小相等的线程数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// Launch the kernel with one block and a number of threads equal to the size of the vectors
+</span></span><span class="line"><span class="cl">vectorAdd &lt;&lt;&lt;1, sizeof(a) / sizeof(a[0])&gt;&gt;&gt; (cudaA, cudaB, cudaC);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The result vector <code>cudaC</code> is copied from the GPU back to the host.<br>
+将结果向量 <code>cudaC</code> 从GPU复制回主机。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// Copy the result vector back to the host
+</span></span><span class="line"><span class="cl">cudaMemcpy(c, cudaC, sizeof(c), cudaMemcpyDeviceToHost);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>We can then print the results as usual<br>
+然后我们可以像往常一样打印结果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">    // Print the result
+</span></span><span class="line"><span class="cl">    for (int i = 0; i &lt; sizeof(c) / sizeof(int); i++)
+</span></span><span class="line"><span class="cl">    {
+</span></span><span class="line"><span class="cl">        printf(&#34;c[%d] = %d&#34;, i, c[i]);
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For executing this code, we will use <code>nvcc</code> command.<br>
+为了执行此代码，我们将使用 <code>nvcc</code> 命令。</p>
+<p>We will get the output as<br>
+我们将得到输出为</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/144c2193b0d5ad71eb7bd4da490534fb278ed174df6ec8c6411b039f16757116.png" alt="GPU Output"></p>
+<p>Here&rsquo;s the <a href="https://github.com/RijulTP/GPUToolkit/tree/main/array-addition?ref=journal.hexmos.com">full code</a> for your reference.<br>
+下面是完整的代码供您参考。</p>
+<h4 id="optimize-image-generation-in-python-using-the-gpu">Optimize Image Generation in Python Using the GPU</h4>
+<p>使用GPU在Python中优化图像生成</p>
+<ul>
+<li>
+<p>This section explores the optimization of performance-intensive tasks, such as image generation, using GPU processing.<br>
+本节探讨使用GPU处理优化性能密集型任务，例如图像生成。</p>
+</li>
+<li>
+<p><strong>Mandelbrot set</strong> is a mathematical construct that forms intricate visual patterns based on the behavior of specific numbers in a prescribed equation. Generating one is a resource intensive operation.<br>
+曼德尔布罗特集是一种数学构造，它根据指定等式中特定数字的行为形成复杂的视觉模式。生成一个是资源密集型操作。</p>
+</li>
+<li>
+<p>In the following code snippet, you can observe the conventional method of generating a Mandelbrot set using CPU processing, which is slow.<br>
+在下面的代码片段中，您可以观察到使用CPU处理生成Mandelbrot集的传统方法，这种方法很慢。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Import necessary libraries
+</span></span><span class="line"><span class="cl">from matplotlib import pyplot as plt
+</span></span><span class="line"><span class="cl">import numpy as np
+</span></span><span class="line"><span class="cl">from pylab import imshow, show
+</span></span><span class="line"><span class="cl">from timeit import default_timer as timer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Function to calculate the Mandelbrot set for a given point (x, y)
+</span></span><span class="line"><span class="cl">def mandel(x, y, max_iters):
+</span></span><span class="line"><span class="cl">    c = complex(x, y)
+</span></span><span class="line"><span class="cl">    z = 0.0j
+</span></span><span class="line"><span class="cl">    # Iterate to check if the point is in the Mandelbrot set
+</span></span><span class="line"><span class="cl">    for i in range(max_iters):
+</span></span><span class="line"><span class="cl">        z = z*z + c
+</span></span><span class="line"><span class="cl">        if (z.real*z.real + z.imag*z.imag) &gt;= 4:
+</span></span><span class="line"><span class="cl">            return i
+</span></span><span class="line"><span class="cl">    # If within the maximum iterations, consider it part of the set
+</span></span><span class="line"><span class="cl">    return max_iters
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Function to create the Mandelbrot fractal within a specified region
+</span></span><span class="line"><span class="cl">def create_fractal(min_x, max_x, min_y, max_y, image, iters):
+</span></span><span class="line"><span class="cl">    height = image.shape[0]
+</span></span><span class="line"><span class="cl">    width = image.shape[1]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Calculate pixel sizes based on the specified region
+</span></span><span class="line"><span class="cl">    pixel_size_x = (max_x - min_x) / width
+</span></span><span class="line"><span class="cl">    pixel_size_y = (max_y - min_y) / height
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Iterate over each pixel in the image and compute the Mandelbrot value
+</span></span><span class="line"><span class="cl">    for x in range(width):
+</span></span><span class="line"><span class="cl">        real = min_x + x * pixel_size_x
+</span></span><span class="line"><span class="cl">        for y in range(height):
+</span></span><span class="line"><span class="cl">            imag = min_y + y * pixel_size_y
+</span></span><span class="line"><span class="cl">            color = mandel(real, imag, iters)
+</span></span><span class="line"><span class="cl">            image[y, x] = color
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Create a blank image array for the Mandelbrot set
+</span></span><span class="line"><span class="cl">image = np.zeros((1024, 1536), dtype=np.uint8)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Record the start time for performance measurement
+</span></span><span class="line"><span class="cl">start = timer()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Generate the Mandelbrot set within the specified region and iterations
+</span></span><span class="line"><span class="cl">create_fractal(-2.0, 1.0, -1.0, 1.0, image, 20)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Calculate the time taken to create the Mandelbrot set
+</span></span><span class="line"><span class="cl">dt = timer() - start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Print the time taken to generate the Mandelbrot set
+</span></span><span class="line"><span class="cl">print(&#34;Mandelbrot created in %f s&#34; % dt)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Display the Mandelbrot set using matplotlib
+</span></span><span class="line"><span class="cl">imshow(image)
+</span></span><span class="line"><span class="cl">show()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above code produces the output in <code>4.07</code> seconds.<br>
+上面的代码在 <code>4.07</code> 秒内产生输出。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/14af8fd709215ad96688a3364deefea9cfc2fa13497810587106cef04c5a413c.png" alt="Mandelbrot without GPU"></p>
+<ul>
+<li>
+<p>To make this faster, we can parallelize the code with GPU by using <a href="https://numba.pydata.org/?ref=journal.hexmos.com">Numba library</a>, Lets see how its done.<br>
+为了使这更快，我们可以通过使用Numba库将代码与GPU并行化，让我们看看它是如何完成的。</p>
+</li>
+<li>
+<p>We will import Just-In-Time compilation, CUDA for GPU acceleration, and other utilities from numba<br>
+我们将从numba导入即时编译、CUDA GPU加速和其他实用程序</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import numpy as np
+</span></span><span class="line"><span class="cl">from numba import jit, cuda, uint32, f8, uint8
+</span></span><span class="line"><span class="cl">from pylab import imshow, show
+</span></span><span class="line"><span class="cl">from timeit import default_timer as timer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>The <code>@jit</code> decorator signals Numba to perform <strong>Just-In-Time compilation</strong>, translating the Python code into machine code for improved execution speed.<br>
+<code>@jit</code> decorator向Numba发出信号，执行即时编译，将Python代码转换为机器码，以提高执行速度。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">@jit
+</span></span><span class="line"><span class="cl">def mandel(x, y, max_iters):
+</span></span><span class="line"><span class="cl">    c = complex(x, y)
+</span></span><span class="line"><span class="cl">    z = 0.0j
+</span></span><span class="line"><span class="cl">    for i in range(max_iters):
+</span></span><span class="line"><span class="cl">        z = z*z + c
+</span></span><span class="line"><span class="cl">        if (z.real*z.real + z.imag*z.imag) &gt;= 4:
+</span></span><span class="line"><span class="cl">            return i
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    return max_iters
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>mandel_gpu</code> is a GPU-compatible version of the mandel function created using cuda.jit. This allows the mandel logic to be offloaded to the GPU.<br>
+<code>mandel_gpu</code> 是使用cuda.jit创建的mandel函数的GPU兼容版本。这允许将mandel逻辑卸载到GPU。</li>
+<li>This is done by using <code>@cuda.jit</code> decorator along with specifying the data types (f8 for float, uint32 for unsigned integer) for the function arguments.<br>
+这是通过使用 <code>@cuda.jit</code> 装饰器沿着指定函数参数的数据类型（f8表示浮点数，uint32表示无符号整数）来完成的。</li>
+<li>The <code>device=True</code> argument indicates that this function will run on the GPU.<br>
+<code>device=True</code> 参数表示此函数将在GPU上运行。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">mandel_gpu = cuda.jit((f8, f8, uint32), device=True)(mandel)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>The mandel_kernel function is defined to be executed on the CUDA GPU. It is responsible for parallelizing the Mandelbrot set generation across GPU threads.<br>
+mandel_kernel函数被定义为在CUDA GPU上执行。它负责跨GPU线程并行化Mandelbrot集生成。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">@cuda.jit((f8, f8, f8, f8, uint8[:,:], uint32))
+</span></span><span class="line"><span class="cl">def mandel_kernel(min_x, max_x, min_y, max_y, image, iters):
+</span></span><span class="line"><span class="cl">    height = image.shape[0]
+</span></span><span class="line"><span class="cl">    width = image.shape[1]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    pixel_size_x = (max_x - min_x) / width
+</span></span><span class="line"><span class="cl">    pixel_size_y = (max_y - min_y) / height
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    startX, startY = cuda.grid(2)
+</span></span><span class="line"><span class="cl">    gridX = cuda.gridDim.x * cuda.blockDim.x
+</span></span><span class="line"><span class="cl">    gridY = cuda.gridDim.y * cuda.blockDim.y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    for x in range(startX, width, gridX):
+</span></span><span class="line"><span class="cl">        real = min_x + x * pixel_size_x
+</span></span><span class="line"><span class="cl">        for y in range(startY, height, gridY):
+</span></span><span class="line"><span class="cl">            imag = min_y + y * pixel_size_y
+</span></span><span class="line"><span class="cl">            image[y, x] = mandel_gpu(real, imag, iters)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Now, we can use the GPU-accelerated Mandelbrot set generation in the create_fractal_gpu function. This function allocates GPU memory, launches the GPU kernel (mandel_kernel), and copies the result back to the CPU.<br>
+现在，我们可以在create_fractal_gpu函数中使用GPU加速的Mandelbrot集生成。此函数分配GPU内存，启动GPU内核（mandel_kernel），并将结果复制回CPU。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">def create_fractal_gpu(min_x, max_x, min_y, max_y, image, iters):
+</span></span><span class="line"><span class="cl">    # Step 1: Allocate GPU memory for the image
+</span></span><span class="line"><span class="cl">    d_image = cuda.to_device(image)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 2: Define the number of threads and blocks for GPU parallelization
+</span></span><span class="line"><span class="cl">    threadsperblock = (16, 16)
+</span></span><span class="line"><span class="cl">    blockspergrid_x = int(np.ceil(image.shape[1] / threadsperblock[0]))
+</span></span><span class="line"><span class="cl">    blockspergrid_y = int(np.ceil(image.shape[0] / threadsperblock[1]))
+</span></span><span class="line"><span class="cl">    blockspergrid = (blockspergrid_x, blockspergrid_y)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 3: Measure the starting time
+</span></span><span class="line"><span class="cl">    start = timer()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 4: Launch the GPU kernel (mandel_kernel) to calculate the Mandelbrot set on the GPU
+</span></span><span class="line"><span class="cl">    mandel_kernel[blockspergrid, threadsperblock](min_x, max_x, min_y, max_y, d_image, iters)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 5: Wait for the GPU to finish its work (synchronize)
+</span></span><span class="line"><span class="cl">    cuda.synchronize()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 6: Measure the time taken by GPU processing
+</span></span><span class="line"><span class="cl">    dt = timer() - start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 7: Copy the results back from GPU memory to the CPU
+</span></span><span class="line"><span class="cl">    d_image.copy_to_host(image)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Step 8: Display the Mandelbrot set image
+</span></span><span class="line"><span class="cl">    print(&#34;Mandelbrot created on GPU in %f s&#34; % dt)
+</span></span><span class="line"><span class="cl">    imshow(image)
+</span></span><span class="line"><span class="cl">    show()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above code gets executed in <code>0.0046 seconds</code>. Which is a lot faster the CPU Based code we had earlier.<br>
+上面的代码在 <code>0.0046 seconds</code> 中执行。这比我们之前使用的基于CPU的代码快得多。</p>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/4d62577a332918dc7b5fefc924f27aa6c62599e101e1494184860b82e0e8ddd2.png" alt="Mandelbrot with GPU"></p>
+<p>Here&rsquo;s the <a href="https://github.com/RijulTP/GPUToolkit/tree/main/mandelbrot?ref=journal.hexmos.com">full code</a> for your reference.<br>
+下面是完整的代码供您参考。</p>
+<h4 id="training-a-cat-vs-dog-neural-network-using-the-gpu">Training a Cat VS Dog Neural Network Using the GPU</h4>
+<p>使用GPU训练猫与狗神经网络</p>
+<p>One of the hot topics we see nowadays is how GPUs are getting used in AI, So to demonstrate that we will be creating a <strong>neural network</strong> to differentiate between cats and dogs.<br>
+我们现在看到的热门话题之一是GPU如何在AI中使用，所以为了证明我们将创建一个神经网络来区分猫和狗。</p>
+<p><strong>Prerequisites 先决条件</strong></p>
+<ul>
+<li>
+<p>CUDA</p>
+</li>
+<li>
+<p>Tensorflow -&gt; Can be installed via <code>pip install tensorflow[and-cuda]</code><br>
+Tensorflow -&gt;可以通过 <code>pip install tensorflow[and-cuda]</code> 安装</p>
+</li>
+<li>
+<p>We will use a data set of cats and dogs from <a href="https://www.kaggle.com/competitions/dogs-vs-cats/overview?ref=journal.hexmos.com">kaggle</a><br>
+我们将使用来自Kaggle的猫和狗的数据集</p>
+</li>
+<li>
+<p>Once you have downloaded it, Unzip them, organize the pictures of cats and dogs in the training folder into different subfolders, Like so.<br>
+一旦你下载了它，解压缩它们，组织训练文件夹中的猫和狗的图片到不同的文件夹，像这样.</p>
+</li>
+</ul>
+<p><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/47b0cc05fa99283bd8dcd39a801809bdf5521a285df558c1436460ddf4d1ebdd.png" alt="CNN File Structure"></p>
+<p>This is the code we will use for training and using the Cat vs Dog Model.<br>
+这是我们将用于训练和使用猫对狗模型的代码。</p>
+<p>The below code uses a convolutional neural network, you can <a href="https://www.analyticsvidhya.com/blog/2021/06/beginner-friendly-project-cat-and-dog-classification-using-cnn/?ref=journal.hexmos.com">read more details about it</a><br>
+下面的代码使用了卷积神经网络，你可以阅读更多关于它的细节</p>
+<p><strong>Importing Libraries 图书馆</strong></p>
+<ul>
+<li>pandas and numpy for data manipulation.<br>
+pandas和numpy用于数据操作。</li>
+<li>Sequential for creating a linear stack of layers in the neural network.<br>
+用于在神经网络中创建线性层堆栈的顺序。</li>
+<li>Convolution2D, MaxPooling2D, Dense, and Flatten are layers used in building the Convolutional Neural Network (CNN).<br>
+卷积2D，MaxPooling2D，Dense和Flatten是用于构建卷积神经网络（CNN）的层。</li>
+<li>ImageDataGenerator for real-time data augmentation during training.<br>
+ImageDataGenerator用于在训练过程中进行实时数据增强。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import pandas as pd
+</span></span><span class="line"><span class="cl">import numpy as np
+</span></span><span class="line"><span class="cl">from keras.models import Sequential
+</span></span><span class="line"><span class="cl">from keras.layers import Convolution2D, MaxPooling2D, Dense, Flatten
+</span></span><span class="line"><span class="cl">from keras.preprocessing.image import ImageDataGenerator
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Initializing the Convolutional Neural Network<br>
+初始化卷积神经网络</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">classifier = Sequential()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Loading the data for training<br>
+加载用于训练的数据</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">train_datagen = ImageDataGenerator(
+</span></span><span class="line"><span class="cl">    rescale=1./255,
+</span></span><span class="line"><span class="cl">    shear_range=0.2,
+</span></span><span class="line"><span class="cl">    zoom_range=0.2,
+</span></span><span class="line"><span class="cl">    horizontal_flip=True
+</span></span><span class="line"><span class="cl">)
+</span></span><span class="line"><span class="cl">test_datagen = ImageDataGenerator(rescale=1./255)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">training_set = train_datagen.flow_from_directory(
+</span></span><span class="line"><span class="cl">    &#39;./training_set&#39;,
+</span></span><span class="line"><span class="cl">    target_size=(64, 64),
+</span></span><span class="line"><span class="cl">    batch_size=32,
+</span></span><span class="line"><span class="cl">    class_mode=&#39;binary&#39;
+</span></span><span class="line"><span class="cl">)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">test_set = test_datagen.flow_from_directory(
+</span></span><span class="line"><span class="cl">    &#39;./test_set&#39;,
+</span></span><span class="line"><span class="cl">    target_size=(64, 64),
+</span></span><span class="line"><span class="cl">    batch_size=32,
+</span></span><span class="line"><span class="cl">    class_mode=&#39;binary&#39;
+</span></span><span class="line"><span class="cl">)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Building the CNN Architecture<br>
+构建CNN架构</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">classifier.add(Convolution2D(32, 3, 3, input_shape=(64, 64, 3), activation=&#39;relu&#39;))
+</span></span><span class="line"><span class="cl">classifier.add(MaxPooling2D(pool_size=(2, 2)))
+</span></span><span class="line"><span class="cl">classifier.add(Flatten())
+</span></span><span class="line"><span class="cl">classifier.add(Dense(units=128, activation=&#39;relu&#39;))
+</span></span><span class="line"><span class="cl">classifier.add(Dense(units=1, activation=&#39;sigmoid&#39;))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Compiling the model 编译模型</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">classifier.compile(optimizer=&#39;adam&#39;, loss=&#39;binary_crossentropy&#39;, metrics=[&#39;accuracy&#39;])
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Training the model 训练模型</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">classifier.fit(training_set, epochs=25, validation_data=test_set, validation_steps=2000)
+</span></span><span class="line"><span class="cl">classifier.save(&#39;trained_model.h5&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Once we have trained the model, The model is stored in a .h5 file using <code>classifier.save</code><br>
+一旦我们训练了模型，模型将使用 <code>classifier.save</code> 存储在.h5文件中。</p>
+<p>In the below code, we will use this <code>trained_model.h5</code> file to recognize cats and dogs.<br>
+在下面的代码中，我们将使用这个 <code>trained_model.h5</code> 文件来识别猫和狗。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">import numpy as np
+</span></span><span class="line"><span class="cl">from keras.models import load_model
+</span></span><span class="line"><span class="cl">import keras.utils as image
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def predict_image(imagepath, classifier):
+</span></span><span class="line"><span class="cl">    predict = image.load_img(imagepath, target_size=(64, 64))
+</span></span><span class="line"><span class="cl">    predict_modified = image.img_to_array(predict)
+</span></span><span class="line"><span class="cl">    predict_modified = predict_modified / 255
+</span></span><span class="line"><span class="cl">    predict_modified = np.expand_dims(predict_modified, axis=0)
+</span></span><span class="line"><span class="cl">    result = classifier.predict(predict_modified)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if result[0][0] &gt;= 0.5:
+</span></span><span class="line"><span class="cl">        prediction = &#39;dog&#39;
+</span></span><span class="line"><span class="cl">        probability = result[0][0]
+</span></span><span class="line"><span class="cl">        print(&#34;Probability = &#34; + str(probability))
+</span></span><span class="line"><span class="cl">        print(&#34;Prediction = &#34; + prediction)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        prediction = &#39;cat&#39;
+</span></span><span class="line"><span class="cl">        probability = 1 - result[0][0]
+</span></span><span class="line"><span class="cl">        print(&#34;Probability = &#34; + str(probability))
+</span></span><span class="line"><span class="cl">        print(&#34;Prediction = &#34; + prediction)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Load the trained model
+</span></span><span class="line"><span class="cl">loaded_classifier = load_model(&#39;trained_model.h5&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Example usage
+</span></span><span class="line"><span class="cl">dog_image = &#34;dog.jpg&#34;
+</span></span><span class="line"><span class="cl">predict_image(dog_image, loaded_classifier)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat_image = &#34;cat.jpg&#34;
+</span></span><span class="line"><span class="cl">predict_image(cat_image, loaded_classifier)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Let&rsquo;s see the output让我们看看输出 <img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/d546542af4055bc7163bc49055d5a623a44ad0cc3022d02d0aaa791b9a83d75b.png" alt="Alt text"></p>
+<p>Here&rsquo;s the <a href="https://github.com/RijulTP/GPUToolkit/tree/main/neural-network?ref=journal.hexmos.com">full code</a> for your reference<br>
+下面是完整的代码供您参考</p>
+<h3 id="conclusion结论">Conclusion 结论</h3>
+<p>In the upcoming AI age, GPUs are not a thing to be ignored, We should be more aware of its capabilities.<br>
+在即将到来的AI时代，GPU是一个不容忽视的东西，我们应该更加了解它的能力。</p>
+<p>As we transition from traditional <strong>sequential algorithms</strong> to increasingly prevalent <strong>parallelized algorithms</strong>, GPUs emerge as indispensable tools that empower the acceleration of complex computations. The parallel processing prowess of GPUs is particularly advantageous in handling the massive datasets and intricate neural network architectures inherent to artificial intelligence and machine learning tasks.<br>
+随着我们从传统的顺序算法过渡到越来越流行的并行算法，GPU成为加速复杂计算的不可或缺的工具。GPU的并行处理能力在处理人工智能和机器学习任务所固有的大规模数据集和复杂的神经网络架构方面特别有利。</p>
+<p>Furthermore, the role of GPUs extends beyond traditional machine learning domains, finding applications in scientific research, simulations, and data-intensive tasks. The parallel processing capabilities of GPUs have proven instrumental in addressing challenges across diverse fields, ranging from drug discovery and climate modelling to financial simulations.<br>
+此外，GPU的作用超出了传统的机器学习领域，在科学研究、模拟和数据密集型任务中找到了应用。GPU的并行处理能力已被证明有助于解决从药物发现和气候建模到金融模拟等不同领域的挑战。</p>
+<h3 id="reference参考">Reference 参考</h3>
+<ul>
+<li><a href="https://noahgift.github.io/cloud-data-analysis-at-scale/topics/end-of-moores-law.html?ref=journal.hexmos.com">Using Numba for mandelbrot generation<br>
+使用Numba生成mandelbrot</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2021/06/beginner-friendly-project-cat-and-dog-classification-using-cnn/?ref=journal.hexmos.com">Using Convolutional Neural Networks<br>
+使用卷积神经网络</a></li>
+</ul>
+<p><a href="https://twitter.com/HexmosTech?ref=journal.hexmos.com"><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/e706462dc4b473f96955889657e3893beca1e6cba15daa89dca171d732709b87.png" alt="Twitter"></a></p>
+<p><a href="https://hexmos.com/?ref=journal.hexmos.com"><img src="https://journal-wa6509js.s3.ap-south-1.amazonaws.com/62b98356b4386f9c312f586af9c3606f9bd67f7116b4031c1bf2f5fb0fc73e0a.png" alt="Hexmos"></a></p>
+<p><a href="https://news.ycombinator.com/item?id=38240421&amp;ref=journal.hexmos.com">Hackernews post</a></p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7129475708971618305?ref=journal.hexmos.com">Linkedin post  Linkedin帖子</a></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/information/24-2-27%E4%BB%A4%E4%BA%BA%E6%83%8A%E8%89%B3%E7%9A%841700%E7%A7%8D%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86%E5%8A%A8%E6%80%81%E5%9B%BE-%E7%9F%A5%E4%B9%8E/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">令人惊艳的1700种机械原理动态图 - 知乎</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/information/24-2-28%E4%B8%BA%E8%87%AA%E5%B7%B1%E6%80%9D%E8%80%83%E5%92%8C%E5%81%9A%E7%94%9F%E6%B4%BB%E5%81%9A%E5%BE%97%E5%BE%88%E5%A5%BD%E6%92%AD%E5%AE%A2---thinking-and-doing-for-yourself-life-done-differently-podcast/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

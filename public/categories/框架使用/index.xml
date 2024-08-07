@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>框架使用 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 框架使用 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Feb 2020 20:58:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/categories/%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>laravel 简介</title>
+      <link>https://aming.xyz/post/laravel/</link>
+      <pubDate>Fri, 14 Feb 2020 20:58:44 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/laravel/</guid>
+      <description>&lt;p&gt;
+&lt;strong&gt;php&lt;/strong&gt; 用来处理动态性的网页的， &lt;strong&gt;laravel&lt;/strong&gt; 是 &lt;strong&gt;php&lt;/strong&gt; 的工具集，扩展了功能。
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+特点： 所有的 &lt;strong&gt;URL&lt;/strong&gt; 访问必须先定义路由规则。
+&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vue.js 简介</title>
+      <link>https://aming.xyz/post/vuejs/</link>
+      <pubDate>Wed, 12 Feb 2020 05:44:50 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/vuejs/</guid>
+      <description>&lt;p&gt;
+我们看一张 &lt;strong&gt;报纸&lt;/strong&gt; ，然后版面栏目不是很多嘛，比如这块是实事新闻，那块是娱乐新闻，东西很多放在一起管理就麻烦，分块各人管一小块就清晰点。   
+vuejs 就是干这事的，它提供了版面接口(版面成了一个容易扩展的独立对象)，使得报纸的内容更容易修改(动态化)。
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+就是把报纸的 &lt;strong&gt;版面结构&lt;/strong&gt; 和 &lt;strong&gt;版面内容&lt;/strong&gt; 分离开来，使 &lt;strong&gt;版面结构&lt;/strong&gt;  不动的情况下  &lt;strong&gt;版面内容&lt;/strong&gt;  可以随意变化。
+&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>jQuery简介</title>
+      <link>https://aming.xyz/post/jquery/</link>
+      <pubDate>Tue, 11 Feb 2020 20:46:44 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/jquery/</guid>
+      <description>&lt;p&gt;
+jQuery是一个JavaScript库，主要对 &lt;strong&gt;DOM&lt;/strong&gt; 进行了封装， 例如对节点的遍历和操作，事件
+处理，动画和Ajax等，使得操作起来极为简化，当然自己也扩展了一些功能。
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+相当与原来用 &lt;strong&gt;DOM&lt;/strong&gt; 操作的方式都可以用 &lt;strong&gt;jQuery&lt;/strong&gt; 方式了
+&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Djangoes on 知识</title>
+    <link>https://aming.xyz/django/</link>
+    <description>Recent content in Djangoes on 知识</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Mar 2024 07:50:13 +0800</lastBuildDate><atom:link href="https://aming.xyz/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django 模型  菜鸟教程</title>
+      <link>https://aming.xyz/django/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 19 Mar 2024 07:50:13 +0800</pubDate>
+      
+      <guid>https://aming.xyz/django/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</guid>
+      <description>Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装</description>
+    </item>
+    
+  </channel>
+</rss>

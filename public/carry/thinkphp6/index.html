@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>thinkphp6 - 安静-放松</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。
+" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/carry/thinkphp6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="thinkphp6" />
+<meta property="og:description" content="ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/carry/thinkphp6/" /><meta property="article:section" content="carry" />
+<meta property="article:published_time" content="2023-11-19T13:44:59+08:00" />
+<meta property="article:modified_time" content="2023-11-19T13:44:59+08:00" />
+<meta itemprop="name" content="thinkphp6">
+<meta itemprop="description" content="ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。"><meta itemprop="datePublished" content="2023-11-19T13:44:59+08:00" />
+<meta itemprop="dateModified" content="2023-11-19T13:44:59+08:00" />
+<meta itemprop="wordCount" content="1176">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="thinkphp6"/>
+<meta name="twitter:description" content="ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">放松，安静 ，搬运工 2023</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/carry/">
+        <li class="mobile-menu-item">搬运工</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">放松，安静 ，搬运工 2023</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/carry/">搬运工</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">thinkphp6</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-11-19 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%BC%96%E7%A8%8B/"> 编程 </a>
+            </div>
+          <span class="more-meta"> 约 1176 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#主要特性">主要特性</a></li>
+        <li><a href="#安装">安装</a>
+          <ul>
+            <li><a href="#安装稳定版">安装稳定版</a></li>
+            <li><a href="#开启调试模式">开启调试模式</a></li>
+            <li><a href="#测试运行">测试运行</a></li>
+          </ul>
+        </li>
+        <li><a href="#开发规范">开发规范</a>
+          <ul>
+            <li><a href="#命名规范">命名规范</a></li>
+            <li><a href="#目录结构">目录结构</a></li>
+            <li><a href="#配置定义">配置定义</a></li>
+            <li><a href="#获取配置参数">获取配置参数</a></li>
+          </ul>
+        </li>
+        <li><a href="#架构">架构</a>
+          <ul>
+            <li><a href="#请求流程">请求流程</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。</p>
+<h2 id="主要特性">主要特性</h2>
+<ol>
+<li><strong>OMR</strong> 组件独立</li>
+<li>事件系统</li>
+<li>支持容器 <strong>invoke</strong> 回调</li>
+<li>模板引擎</li>
+<li>SESSION 机制</li>
+<li>缓存及日志支持多通道</li>
+<li>引入 <strong>Filesystem</strong> 组件</li>
+<li>支持 <strong>Swoole</strong> 以及协程</li>
+</ol>
+<h2 id="安装">安装</h2>
+<h3 id="安装稳定版">安装稳定版</h3>
+<p>如果第一次安装，切换到web根目录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">composer create-project topthink/think tp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果是之前已经安装过，则可以进入根目录进行 <strong>更新</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">composer update topthink/framework
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更新操作会删除 thinkphp 目录并重新下载安装新版本，但不会影响 <strong>app</strong> 目录，因此不要在核心框架目录添加任何应用代码或类库。</p>
+<h3 id="开启调试模式">开启调试模式</h3>
+<p>应用默认是部署模式，如需开启调试模式，可以在 /.env 环境文件，修改 APP_DEBUG 的值</p>
+<p>在代码中打开调试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">ini_set</span><span class="p">(</span><span class="s2">&#34;display_errors&#34;</span><span class="p">,</span> <span class="s2">&#34;On&#34;</span><span class="p">);</span><span class="c1">//打开错误提示
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">ini_set</span><span class="p">(</span><span class="s2">&#34;error_reporting&#34;</span><span class="p">,</span><span class="k">E_ALL</span><span class="p">);</span><span class="c1">//显示所有错误
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="测试运行">测试运行</h3>
+<p>运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">php think run
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在浏览器中输入地址</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://localhost:8000/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果 <strong>8000</strong> 端口被占用，则可以指定某个端口</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">php think run -p xxx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>实际部署中，应该绑定域名到 <strong>public</strong> 目录</p>
+<h2 id="开发规范">开发规范</h2>
+<h3 id="命名规范">命名规范</h3>
+<ol>
+<li>类（包含接口）文件采用 <strong>首字母大写</strong> 驼峰法命名，类名保持与文件名一致</li>
+<li>方法名，属性名使用<strong>首字母小写</strong> 的驼峰法。</li>
+<li>常量以大写字母和下划线命名，如 APP_PATH</li>
+<li>配置参数以小写字母和下划线命名, 如 url_route_on</li>
+<li>数据表和字段同样以小写字母和下划线命名，如 think_user</li>
+</ol>
+<h3 id="目录结构">目录结构</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">www WEB部署根目录或子目录 /
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/app/   应用目录
+</span></span><span class="line"><span class="cl">/app/controller/ 控制器目录
+</span></span><span class="line"><span class="cl">/app/model/ 模型目录
+</span></span><span class="line"><span class="cl">/app/common.php 公共函数文件
+</span></span><span class="line"><span class="cl">/app/event.php 事件定义文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/config  配置目录
+</span></span><span class="line"><span class="cl">/config/app.php 应用配置
+</span></span><span class="line"><span class="cl">/config/cache.php 缓存配置
+</span></span><span class="line"><span class="cl">/config/console.php 控制台配置
+</span></span><span class="line"><span class="cl">/config/database.php 数据库配置
+</span></span><span class="line"><span class="cl">/config/cookie.php Cookie.php 配置
+</span></span><span class="line"><span class="cl">/config/session.php Session配置
+</span></span><span class="line"><span class="cl">/config/view.php 视图配置
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/view 视图目录
+</span></span><span class="line"><span class="cl">/route  路由定义目录
+</span></span><span class="line"><span class="cl">/route/route.php 路由定义文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/public WEB目录(对外访问)
+</span></span><span class="line"><span class="cl">/public/index.php 入口文件
+</span></span><span class="line"><span class="cl">/public/router.php 快速测试文件
+</span></span><span class="line"><span class="cl">/public/.htaccess 用于 apache 的重写
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/extend 扩展类库目录
+</span></span><span class="line"><span class="cl">/runtime 应用的运行时目录 (可写，可定制)
+</span></span><span class="line"><span class="cl">/vendor Composer类库目录
+</span></span><span class="line"><span class="cl">/composer.json Composer定义文件
+</span></span><span class="line"><span class="cl">/LICENSE.txt 授权说明文件
+</span></span><span class="line"><span class="cl">/README.md 
+</span></span><span class="line"><span class="cl">/think  命令行入口文件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置定义">配置定义</h3>
+<p>可以直接在相应的全局配置或应用配置中增加或修改配置参数，如果你要增加额外的配置文件，直接放在配置目录即可（文件名小写）。</p>
+<p>由于架构原因，下面的配置只能在环境变量中修改</p>
+<table>
+    <tr>
+        <th>配置参数</th>
+        <th>描述</th>
+     </tr>
+      <tr>
+            <td>app_debug</td>
+            <td>应用调试模式</td>
+      </tr>
+        <tr>
+            <td>config_ext</td>
+            <td>配置文件后缀</td>
+    </tr>
+</table>
+<h3 id="获取配置参数">获取配置参数</h3>
+<p>获取环境变量</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">Env</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;database.username&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以直接在配置文件中使用环境变量函数进行本地环境和服务器环境的自动配置，如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">return</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;hostname&#39;</span><span class="o">=&gt;</span><span class="nx">Env</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;hostname&#39;</span><span class="p">,</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>get 的定义方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$name</span> <span class="o">=</span> <span class="k">null</span><span class="p">,</span> <span class="nv">$default</span><span class="o">=</span><span class="k">null</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nx">is_null</span><span class="p">(</span><span class="nv">$name</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$name</span><span class="o">=</span><span class="nx">strtoupper</span><span class="p">(</span><span class="nx">str_replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="nv">$name</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">[</span><span class="nv">$name</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$result</span><span class="o">=</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">[</span><span class="nv">$name</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nx">is_string</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">convert</span><span class="p">[</span><span class="nv">$result</span><span class="p">])){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">convert</span><span class="p">[</span><span class="nv">$result</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getEnv</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span><span class="nv">$default</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用 <strong>Config</strong> 类, use think\facade\Config;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取 config/app.php 文件的配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Config</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;app&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="架构">架构</h2>
+<h3 id="请求流程">请求流程</h3>
+<p>HTTP 请求流程，从用户发起请求到响应输出，大致如下</p>
+<ol>
+<li>载入 Composer 的自动加载 autoload 文件</li>
+<li>实例化系统应用基础类 think\App</li>
+<li>获取应用目录等相关路径信息</li>
+<li>加载全局的服务提供 provider.php 文件</li>
+<li>&hellip;</li>
+<li>加载环境变量文件 .env 和全局初始化文件</li>
+<li>判断应用模式</li>
+<li>注册异常处理
+&hellip;</li>
+<li>路由检测</li>
+<li>执行数据验证</li>
+<li>获取控制器实例</li>
+<li>执行响应对象的send 方法输出</li>
+<li>写入当前请求的日志信息</li>
+</ol>
+<p>模板引擎</p>
+<p>模板文件中可以使用一些特殊的模板标签，这些标签的解析通常由模板引擎负责实现。
+新版不再内置 <strong>think-template</strong> 模板引擎，如需使用，需要安装 <strong>think-view</strong> 扩展库。</p>
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/carry/%E9%AB%98%E6%95%88%E8%83%BD%E5%A3%AB%E7%9A%84%E4%B9%A0%E6%83%AF/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">高效能士的习惯</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/carry/%E5%8F%AF%E6%8B%96%E5%8A%A8%E5%AF%B9%E8%B1%A1/">
+            <span class="next-text nav-default">可拖动对象</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2023
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

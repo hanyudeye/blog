@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/javascript/</link>
+    <description>Recent content in JavaScript on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Feb 2020 18:47:24 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript 与 DOM简介</title>
+      <link>https://aming.xyz/technology/javascript/</link>
+      <pubDate>Tue, 11 Feb 2020 18:47:24 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/javascript/</guid>
+      <description>&lt;p&gt;
+&lt;strong&gt;Javascript&lt;/strong&gt; 是一个脚本语言，是一个小伙子用了半个月开发出来的，作为给网页做效果用的，源码会存到本地，然后浏览器来执行，是客户端的脚本。
+因为现在的网页已经作为 App 来用了，要写大量的 javascript 代码，所以 javascript 也在更新，加入了模块等功能，这样能够作为服务器脚本了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git,svn on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/gitsvn/</link>
+    <description>Recent content in git,svn on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Dec 2019 06:23:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/gitsvn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>版本控制简介</title>
+      <link>https://aming.xyz/post/vc/</link>
+      <pubDate>Wed, 25 Dec 2019 06:23:31 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/vc/</guid>
+      <description>&lt;p&gt;
+记录任何工程项目内各个模块的改动历程，并为每次改动编上序号
+&lt;/p&gt;
+&lt;p&gt;
+这玩意就像你的年纪一样，过了一年，给你的年纪加个一岁，不过这里加一个岁月的标签是看作者的任性的   
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+加了岁月的标签后(软件里叫版本号)，你可以返老还童了，想到哪个年纪就到哪个年纪，就像给你照个片，存个档一样，哪段日子过的痛苦了，回头重新过。
+&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information on 阿明</title>
+    <link>https://aming.xyz/information/</link>
+    <description>Recent content in Information on 阿明</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Aug 2024 15:40:07 +0800</lastBuildDate><atom:link href="https://aming.xyz/information/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github-action 的使用</title>
+      <link>https://aming.xyz/information/github-action/</link>
+      <pubDate>Wed, 07 Aug 2024 15:40:07 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/github-action/</guid>
+      <description>要创建一个Hugo站点并使用 GitHub Actions 部署到 GitHub Pages，你可以按照以下步骤进行设置。以下是一个完整的 GitHub Actions 配置文件示例： 1. 创建 Hugo 站点 如果你还没有 Hugo</description>
+    </item>
+    
+    <item>
+      <title>React 是什么</title>
+      <link>https://aming.xyz/information/react/</link>
+      <pubDate>Tue, 06 Aug 2024 21:47:04 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/react/</guid>
+      <description>react 是什么 : 是一个使用 javascript 来构建 DOM界面 的框架，开源，不用 html 超链接 刷新影响应用的体验。 这个框架提倡 界面组件化， 单向数据流 组件能保存状态(Sta</description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://aming.xyz/information/html/</link>
+      <pubDate>Wed, 26 Jun 2024 09:36:13 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/html/</guid>
+      <description>&lt;h1 id=&#34;html-教程&#34;&gt;HTML 教程&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>科技周刊第 2 期</title>
+      <link>https://aming.xyz/information/information2/</link>
+      <pubDate>Wed, 12 Jun 2024 07:48:44 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/information2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>每周资讯 第一期</title>
+      <link>https://aming.xyz/information/information1/</link>
+      <pubDate>Tue, 11 Jun 2024 10:51:27 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/information1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tailwind CSS (顺风)</title>
+      <link>https://aming.xyz/information/tailwind/</link>
+      <pubDate>Mon, 13 May 2024 10:51:27 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/tailwind/</guid>
+      <description>&lt;h1 id=&#34;tailwind-css&#34;&gt;Tailwind CSS&lt;/h1&gt;
+&lt;p&gt;Tailwind CSS 是一个强大的工具，用于快速构建现代网页界面，包括移动端样式。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>scss-best-practices-to-keep-in-mind</title>
+      <link>https://aming.xyz/information/8-scss-best-practices-to-keep-in-mind/</link>
+      <pubDate>Mon, 13 May 2024 10:39:40 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/8-scss-best-practices-to-keep-in-mind/</guid>
+      <description>SCSS 样式 1. 移动端优先 做响应式项目的时候，一般会先写 PC 版本的样式，但这会使移动端样式的书写变得特别痛苦。因此，我们应该先进行移动端样式的书写，在</description>
+    </item>
+    
+    <item>
+      <title>ps必备的快捷键大全（超详细） - 知乎</title>
+      <link>https://aming.xyz/information/ps%E5%BF%85%E5%A4%87%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8%E8%B6%85%E8%AF%A6%E7%BB%86-%E7%9F%A5%E4%B9%8E/</link>
+      <pubDate>Fri, 15 Mar 2024 07:21:14 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/ps%E5%BF%85%E5%A4%87%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8%E8%B6%85%E8%AF%A6%E7%BB%86-%E7%9F%A5%E4%B9%8E/</guid>
+      <description>mac 版 PS 将 Ctrl 替换为 CMD 即可 一、文件 新建CTRL+N 打开CTRL+O 打开为ALT+CTRL+O 关闭CTRL+W 保存CTRL+S 另存为CTRL+SH</description>
+    </item>
+    
+    <item>
+      <title>独立开发者</title>
+      <link>https://aming.xyz/information/24-3-7mezodawesome-indie-resources-for-independent-developers-to-make-money/</link>
+      <pubDate>Thu, 07 Mar 2024 09:36:13 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/24-3-7mezodawesome-indie-resources-for-independent-developers-to-make-money/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机生产力软件</title>
+      <link>https://aming.xyz/information/%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Fri, 29 Sep 2023 11:33:34 +0800</pubDate>
+      
+      <guid>https://aming.xyz/information/%E8%BD%AF%E4%BB%B6/</guid>
+      <description>查找工具 (按文件名) Everything: Windows下强大的文件搜索工具 Listary: Windows 下的文件搜索和应用启动工具 ulauncher: Linux 下具有同Listary 相似功能的工具 资源下载 m3u</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/information/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/information/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

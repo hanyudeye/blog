@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on 思维</title>
+    <link>https://aming.xyz/books/</link>
+    <description>Recent content in Books on 思维</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 May 2024 20:53:48 +0800</lastBuildDate><atom:link href="https://aming.xyz/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>https://aming.xyz/books/epub/</link>
+      <pubDate>Mon, 06 May 2024 20:53:48 +0800</pubDate>
+      
+      <guid>https://aming.xyz/books/epub/</guid>
+      <description>Key bindings | Key binding | Description | |&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;| | ~~ | Next link | | ~~ | Previous link | | ~H~ or ~[~ | Previous chapter | | ~L~ or ~]~ | Next chapter | | ~K/u~ | Scroll up | | ~J/d~ | Scroll down | | ~g m~ | Display metadata | | ~g r~ | Re-render document | | ~g t~ | Table of contents | | ~g v~ | View source | | ~g V~ | View content source |</description>
+    </item>
+    
+    <item>
+      <title>1984</title>
+      <link>https://aming.xyz/books/1984/</link>
+      <pubDate>Mon, 06 May 2024 19:47:50 +0800</pubDate>
+      
+      <guid>https://aming.xyz/books/1984/</guid>
+      <description>乔治•奥威尔代表作。刻画了人类在极权主义社会的生存状态，有若一个永不退色的警示标签，警醒世人提防这种预想中的黑暗成为现实。历经几十年，其生命</description>
+    </item>
+    
+  </channel>
+</rss>

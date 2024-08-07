@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>科学 on 知识</title>
+    <link>https://aming.xyz/categories/%E7%A7%91%E5%AD%A6/</link>
+    <description>Recent content in 科学 on 知识</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Dec 2023 04:31:55 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E7%A7%91%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科技发展趋向</title>
+      <link>https://aming.xyz/post/%E6%9C%AA%E6%9D%A5/</link>
+      <pubDate>Fri, 08 Dec 2023 04:31:55 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/%E6%9C%AA%E6%9D%A5/</guid>
+      <description>计算机科学： 计算机越来越智能化，懂得越来越多，用来代替或超越人所提供的能力。 大数据：世界上的 任何状态 都进行信息化，网络化。 生物科学 治病 寿命 基</description>
+    </item>
+    
+  </channel>
+</rss>

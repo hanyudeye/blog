@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/tech/</link>
+    <description>Recent content in tech on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Aug 2023 19:45:00 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编写代码片段</title>
+      <link>https://aming.xyz/post/%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%E6%AE%B5/</link>
+      <pubDate>Mon, 07 Aug 2023 19:45:00 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/%E7%BC%96%E5%86%99%E4%BB%A3%E7%A0%81%E6%AE%B5/</guid>
+      <description>命令 M-x yas-new-snippet M-x yas-visit-snippet-file 打开片段文件 M-x snippet-mode 语法 1 2 3 4 5 # key: snippet abbrev 代码片段缩写 # name: snippet name 代码段名称,它将显示在菜单中 # condition: snippet condition 则仅当条件代码的计算结果为某个非 nil</description>
+    </item>
+    
+  </channel>
+</rss>

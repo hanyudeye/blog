@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>todo on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/todo/</link>
+    <description>Recent content in todo on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Nov 2023 09:02:53 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/todo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>todolist</title>
+      <link>https://aming.xyz/post/todolist/</link>
+      <pubDate>Tue, 07 Nov 2023 09:02:53 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/todolist/</guid>
+      <description>制作工具导航站点 11.07</description>
+    </item>
+    
+  </channel>
+</rss>

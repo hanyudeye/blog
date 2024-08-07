@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/html/</link>
+    <description>Recent content in html on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Feb 2020 14:27:45 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>html 简介</title>
+      <link>https://aming.xyz/technology/html/</link>
+      <pubDate>Tue, 11 Feb 2020 14:27:45 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/html/</guid>
+      <description>&lt;p&gt;
+超文本标记语言（英語：HyperText Markup Language，简称：HTML） 是一种用于创建网页的标准标记语言。HTML 是一种基础技术，常与 CSS、JavaScript 一起被众多网站用于设计网页、网页应用程序以及移动应用程序的用户界面。网页浏览器可以读取 HTML 文件，并将其渲染成可视化网页。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

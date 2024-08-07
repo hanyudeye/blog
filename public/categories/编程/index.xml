@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on 安静-放松</title>
+    <link>https://aming.xyz/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 安静-放松</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Nov 2023 13:44:59 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>thinkphp6</title>
+      <link>https://aming.xyz/carry/thinkphp6/</link>
+      <pubDate>Sun, 19 Nov 2023 13:44:59 +0800</pubDate>
+      
+      <guid>https://aming.xyz/carry/thinkphp6/</guid>
+      <description>&lt;p&gt;ThinkPHP 是免费开源的，敏捷web 应用开发的程序框架。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

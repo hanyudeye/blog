@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>浏览器 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+    <description>Recent content in 浏览器 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 12 Aug 2023 08:35:08 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浏览器的使用</title>
+      <link>https://aming.xyz/post1/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 12 Aug 2023 08:35:08 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post1/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>打开浏览器兼容性 Edge浏览器: 右边点选项 -&amp;gt; 在IE兼容模式打开 Chrome浏览器： 没有IE兼容模式，直接用IE打开</description>
+    </item>
+    
+  </channel>
+</rss>

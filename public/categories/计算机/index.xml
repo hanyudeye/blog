@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+    <description>Recent content in 计算机 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Oct 2023 10:39:42 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机</title>
+      <link>https://aming.xyz/post/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+      <pubDate>Mon, 16 Oct 2023 10:39:42 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/%E8%AE%A1%E7%AE%97%E6%9C%BA/</guid>
+      <description>计算机 计算机就是与CPU沟通，与自己沟通 网络 网络就是与他人沟通</description>
+    </item>
+    
+  </channel>
+</rss>

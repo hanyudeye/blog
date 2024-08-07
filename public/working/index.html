@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>Doing - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="work list 4.2 6年跟拍3个阶层，三种人生，令人揪心 动手编程 成功来于 99 次失败 一天的时间规划后，没多少浪费 ssh 登录，把本地文件上传服务器 代理人 ，代办人 chatgpt 写" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/working/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Doing" />
+<meta property="og:description" content="work list 4.2 6年跟拍3个阶层，三种人生，令人揪心 动手编程 成功来于 99 次失败 一天的时间规划后，没多少浪费 ssh 登录，把本地文件上传服务器 代理人 ，代办人 chatgpt 写" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/working/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2024-04-02T14:27:55+08:00" />
+<meta property="article:modified_time" content="2024-04-02T14:27:55+08:00" />
+<meta itemprop="name" content="Doing">
+<meta itemprop="description" content="work list 4.2 6年跟拍3个阶层，三种人生，令人揪心 动手编程 成功来于 99 次失败 一天的时间规划后，没多少浪费 ssh 登录，把本地文件上传服务器 代理人 ，代办人 chatgpt 写"><meta itemprop="datePublished" content="2024-04-02T14:27:55+08:00" />
+<meta itemprop="dateModified" content="2024-04-02T14:27:55+08:00" />
+<meta itemprop="wordCount" content="564">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Doing"/>
+<meta name="twitter:description" content="work list 4.2 6年跟拍3个阶层，三种人生，令人揪心 动手编程 成功来于 99 次失败 一天的时间规划后，没多少浪费 ssh 登录，把本地文件上传服务器 代理人 ，代办人 chatgpt 写"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/doing/">
+        <li class="mobile-menu-item">doing</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/doing/">doing</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h2 id="work-list">work list</h2>
+<p>4.2</p>
+<ul>
+<li>6年跟拍3个阶层，三种人生，令人揪心</li>
+<li>动手编程</li>
+<li>成功来于 99 次失败</li>
+<li>一天的时间规划后，没多少浪费</li>
+<li>ssh 登录，把本地文件上传服务器</li>
+<li>代理人 ，代办人</li>
+<li>chatgpt 写推文</li>
+<li>帮我生成一些Matlab基本绘图指令以及基本用法的推文(提问，需求就是写文章)</li>
+<li>模型微调</li>
+<li>x 理想、恐惧和人生剧本 &mdash; Ideals, fears and the script of life</li>
+<li>x 人在沮丧的时候要做点事情转移注意力，比如 铲沙子</li>
+<li>二分查找</li>
+</ul>
+<p>4.3</p>
+<ul>
+<li>x python是给人用的，要注意便利性</li>
+<li>x 脑子中搭建一个最小功能的计算机 (执行解析纸带，导出新的纸带，这就是编译器，执行纸带，输出纸带结果，是工具，通过网线传送纸带，便是网络)</li>
+<li>x 暗色调,简洁背景更能让人思维集中</li>
+<li>t 人要过得简洁，条理，删除不用的书</li>
+<li>x python编程，元组 1,3,4 就是元组，是元素的集合，len计算元组的长度,count(x),统计x 元素在元组中出现的次数</li>
+<li>x 使用位置坐标元组进行赋值, for x,y in ((1,4),(2,8))</li>
+<li>x 列表中 append 东西</li>
+<li>x 抖音来客商家协议续约</li>
+<li>t 家里配置vim</li>
+<li>t 查询电话费</li>
+<li>x 话费充值 50</li>
+<li>x http是无状态的，session保存在服务器中，记录当前用户，可以针对当前用户处理任务,客户端用 cookie 记录 session ID，服务器以此判断，一般实现自动登录。</li>
+<li>t 换贴膜</li>
+<li>x 安装 gpt 命令行工具 <a href="https://github.com/nomic-ai/gpt4all">https://github.com/nomic-ai/gpt4all</a> [无法实现]</li>
+<li>x 查看显存大小  输入命令 dxdiag 或者任务管理器里面看 vram 是 6G</li>
+</ul>
+<p>4/4</p>
+<ul>
+<li>x 列表进行翻倍，使用乘法</li>
+<li>x 对列表进行排序  sort ，key 指定排序元素执行函数后的值，进行特定排序</li>
+<li></li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

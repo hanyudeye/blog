@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TODO on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/todo/</link>
+    <description>Recent content in TODO on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 May 2021 05:05:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/todo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Todo</title>
+      <link>https://aming.xyz/post/todo/</link>
+      <pubDate>Sat, 29 May 2021 05:05:18 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/todo/</guid>
+      <description>&lt;p&gt;看着我博客好久不打理，长草了都。平时生活又是风平浪静的，自己没有发现的眼睛，吐不出 &lt;strong&gt;象牙&lt;/strong&gt; 来。&lt;/p&gt;
+&lt;p&gt;看着博客使用的样式又是很简洁，简洁的朴素了，记得以前哪位博友的蓝色的，像facebook 的主题挺好看，但好像换主题，遗忘了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

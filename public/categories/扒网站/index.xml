@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>扒网站 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E6%89%92%E7%BD%91%E7%AB%99/</link>
+    <description>Recent content in 扒网站 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Aug 2023 15:19:38 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E6%89%92%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>扒网站</title>
+      <link>https://aming.xyz/post1/%E5%A6%82%E4%BD%95%E6%89%92%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Fri, 11 Aug 2023 15:19:38 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post1/%E5%A6%82%E4%BD%95%E6%89%92%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99/</guid>
+      <description>如何扒一个网站 ArchiveBox工具 互联网存档解决方案，空间 用于收集、保存和查看要脱机保留的网站。 使用 adding links to archive archivebox add &amp;lsquo;https://example.com&amp;rsquo; # add URLs one at a time archivebox add &amp;lt; ~/Downloads/bookmarks.json</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程语言 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 编程语言 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Dec 2019 19:41:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>编程语言小问题</title>
+      <link>https://aming.xyz/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Sat, 07 Dec 2019 19:41:03 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description>&lt;p&gt;
+什么是自然语言？
+&lt;/p&gt;
+&lt;p&gt;
+就是沟通的双方都能理解的一种符号或语音或视频，用来表达想法或现象的。
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+就是给沟通对象传达自己意图的某种行为，比如，盲人的比比划划，对外国人的指指画画等动作
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+什么是编程语言？
+&lt;/p&gt;
+&lt;p&gt;
+就是给计算机看的，用在计算机上的一种符号，指导计算机行为的东西
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+计算机还没有人那么智能，以后发展的话，计算机也能通过其它介质来传递想法(如语音描述什么的)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+因为计算机现在还不太智能，解析语言的解析器只能理解文本，所以，编程语言必须是某种 &lt;strong&gt;规则化&lt;/strong&gt; 的文本
+&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

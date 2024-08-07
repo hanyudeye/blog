@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/php/</link>
+    <description>Recent content in php on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Feb 2020 19:01:28 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php 简介</title>
+      <link>https://aming.xyz/technology/php/</link>
+      <pubDate>Thu, 13 Feb 2020 19:01:28 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/php/</guid>
+      <description>&lt;p&gt;
+WEB 服务器脚本语言&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

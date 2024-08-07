@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>应用 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E5%BA%94%E7%94%A8/</link>
+    <description>Recent content in 应用 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Aug 2023 21:10:31 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows虚拟桌面</title>
+      <link>https://aming.xyz/post/windows%E8%99%9A%E6%8B%9F%E6%A1%8C%E9%9D%A2/</link>
+      <pubDate>Mon, 07 Aug 2023 21:10:31 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/windows%E8%99%9A%E6%8B%9F%E6%A1%8C%E9%9D%A2/</guid>
+      <description>win10虚拟桌面 win + ctrl + d可以新建虚拟桌面； win + ctrl + ←或→在这些桌面之间切换； win + ctrl + F4关闭此桌面 win + tab显示所有桌面略缩图</description>
+    </item>
+    
+  </channel>
+</rss>

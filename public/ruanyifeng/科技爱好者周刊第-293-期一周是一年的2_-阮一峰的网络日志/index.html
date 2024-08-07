@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>24-3-15科技爱好者周刊（第 293 期）：一周是一年的2_ - 阮一峰的网络日志 - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="工具 1、Rot 一个命令行工具，用来对密码进行加密/解密，这样就可以把密码保存在公开的代码库了。 2、Angie 一个 nginx 的分叉版本，由原始团队成员" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/ruanyifeng/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%E7%AC%AC-293-%E6%9C%9F%E4%B8%80%E5%91%A8%E6%98%AF%E4%B8%80%E5%B9%B4%E7%9A%842_-%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="24-3-15科技爱好者周刊（第 293 期）：一周是一年的2_ - 阮一峰的网络日志" />
+<meta property="og:description" content="工具 1、Rot 一个命令行工具，用来对密码进行加密/解密，这样就可以把密码保存在公开的代码库了。 2、Angie 一个 nginx 的分叉版本，由原始团队成员" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/ruanyifeng/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%E7%AC%AC-293-%E6%9C%9F%E4%B8%80%E5%91%A8%E6%98%AF%E4%B8%80%E5%B9%B4%E7%9A%842_-%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/" /><meta property="article:section" content="ruanyifeng" />
+<meta property="article:published_time" content="2024-03-15T10:47:42+08:00" />
+<meta property="article:modified_time" content="2024-03-15T10:47:42+08:00" />
+<meta itemprop="name" content="24-3-15科技爱好者周刊（第 293 期）：一周是一年的2_ - 阮一峰的网络日志">
+<meta itemprop="description" content="工具 1、Rot 一个命令行工具，用来对密码进行加密/解密，这样就可以把密码保存在公开的代码库了。 2、Angie 一个 nginx 的分叉版本，由原始团队成员"><meta itemprop="datePublished" content="2024-03-15T10:47:42+08:00" />
+<meta itemprop="dateModified" content="2024-03-15T10:47:42+08:00" />
+<meta itemprop="wordCount" content="2080">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="24-3-15科技爱好者周刊（第 293 期）：一周是一年的2_ - 阮一峰的网络日志"/>
+<meta name="twitter:description" content="工具 1、Rot 一个命令行工具，用来对密码进行加密/解密，这样就可以把密码保存在公开的代码库了。 2、Angie 一个 nginx 的分叉版本，由原始团队成员"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/doing/">
+        <li class="mobile-menu-item">doing</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/doing/">doing</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/candiddev/rot">Rot</a></p>
+<p>一个命令行工具，用来对密码进行加密/解密，这样就可以把密码保存在公开的代码库了。</p>
+<p>2、<a href="https://angie.software/en/">Angie</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121308.webp" alt=""></p>
+<p>一个 nginx 的分叉版本，由原始团队成员开发，增加了一些功能。类似的项目还有 <a href="https://freenginx.org/">free nginx</a>。</p>
+<p>3、<a href="https://github.com/lavague-ai/LaVague">LaVague</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031403.webp" alt=""></p>
+<p>一个很有意思的概念产品，使用文字指令来操作网站，比如输入文字&quot;点击按钮&quot;，它就自动点击网页按钮，底层用的是浏览器自动化框架 Selenium。</p>
+<p>4、<a href="https://github.com/BingyanStudio/LapisCV">LapisCV</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031209.webp" alt=""></p>
+<p>基于 Obsidian / Typora 编辑器的 Markdown 简历模板，可以导出 PDF 文件。（<a href="https://github.com/ruanyf/weekly/issues/4111">@YiNNx</a> 投稿）</p>
+<p>5、<a href="https://github.com/rookie-luochao/openapi-ui">OpenAPI-UI</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031210.webp" alt=""></p>
+<p>该工具生成 Swagger 或 OpenAPI 3 格式的 API 接口文档，也可当作简洁的 Postman 使用。（<a href="https://github.com/ruanyf/weekly/issues/4114">@rookie-luochao</a> 投稿）</p>
+<p>6、<a href="https://github.com/MrWangJustToDo/git-diff-view">git-diff-view</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031211.webp" alt=""></p>
+<p>一个 React/Vue 组件，用来显示 git diff 的结果，类似于 GitHub 的样式。（<a href="https://github.com/ruanyf/weekly/issues/4105">@MrWangJustToDo</a> 投稿）</p>
+<p>7、 <a href="http://www.ai-timeline.top/">AI 时间线</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031212.webp" alt=""></p>
+<p>一个有意思的网站，输入一个关键词，自动生成该词的时间线，上图是输入&quot;github&quot;的生成结果，它的代码仓库在 <a href="https://github.com/zhugezifang/ai_timeline">GitHub</a>。（<a href="https://github.com/ruanyf/weekly/issues/4115">@zhugezifang</a> 投稿）</p>
+<p>8、<a href="https://github.com/cuixueshe/earthworm">Earthworm</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202403/bg2024031306.webp" alt=""></p>
+<p>一个开源的 Web 程序，通过连词造句的方式，经过不断重复练习英语，<a href="https://earthworm.cuixueshe.com/">线上体验</a>。（<a href="https://github.com/ruanyf/weekly/issues/4120">@cuixiaorui</a> 投稿）</p>
+<p>9、<a href="https://github.com/postalserver/postal">Postal</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202312/bg2023121407.webp" alt=""></p>
+<p>一个开源的电子邮件服务器，自带 Web 界面。</p>
+<p>10、<a href="https://briefsky.app/">briefsky</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101702.webp" alt=""></p>
+<p>一个开源的天气预报前端，可以接入各种天气数据源。</p>
+<p>11、<a href="https://qaul.net/">Qaul</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101801.webp" alt=""></p>
+<p>一个可以离线通信的软件，允许一群用户在不联网的情况下，通过本机的共享 WiFi 发送消息。</p>
+<p>12、<a href="https://github.com/TeamPiped/Piped">Piped</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101802.webp" alt=""></p>
+<p>一个开源的 Youtube 网页前端 UI。</p>
+<p>13、<a href="https://www.riffusion.com/">Riffusion</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101803.webp" alt=""></p>
+<p>一个免费的 AI 工具，给出一段提示，它会生成相应的歌曲，并且是带有歌词、人声演唱的。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://github.com/ihmily/ip-info-api">IP 信息查询合集</a></p>
+<p>这个仓库收集可以查询 IP 信息的免费网站。（<a href="https://github.com/ruanyf/weekly/issues/4119">@ihmily</a> 投稿）</p>
+<p>2、<a href="https://www.learn-ts.org/">TypeScript 互动教程</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202312/bg2023122603.webp" alt=""></p>
+<p>通过一个个小练习，讲授 TypeScript 语法。</p>
+<p>3、<a href="https://learnmoderncpp.com/">学习现代 C++</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202312/bg2023122701.webp" alt=""></p>
+<p>一个讲解 C++ 基础知识的自学教程。</p>
+<p>4、<a href="https://www.virustotal.com/gui/home/upload">Virustotal</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202304/bg2023042003.webp" alt=""></p>
+<p>软件病毒检测引擎，可以上传文件进行扫描，也可以指定需要扫描的文件或网址。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://rarehistoricalphotos.com/bathysphere-old-photos/">世界第一艘深海潜水器</a></p>
+<p>1925年，美国博物学家威廉·毕比（William Beebe）提出想造一种深海潜水器。当时，潜艇的最大下潜深度只有117米，而且没有窗口可以观察外部。</p>
+<p>威廉·毕比设计的潜水器为球形，因为球形最抗压，由铸铁制造，里面只能待一个人。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100810.webp" alt=""></p>
+<p>潜水器的后端是一个透明的入舱口，采用螺栓固定，只能从外部打开，内部无法打开。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100811.webp" alt=""></p>
+<p>前端是三个窗口，由76毫米厚的石英制成，这是当时最坚固的透明材料。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100812.webp" alt=""></p>
+<p>潜水器内部由高压气瓶提供氧气，采用钠钙和氯化钙吸收二氧化碳和水分。</p>
+<p>1930年6月11日，它第一次下水，达到了400米深度，1934年达到了900米的深度。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100813.webp" alt=""></p>
+<p>此后，威廉·毕比停止使用这个潜水器了，因为他觉得已经达到了观测海底生物的目的。</p>
+<p>而且，它不是很安全。每次下水，它必须系着钢缆，要靠钢缆拉上来。万一钢缆在压力下出现问题，或者钩子断了，潜水器里面的人必死无疑。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100814.webp" alt=""></p>
+<p>现在，这个潜水器的复制品，陈列在美国华盛顿特区的国家地理博物馆。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023100809.webp" alt=""></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://profoto.com/int/profoto-stories/albert-watson-steve-jobs">乔布斯的遗照</a></p>
+<p>苹果创始人乔布斯的遗照是如何拍摄的？</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101501.webp" alt=""></p>
+<p>2011年10月5日，史蒂夫·乔布斯去世，苹果网站用苏格兰摄影师艾伯特·沃森 (Albert Watson) 在2006年拍摄的这张照片来纪念他。</p>
+<p>许多人知道，乔布斯并不太喜欢被人拍摄，这对摄影师是一种挑战。</p>
+<p>拍摄当日，摄影师被告知拍摄时间只有一小时，然而他却胸有成竹地说，只要三十分钟便能完成。</p>
+<p>艾伯特·沃森建议史蒂夫·乔布斯稍微前倾，说道：&ldquo;想象一下，桌子对面有四五个人不同意你的观点，但你知道自己是对的。&rdquo;</p>
+<p>Steve Jobs 凝视着镜头，眼神十分坚定，给人一种充满信念与智慧的感觉。这就是这幅肖像照的创作过程。</p>
+<p>离开时，史蒂夫·乔布斯看了一眼照片，问他是否可以拥有它，并说这&quot;也许是我拍过的最好的照片&quot;。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202310/bg2023101502.webp" alt=""></p>
+<p>五年后，艾伯特·沃森接到苹果公司的电话，问他是否仍保留那张乔布斯的照片。他当时感到十分惊讶，同时意识到事情的紧迫性，随即找到照片并发送给苹果公司。</p>
+<p>当天晚上，苹果在官网宣布乔布斯去世的消息，并附上艾伯特·沃森拍摄他的肖像，这张照片在网站上刊登了一个月，之后也成为乔布斯传记的封面，成为21世纪最广为人知的人像照片之一。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>以后不会存在&quot;程序员&quot;这种职业了，只要会说话，人人都具备程序员的能力。未来的编程语言只会剩下两种，一种叫做英文，一种叫做中文。</p>
+<p>-- <a href="https://finance.sina.com.cn/jjxw/2024-03-10/doc-inamvkcs5017643.shtml">李彦宏</a>，百度董事长</p>
+<p>2、</p>
+<p>你无事可做时，未来看起来就会让人灰心丧气。我早已放弃了为人生寻找某种意义之类的事情，但我确实尝试寻找一些有趣的事情来做。</p>
+<p>-- <a href="https://news.ycombinator.com/item?id=38754757">Hacker News 读者</a></p>
+<p>无聊时尝试做有趣的事</p>
+<p>3、</p>
+<p>电影《奥本海默》之中，奥本海默在黑板上写方程式，解释核裂变。这个方程式在物理上是完全正确的。</p>
+<p>大多数观众不会意识到这一点，但这让我这个物理学家感觉很好，黑板上有正确的方程！</p>
+<p>-- <a href="https://www.nature.com/articles/d41586-024-00715-3?utm_source=join1440&amp;utm_medium=email">电影《奥本海默》的物理学顾问</a></p>
+<p>4、</p>
+<p>幸福的三大要素是：有要做的事（something to do）、有要爱的人（someone to love）、有寄予希望的东西（something to hope for）。</p>
+<p>-- <a href="https://www.forbes.com/quotes/252/">亚历山大·查默斯</a>，19世纪美国著名医生</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>Django 模型  菜鸟教程 - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/django/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Django 模型  菜鸟教程" />
+<meta property="og:description" content="Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/django/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/" /><meta property="article:section" content="django" />
+<meta property="article:published_time" content="2024-03-19T07:50:13+08:00" />
+<meta property="article:modified_time" content="2024-03-19T07:50:13+08:00" />
+<meta itemprop="name" content="Django 模型  菜鸟教程">
+<meta itemprop="description" content="Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装"><meta itemprop="datePublished" content="2024-03-19T07:50:13+08:00" />
+<meta itemprop="dateModified" content="2024-03-19T07:50:13+08:00" />
+<meta itemprop="wordCount" content="1986">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Django 模型  菜鸟教程"/>
+<meta name="twitter:description" content="Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/doing/">
+        <li class="mobile-menu-item">doing</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/doing/">doing</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。</p>
+<p>如果你没安装 mysql 驱动，可以执行以下命令安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;sudo pip3 install pymysql&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="django-orm">Django ORM</h2>
+<p>Django 模型使用自带的 ORM。</p>
+<p>对象关系映射（Object Relational Mapping，简称 ORM ）用于实现面向对象编程语言里不同类型系统的数据之间的转换。</p>
+<p>ORM 在业务逻辑层和数据库层之间充当了桥梁的作用。</p>
+<p>ORM 是通过使用描述对象和数据库之间的映射的元数据，将程序中的对象自动持久化到数据库中。</p>
+<p>使用 ORM 的好处：</p>
+<ul>
+<li>提高开发效率。</li>
+<li>不同数据库可以平滑切换。</li>
+</ul>
+<p>使用 ORM 的缺点：</p>
+<ul>
+<li>ORM 代码转换为 SQL 语句时，需要花费一定的时间，执行效率会有所降低。</li>
+<li>长期写 ORM 代码，会降低编写 SQL 语句的能力。</li>
+</ul>
+<p>ORM 解析过程:</p>
+<ul>
+<li>1、ORM 会将 Python 代码转成为 SQL 语句。</li>
+<li>2、SQL 语句通过 pymysql 传送到数据库服务端。</li>
+<li>3、在数据库中执行 SQL 语句并将结果返回。</li>
+</ul>
+<h2 id="数据库配置">数据库配置</h2>
+<h3 id="django-如何使用-mysql-数据库">Django 如何使用 mysql 数据库</h3>
+<p>创建 MySQL 数据库(ORM 无法操作到数据库级别，只能操作到数据表)语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">create database 数据库名称
+</span></span><span class="line"><span class="cl">default charset=utf8;# 防止编码问题，指定为 utf8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如我们创建一个名为 runoob 数据库，编码指定为 utf8：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;create database runoob &lt;/span&gt;&lt;span&gt;default&lt;/span&gt;&lt;span&gt; charset&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;utf8&lt;/span&gt;&lt;span&gt;;&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们在项目的 settings.py 文件中找到 DATABASES 配置项，将其信息修改为：</p>
+<h2 id="helloworldhelloworldsettingspy-文件代码">HelloWorld/HelloWorld/settings.py: 文件代码：</h2>
+<p>DATABASES = { &lsquo;default&rsquo;: { &lsquo;ENGINE&rsquo;: &lsquo;django.db.backends.mysql&rsquo;, &lsquo;NAME&rsquo;: &lsquo;runoob&rsquo;, &lsquo;HOST&rsquo;: &lsquo;127.0.0.1&rsquo;, &lsquo;PORT&rsquo;: 3306, &lsquo;USER&rsquo;: &lsquo;root&rsquo;, &lsquo;PASSWORD&rsquo;: &lsquo;123456&rsquo;, } }</p>
+<p>如果你使用了 Python2.x 版本这里添加了中文注释，所以你需要在 HelloWorld/settings.py 文件头部添加 # -*- coding: UTF-8 -*-。</p>
+<p>上面包含数据库名称和用户的信息，它们与 MySQL 中对应数据库和用户的设置相同。Django 根据这一设置，与 MySQL 中相应的数据库和用户连接起来。</p>
+<p>接下来，告诉 Django 使用 pymysql 模块连接 mysql 数据库：</p>
+<h2 id="实例">实例</h2>
+<p># 在与 settings.py 同级目录下的 __init__.py 中引入模块和进行配置<br>
+import pymysql<br>
+pymysql.install_as_MySQLdb()</p>
+<hr>
+<h2 id="定义模型">定义模型</h2>
+<h3 id="创建-app">创建 APP</h3>
+<p>Django 规定，如果要使用模型，必须要创建一个 app。我们使用以下命令创建一个 TestModel 的 app:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;django&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;admin startapp &lt;/span&gt;&lt;span&gt;TestModel&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>目录结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;HelloWorld&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;HelloWorld&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; manage&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;...&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;TestModel&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; __init__&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; admin&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; models&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;|--&lt;/span&gt;&lt;span&gt; tests&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;|&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;`-- views.py&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们修改 TestModel/models.py 文件，代码如下：</p>
+<h2 id="helloworldtestmodelmodelspy-文件代码">HelloWorld/TestModel/models.py: 文件代码：</h2>
+<p>from django.db import models class Test(models.Model): name = models.CharField(max_length=20)</p>
+<p>以上的类名代表了数据库表名，且继承了models.Model，类里面的字段代表数据表中的字段(name)，数据类型则由CharField（相当于varchar）、DateField（相当于datetime）， max_length 参数限定长度。</p>
+<p>接下来在 settings.py 中找到INSTALLED_APPS这一项，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;INSTALLED_APPS &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.admin&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.auth&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.contenttypes&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.sessions&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.messages&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;django.contrib.staticfiles&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;&#39;TestModel&#39;&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;               &lt;/span&gt;&lt;span&gt;# 添加此项&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在命令行中运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;$ python3 manage&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py migrate   &lt;/span&gt;&lt;span&gt;# 创建表结构&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ python3 manage&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py makemigrations &lt;/span&gt;&lt;span&gt;TestModel&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;# 让 Django 知道我们在我们的模型有一些变更&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">$ python3 manage&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;py migrate &lt;/span&gt;&lt;span&gt;TestModel&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 创建表结构&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>看到几行 &ldquo;Creating table…&rdquo; 的字样，你的数据表就创建好了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;Creating&lt;/span&gt;&lt;span&gt; tables &lt;/span&gt;&lt;span&gt;...&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;……&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;Creating&lt;/span&gt;&lt;span&gt; table &lt;/span&gt;&lt;span&gt;TestModel_test&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;#我们自定义的表&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">&lt;/span&gt;&lt;span&gt;……&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>表名组成结构为：应用名_类名（如：TestModel_test）。</p>
+<p>**注意：**尽管我们没有在 models 给表设置主键，但是 Django 会自动添加一个 id 作为主键。</p>
+<h3 id="常见报错信息">常见报错信息</h3>
+<p>如果执行以上命令时会出现如下报错信息:</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_5.png" alt=""></p>
+<p>原因是 MySQLclient 目前只支持到 Python3.4，因此如果使用的更高版本的 python，需要修改如下：</p>
+<p>通过报错信息的文件路径找到 &hellip;site-packages\Django-2.0-py3.6.egg\django\db\backends\mysql 这个路径里的 base.py 文件，把这两行代码注释掉（代码在文件开头部分）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;if&lt;/span&gt;&lt;span&gt; version &lt;/span&gt;&lt;span&gt;&amp;lt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;13&lt;/span&gt;&lt;span&gt;):&lt;/span&gt;&lt;span&gt;
+</span></span><span class="line"><span class="cl">    &lt;/span&gt;&lt;span&gt;raise&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;ImproperlyConfigured&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;&#39;mysqlclient 1.3.13 or newer is required; you have %s.&#39;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;%&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Database&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;__version__&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://www.runoob.com/wp-content/uploads/2015/01/wUC7W1KOjgwuTi0n.png" alt=""></p>
+<p>一般点报错的代码文件路径信息，会自动跳转到报错文件中行数，此时我们在报错的代码行数注释掉。</p>
+<p>如果出现以下报错信息:</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_6.png" alt=""></p>
+<p>我们点报错的代码文件路径，跳转到报错文件中行数，此时我们在报错的代码行数之前加上:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span&gt;query &lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt; query&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;encode&lt;/span&gt;&lt;span&gt;()&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://www.runoob.com/wp-content/uploads/2020/05/Django-orm_7.png" alt=""></p>
+<hr>
+<h2 id="数据库操作">数据库操作</h2>
+<p>接下来我们在 HelloWorld 目录中添加 testdb.py 文件（下面介绍），并修改 urls.py：</p>
+<h2 id="helloworldhelloworldurlspy-文件代码">HelloWorld/HelloWorld/urls.py: 文件代码：</h2>
+<p>from django.urls import path from . import views,testdb urlpatterns = [ path(&lsquo;runoob/&rsquo;, views.runoob), path(&rsquo;testdb/&rsquo;, testdb.testdb), ]</p>
+<h3 id="添加数据">添加数据</h3>
+<p>添加数据需要先创建对象，然后再执行 save 函数，相当于SQL中的INSERT：</p>
+<h2 id="helloworldhelloworldtestdbpy-文件代码">HelloWorld/HelloWorld/testdb.py: 文件代码：</h2>
+<p>from django.http import HttpResponse from TestModel.models import Test def testdb(request): test1 = Test(name=&lsquo;runoob&rsquo;) test1.save() return HttpResponse(&quot;<p>数据添加成功！</p>&quot;)</p>
+<p>访问 <strong>http://127.0.0.1:8000/testdb</strong> 就可以看到数据添加成功的提示。</p>
+<p>输出结果如下：</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/01/B2AC7C80-4194-4D5B-9031-5FC6D527D912.jpg" alt=""></p>
+<h3 id="获取数据">获取数据</h3>
+<p>Django提供了多种方式来获取数据库的内容，如下代码所示：</p>
+<h2 id="helloworldhelloworldtestdbpy-文件代码-1">HelloWorld/HelloWorld/testdb.py: 文件代码：</h2>
+<p>from django.http import HttpResponse from TestModel.models import Test def testdb(request): response = &quot;&quot; response1 = &quot;&quot; listTest = Test.objects.all() response2 = Test.objects.filter(id=1) response3 = Test.objects.get(id=1) Test.objects.order_by(&rsquo;name&rsquo;)[0:2] Test.objects.order_by(&ldquo;id&rdquo;) Test.objects.filter(name=&ldquo;runoob&rdquo;).order_by(&ldquo;id&rdquo;) for var in listTest: response1 += var.name + &quot; &quot; response = response1 return HttpResponse(&quot;<p>&quot; + response + &ldquo;</p>&rdquo;)</p>
+<h3 id="更新数据">更新数据</h3>
+<p>修改数据可以使用 save() 或 update():</p>
+<h2 id="helloworldhelloworldtestdbpy-文件代码-2">HelloWorld/HelloWorld/testdb.py: 文件代码：</h2>
+<p>from django.http import HttpResponse from TestModel.models import Test def testdb(request): test1 = Test.objects.get(id=1) test1.name = &lsquo;Google&rsquo; test1.save() return HttpResponse(&quot;<p>修改成功</p>&quot;)</p>
+<h3 id="删除数据">删除数据</h3>
+<p>删除数据库中的对象只需调用该对象的delete()方法即可：</p>
+<h2 id="helloworldhelloworldtestdbpy-文件代码-3">HelloWorld/HelloWorld/testdb.py: 文件代码：</h2>
+<p>from django.http import HttpResponse from TestModel.models import Test def testdb(request): test1 = Test.objects.get(id=1) test1.delete() return HttpResponse(&quot;<p>删除成功</p>&quot;)</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

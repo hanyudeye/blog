@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others on 阿明</title>
+    <link>https://aming.xyz/other/</link>
+    <description>Recent content in Others on 阿明</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Mar 2024 07:50:13 +0800</lastBuildDate><atom:link href="https://aming.xyz/other/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django 模型  菜鸟教程</title>
+      <link>https://aming.xyz/other/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 19 Mar 2024 07:50:13 +0800</pubDate>
+      
+      <guid>https://aming.xyz/other/django-%E6%A8%A1%E5%9E%8B-%E8%8F%9C%E9%B8%9F%E6%95%99%E7%A8%8B/</guid>
+      <description>Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。 如果你没安装 mysql 驱动，可以执行以下命令安装</description>
+    </item>
+    
+    <item>
+      <title>计算机</title>
+      <link>https://aming.xyz/other/%E8%AE%A1%E6%9C%BA/</link>
+      <pubDate>Sat, 02 Dec 2023 18:17:33 +0800</pubDate>
+      
+      <guid>https://aming.xyz/other/%E8%AE%A1%E6%9C%BA/</guid>
+      <description>计算机的产生 人类需要一种辅助工作，娱乐的工具，便创造了它。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/english/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/english/</guid>
+      <description>日常英语 &amp;ldquo;Good morning! How are you today?&amp;rdquo; 中文：早上好！你今天好吗？ &amp;ldquo;Could you please pass me the salt?&amp;rdquo; 中文：请把盐递给我好吗？ &amp;ldquo;I&amp;rsquo;m going to the grocery store. Do you need anything?&amp;rdquo; 中文：我要去杂货店，你需要买什么吗？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/%E5%8C%96%E5%AD%A6/</guid>
+      <description>空气 (混合物质) 氧气 液氧(-170多度)，固氧(-218度)均为淡蓝色 不易溶于水 密度大于空气 C+O2=&amp;gt;CO2 (点燃) S+O2=&amp;gt;SO2 (点燃,硫) 燃烧（剧烈化学反应） 二氧</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/%E5%BF%83%E7%90%86%E5%AD%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/%E5%BF%83%E7%90%86%E5%AD%A6/</guid>
+      <description>积极心理，胆子大学</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/%E6%95%B0%E5%AD%A6/</guid>
+      <description>扩大数的使用范围 正数 ，负数 有理数 复数 (复平面) 用数轴表示数 数的行为：运算 加减乘除 平方 方程,不等式(变量有值) 函数(y变量是范围) 导数 (函数中</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/%E7%89%A9%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/%E7%89%A9%E7%90%86/</guid>
+      <description>声 力 光 电磁 热 运动 速度</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aming.xyz/other/%E7%94%9F%E7%89%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aming.xyz/other/%E7%94%9F%E7%89%A9/</guid>
+      <description>生命系统 细胞 2. 病毒 细胞组成 细胞膜，细胞质，细胞核 细胞膜含有 {糖蛋白，载体蛋白，酶} 细胞质含有 {细胞代谢所需的各种酶，血红蛋白，分泌蛋白 } 细胞</description>
+    </item>
+    
+  </channel>
+</rss>

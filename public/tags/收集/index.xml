@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>收集 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E6%94%B6%E9%9B%86/</link>
+    <description>Recent content in 收集 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Apr 2020 05:27:43 +0800</lastBuildDate><atom:link href="https://aming.xyz/tags/%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>do things that don&#39;t scale 做一些不需扩展的事情</title>
+      <link>https://aming.xyz/post/ds/</link>
+      <pubDate>Fri, 24 Apr 2020 05:27:43 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/ds/</guid>
+      <description>&lt;p&gt;翻译创业的文章，瞎翻译一通。&lt;br&gt;
+主要讲公司主创们应有的一些素质，做一些公司起步时需要做的事情，才能使公司成长(成长起来以后就不用做了)。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

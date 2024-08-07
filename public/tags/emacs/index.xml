@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/emacs/</link>
+    <description>Recent content in emacs on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Jun 2019 22:41:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>emacs 简介</title>
+      <link>https://aming.xyz/post/emacs/</link>
+      <pubDate>Tue, 04 Jun 2019 22:41:32 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/emacs/</guid>
+      <description>&lt;p&gt;
+<<<<<<< HEAD
+一种文本编辑器，因为它是解释执行的，所以可以通过添加代码进行功能扩展。&lt;/p&gt;</description>
+=======
+文本编辑器，因为其功能是通过 lisp 脚本渲染的，所以功能全部可配置。
+&lt;/p&gt;</description>
+>>>>>>> d5d1b30 (rebuilding site 2023年 08月 08日 星期二 07:50:40 CST)
+    </item>
+    
+  </channel>
+</rss>

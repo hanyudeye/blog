@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/vue/</link>
+    <description>Recent content in vue on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Aug 2023 21:10:31 +0800</lastBuildDate><atom:link href="https://aming.xyz/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue2使用方法</title>
+      <link>https://aming.xyz/post/vue2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 07 Aug 2023 21:10:31 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/vue2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>vue 可以挂载界面元素 nvm NVM, 全名为&amp;quot;Node Version Manager&amp;quot;, 是非常好用的Node版本管理器。 安装 新建一个页面 做一些简单的变量的渲染 实现页面的跳转 (路</description>
+    </item>
+    
+  </channel>
+</rss>

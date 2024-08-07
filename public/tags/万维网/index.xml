@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>万维网 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E4%B8%87%E7%BB%B4%E7%BD%91/</link>
+    <description>Recent content in 万维网 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Sep 2020 13:24:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E4%B8%87%E7%BB%B4%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>万维网</title>
+      <link>https://aming.xyz/technology/web/</link>
+      <pubDate>Tue, 15 Sep 2020 13:24:19 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/web/</guid>
+      <description>&lt;p&gt;
+<<<<<<< HEAD
+万维网是网络的应用之一，原理是客户端发送请求，服务端进行响应，客户端解析响应&lt;/p&gt;</description>
+=======
+计算机网络形成以后，我们可以方便的从别人的计算机获取资料了。 要满足这个条件，我们必须满足几个条件：
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;
+有一个客户端 (本地计算机)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+有一个服务端 (远程计算机)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+一条连接协议
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+>>>>>>> d5d1b30 (rebuilding site 2023年 08月 08日 星期二 07:50:40 CST)
+    </item>
+    
+  </channel>
+</rss>

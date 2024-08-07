@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>语言使用 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/categories/%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 语言使用 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Feb 2020 19:01:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/categories/%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>php 简介</title>
+      <link>https://aming.xyz/post/php/</link>
+      <pubDate>Thu, 13 Feb 2020 19:01:28 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/php/</guid>
+      <description>&lt;p&gt;
+一种简单的语言，一般用在 &lt;strong&gt;web&lt;/strong&gt; 开发里，给网页生成动态内容用的。当然，如果你喜欢的话，用来编写其它程序也可以的。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 与 DOM简介</title>
+      <link>https://aming.xyz/post/javascript/</link>
+      <pubDate>Tue, 11 Feb 2020 18:47:24 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/javascript/</guid>
+      <description>&lt;p&gt;
+Javascript技术原来也是用在网页里面的，弄一些花里胡哨的动态效果，但现在它满足了一
+个现实，人有时懒的连报纸都不想翻，就想在报纸上用手指划划就想翻页，Javascript 的
+技术能够实现，所以现在又发达起来了。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>html 简介</title>
+      <link>https://aming.xyz/post/html/</link>
+      <pubDate>Tue, 11 Feb 2020 14:27:45 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/html/</guid>
+      <description>&lt;p&gt;
+HTML技术主要用来给网页用的，就像我们看过的书或者报纸页一样，它不仅可以展示文字，还能格式化文字，还能播放多媒体，
+联合 javascript 技术还能制作网游，使得界面感觉都不像一页报纸了。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编程语言简介</title>
+      <link>https://aming.xyz/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Sat, 07 Dec 2019 19:41:03 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</guid>
+      <description>&lt;p&gt;
+前文我们讲过，世界是由 &lt;strong&gt;东西&lt;/strong&gt; 组成的，东西分为两种，一种是会动的东西，另一种是静止的东西。
+会动的东西影响不动的东西，或会动的东西相互影响，构成了我们运动的世界。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

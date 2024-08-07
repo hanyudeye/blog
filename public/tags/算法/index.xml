@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Dec 2019 05:32:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>算法小难题</title>
+<<<<<<< HEAD
+      <link>https://aming.xyz/technology/algorithm/</link>
+=======
+      <link>https://aming.xyz/post/algorithm/</link>
+>>>>>>> d5d1b30 (rebuilding site 2023年 08月 08日 星期二 07:50:40 CST)
+      <pubDate>Sun, 08 Dec 2019 05:32:47 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/algorithm/</guid>
+      <description>&lt;p&gt;
+<<<<<<< HEAD
+算法是完成一件事情的明细。&lt;/p&gt;
+&lt;p&gt;
+有些事情暂时完成不了，比如穿越时空，这就暂时没有算法。&lt;/p&gt;</description>
+=======
+算法是完成一件事情的明细。
+&lt;/p&gt;
+&lt;p&gt;
+有些事情暂时完成不了，比如穿越时空，这就暂时没有算法。
+&lt;/p&gt;</description>
+>>>>>>> d5d1b30 (rebuilding site 2023年 08月 08日 星期二 07:50:40 CST)
+    </item>
+    
+  </channel>
+</rss>

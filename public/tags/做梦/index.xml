@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>做梦 on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/%E5%81%9A%E6%A2%A6/</link>
+    <description>Recent content in 做梦 on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 May 2020 06:26:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/%E5%81%9A%E6%A2%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>白日梦</title>
+      <link>https://aming.xyz/post/daydream/</link>
+      <pubDate>Sun, 31 May 2020 06:26:21 +0800</pubDate>
+      
+      <guid>https://aming.xyz/post/daydream/</guid>
+      <description>&lt;p&gt;记录一下我做的白日梦&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

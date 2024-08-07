@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title> - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="Since I’ve launched my 12 startups in 12 months challenge, the #1 question I get asked is about my work flow and how I can ship so fast. I don’t work particularly longer hours than most people (I think). I do work fast and rough. In this post, I’d like to show you the basics of how my I build my" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.117.0 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/information/24-3-1%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E6%9C%80%E5%B0%8F%E5%8F%AF%E8%A1%8C%E4%BA%A7%E5%93%81---how-i-build-my-minimum-viable-products/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Since I’ve launched my 12 startups in 12 months challenge, the #1 question I get asked is about my work flow and how I can ship so fast. I don’t work particularly longer hours than most people (I think). I do work fast and rough. In this post, I’d like to show you the basics of how my I build my" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/information/24-3-1%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E6%9C%80%E5%B0%8F%E5%8F%AF%E8%A1%8C%E4%BA%A7%E5%93%81---how-i-build-my-minimum-viable-products/" /><meta property="article:section" content="information" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Since I’ve launched my 12 startups in 12 months challenge, the #1 question I get asked is about my work flow and how I can ship so fast. I don’t work particularly longer hours than most people (I think). I do work fast and rough. In this post, I’d like to show you the basics of how my I build my">
+
+<meta itemprop="wordCount" content="5062">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Since I’ve launched my 12 startups in 12 months challenge, the #1 question I get asked is about my work flow and how I can ship so fast. I don’t work particularly longer hours than most people (I think). I do work fast and rough. In this post, I’d like to show you the basics of how my I build my"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+          <span class="more-meta"> 约 5062 字 </span>
+          <span class="more-meta"> 预计阅读 11 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>Since I’ve launched my <a href="https://levels.io/12-startups-12-months/">12 startups in 12 months</a> challenge, the #1 question I get asked is about my work flow and how I can ship so fast. I don’t work particularly longer hours than most people (I think). I do work fast and rough. In this post, I’d like to show you the basics of how my I build my minimum viable products (or MVPs).<br>
+自从我在12个月的挑战中推出了12家初创公司以来，我被问到的第一个问题是关于我的工作流程以及我如何能够如此快速地发货。我的工作时间并不比大多数人长（我想）。我做事又快又粗暴。在这篇文章中，我想向你展示如何构建我的最小可行产品（或MVP）的基础知识。</p>
+<p>First, a public service announcement, I don’t do things conventionally and probably not according to the rules. Especially not with these 12 projects. So it’d be a bad idea to follow how I do things exactly. It’s probably better to just figure out your own workflow. That’s what I did.<br>
+首先，一个公共服务公告，我不做常规的事情，可能不按照规则。尤其是这12个项目。所以完全按照我的方式做事是个坏主意。最好还是自己想办法。我就是这么做的</p>
+<h2 id="solve-your-own-problems-or-not">Solve your own problems, or not?</h2>
+<p>解决自己的问题，还是不解决？</p>
+<p>I start with an idea. I built <a href="http://gofuckingdoit.com/?ref=levels.io">GoFuckingDoIt</a> so I stopped procrastinating and was fined money if I didn’t finish what I said I would. <a href="http://tubelytics.com/?ref=levels.io">Tubelytics</a> was there to get a general overview of all my different YouTube channels performance. And when I wanted to know which cities had the best cost of living for a traveling nomad like me, I built <a href="http://nomadlist.io/?ref=levels.io">NomadList</a>.<br>
+我从一个想法开始。我建立了GoFuckingDoIt，这样我就不再拖延了，如果我没有完成我说过的话，我会被罚款。Tubelytics在那里得到了我所有不同的YouTube频道性能的一般概述。当我想知道哪些城市的生活成本最适合像我这样的流浪者时，我建立了NomadList。</p>
+<p>As you see, most of my ideas are actually there to solve my own problems — as <a href="http://twitter.com/dhh?ref=levels.io">David Heinemeier Hansson</a> calls it <a href="https://gettingreal.37signals.com/ch02_Whats_Your_Problem.php?ref=levels.io">scratching your own itch</a>).<br>
+正如你所看到的，我的大部分想法实际上都是为了解决我自己的问题&ndash;就像大卫·海涅迈尔·汉森所说的那样。</p>
+<p>Is that good though? As <a href="http://www.wired.com/2014/08/12-startups-in-12-months/?ref=levels.io">this article</a> points out, we might need to consider that a majority of us doing this stuff are young white males. So if we only solve our own problems, we limit ourselves in audience and problem settings. I don’t think that’s bad necessarily. It’s great to start off by solving your own problems. Personally, in the long run, I’d like to build more stuff that has a wider impact though.<br>
+这样好吗正如这篇文章所指出的，我们可能需要考虑到，我们中的大多数人做这件事是年轻的白色男性。因此，如果我们只解决自己的问题，我们就限制了自己的受众和问题设置。我不认为这是坏事。从解决自己的问题开始是很好的。就个人而言，从长远来看，我想建立更多的东西，有更广泛的影响，虽然。</p>
+<h2 id="my-development-philosophy">My development philosophy</h2>
+<p>我的发展理念</p>
+<p>In terms of development I sympathize highly with <a href="http://twitter.com/alphacolin?ref=levels.io">Colin</a> from <a href="http://customer.io/?ref=levels.io">Customer.io</a> whose site is aptly titled <a href="http://iamnotaprogrammer.com/?ref=levels.io">I Am Not A Programmer</a>. I’m not and I don’t want to be one either. I just want my stuff to work and not break. Programming is not my passion. Making stuff is my passion. Just as I don’t like mathematics, but I like how you can apply it to build a skyscraper.<br>
+在开发方面，我非常同情来自Customer.io的Colin，他的网站名为“我不是程序员”。我不是，我也不想成为一个。我只想让我的东西工作而不是坏掉。编程不是我的激情。做东西是我的激情。就像我不喜欢数学，但我喜欢你如何运用它来建造摩天大楼。</p>
+<p>If something potentially takes off, I do want my code to be easily readable by other coders to refactor and/or scale it.<br>
+如果有什么东西可能会起飞，我希望我的代码能够被其他编码人员轻松读取，以重构和/或扩展它。</p>
+<p>If you look at any of my sites, they’re very minimal <a href="http://gofuckingdoit.com/?ref=levels.io">[1]</a> and basic <a href="http://nomadlist.io/?ref=levels.io">[2]</a>. That’s on purpose. I don’t have as much as time to build things big and I don’t see the point of building things big immediately. And I like minimal user interfaces. I don’t think a site needs to be filled with functionality from top to bottom.<br>
+如果你看我的任何一个网站，它们都是非常小的[1]和基本的[2]。我是故意的。我没有那么多的时间来建立大的东西，我不认为立即建立大的东西的意义。我喜欢最小的用户界面。我不认为一个网站需要从上到下充满功能。</p>
+<h2 id="my-development-environment">My development environment</h2>
+<p>我的开发环境</p>
+<p>I don’t really have an <a href="http://en.wikipedia.org/wiki/Integrated_development_environment?ref=levels.io">IDE</a>. I just code everything in <a href="http://www.sublimetext.com/3?ref=levels.io">Sublime Text 3</a>, I highly recommend it to anyone.<br>
+我真的没有一个IDE。我只是在Sublime Text 3中编写所有代码，我强烈推荐给任何人。</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-31-01.53.53-1024x527.png" alt=""></p>
+<p>To give you an idea, two years ago I was still using Notepad++ on Windows 7:<br>
+给予你一个想法，两年前我还在Windows 7上使用Notepad++：</p>
+<p><img src="https://levels.io/content/images/2014/09/best-free-file-editor-for-windows-1.png" alt=""></p>
+<p>Sublime Text is great since it has auto completion, linting (e.g. live debugging of your code) and dark themes (like <a href="https://github.com/buymeasoda/soda-theme%22?ref=levels.io">Soda</a>) that don’t burn your eyes. The auto-completion and linting especially now saves me incredible amounts of time. If I type this:<br>
+Sublime Text很棒，因为它有自动完成，linting（例如实时调试代码）和不会灼伤眼睛的黑暗主题（如Soda）。特别是现在的自动完成和linting为我节省了大量的时间。如果我输入这个：</p>
+<html>
+<p>and press tab, Sublime auto-completes it into:<br>
+然后按tab，Sublime会自动完成它：</p>
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title></title>  
+</head>  
+<body>
+</body>  
+</html>
+<p>Sublime’s linting will visually show where I have errors in my PHP, JS or SCSS code. I also use <a href="https://incident57.com/codekit/?ref=levels.io">CodeKit</a> to compile/minify my JS and SCSS files. Like Sublime, it also supports linting. So if I don’t see the error in Sublime, CodeKit will simply pop up a window and tell me what’s wrong:<br>
+Sublime的linting将直观地显示我在PHP，JS或SCSS代码中的错误。我还使用CodeKit来编译/缩小我的JS和SCSS文件。像Sublime一样，它也支持linting。因此，如果我在Sublime中没有看到错误，CodeKit将简单地弹出一个窗口并告诉我错误所在：</p>
+<p><img src="https://levels.io/content/images/2014/09/Screenshot-2014-09-05-13.17.28-1024x705.png" alt=""></p>
+<p>A year ago, I didn’t have any of these features. I didn’t even have a local server, so I’d make a change to my code, then upload it to my development server (on DreamHost) and see if it worked. I developed entire sites like this. It would take 1000x more time though. I know, I know! Ridiculous. But what do you do if you don’t know?<br>
+一年前，我还没有这些特征。我甚至没有本地服务器，所以我会对代码进行更改，然后将其上传到我的开发服务器（在DreamHost上），看看它是否有效。我开发了整个这样的网站。这将需要1000倍的时间。我知道我知道荒谬了但如果你不知道怎么办？</p>
+<p>I’d recommend anyone to use a MacBook or Mac to develop your stuff on. It helps so much that OSX is a lot like Linux. That means I can have an almost exact duplicate of my production environment (e.g. the actual Linode server where the live website is running) on my development environment (e.g. my MacBook). So I can code and test stuff without breaking the live site. It also allows me to develop my sites when I don’t have internet. To show you, above is my MacBook, below is my server:<br>
+我建议大家使用MacBook或Mac来开发你的东西，OSX很像Linux，这很有帮助。这意味着我可以在我的开发环境（例如我的MacBook）上拥有几乎完全相同的生产环境（例如运行实时网站的实际Linode服务器）。所以我可以编码和测试的东西，而不破坏现场。它还允许我在没有互联网的情况下开发我的网站。上面是我的MacBook，下面是我的服务器：</p>
+<p><img src="https://levels.io/content/images/2014/09/Screenshot-2014-09-05-15.16.42x-1024x946.png" alt=""></p>
+<p>You can do all of this in Windows too, but it’s not as smooth and your production and dev environment will look a lot different — that is, if you use a Linux server, which you should (you say Microsoft .NET? I say lulz were had!)<br>
+您也可以在Windows中完成所有这些，但它并不那么流畅，您的生产和开发环境看起来会有很大不同-也就是说，如果您使用Linux服务器，您应该（您说Microsoft .NET？我说lulz是有！）</p>
+<h2 id="design-process设计过程">Design process 设计过程</h2>
+<p>When designing I usually start off with an idea of how it should look in my head already. I usually draw it out on paper first. For example, this is <a href="http://gofuckingdoit.com/?ref=levels.io">GoFuckingDoIt.com</a> (I know, it looks terrible!)<br>
+在设计的时候，我通常会先在脑海中想好它应该是什么样子。我通常先把它画在纸上。例如，这是GoFuckingDoIt.com（我知道，它看起来很糟糕！）</p>
+<p><img src="https://levels.io/content/images/2014/08/photo-12-1024x768.jpg" alt="photo (12)"></p>
+<p>And then I just build it in Photoshop and evolve it further. If I need a stock photo, I always get a mock first from <a href="http://stocksy.com/?ref=levels.io">Stocksy</a>. They have amazing, beautiful, authentic stock photography. Really special stuff. Then when I actually decide to use it, I pay $10 and I have it licensed!<br>
+然后我就在Photoshop里把它做出来，再进一步改进。如果我需要一张库存照片，我总是先从斯托克西那里得到一张模拟照片。他们有惊人的，美丽的，真实的股票摄影。很特别的东西。然后，当我真正决定使用它，我支付10美元，我有它的许可！</p>
+<p><img src="https://levels.io/content/images/2014/08/mock3.png" alt=""></p>
+<p>Then I build it in HTML and CSS. That’s when things start changing. For example the name went from Just Fucking Do It to Go Fucking Do It, and I switched around the picture with another one from Stocksy:<br>
+然后我用HTML和CSS构建它。一切都开始改变了。例如，这个名字从Just Fucking Do It变成了Go Fucking Do It，我把照片换成了Stocksy的另一张：</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-09-02-21.31.31-1024x473.png" alt="Screenshot 2014-09-02 21.31.31"></p>
+<p>I then tweak it until the interface looks great. Then I make it responsive for mobile. I use Chrome’s new emulation feature to see how it looks on mobile. It’s <strong>quintessential</strong> right now to make sure your site looks great on any mobile device. 40% of my traffic comes from mobile now. People will simply leave your site if they can’t use it! Take it serious.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-09-02-21.33.09-1024x361.png" alt=""></p>
+<p>When the front-end is finished, I usually start building the back-end (the stuff on the server) and making it actually interactive.</p>
+<p>A year ago, I used to host all my sites with <a href="http://dreamhost.com/?ref=levels.io">DreamHost</a>. I was on there for years. My sites weren’t that special though so they didn’t need a lot resources. When I started doing intense background cron jobs though, I started getting messages telling me I should probably stop doing that and get my own server. Fair enough I thought, I’ll get my own.</p>
+<p>I didn’t even know how a Linux shell worked back then. And it probably took me a week before I had a working server set up on <a href="https://www.linode.com/?r=9ca5a3583601b91e04ba71883446f0ed3d8fd025&amp;ref=levels.io">Linode</a>. But when it worked, it felt so much better to have my own server. I now owned the entire stack. From front-end, back-end to the server itself. That meant if something didn’t work, I could quickly find the problem, instead of relying on some hosting company fucking up their shit and me debugging it for 12 hours to then figure out it was their fault.</p>
+<h2 id="tech-stack">Tech stack</h2>
+<p>I have a very basic stack. It’s Nginx on Ubuntu on Linode with basic PHP, Node.JS, JS, CSS and HTML.</p>
+<p><strong>Linode</strong><br>
+My server is hosted by the awesome guys and girls at <a href="https://www.linode.com/?r=9ca5a3583601b91e04ba71883446f0ed3d8fd025&amp;ref=levels.io">Linode</a> (yes that’s a referral link). I run all my sites (even this blog you’re looking at) on one virtual private server (VPS).</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-31-01.21.52-1024x480.png" alt=""></p>
+<p>To show you how cheap it is: I pay $40/m for a Linode with 4 GB RAM, 4 CPU cores, 96 GB SSD storage and 4TB transfer i/o. You think that sounds slow and tiny? Yep, that’d be a slow MacBook, but as a server it’s really quite fast. It takes floods of users easily. To give you an idea, every time one of my sites gets press or is featured on <a href="https://levels.io/hacker-news-number-one/">Hacker News</a> or <a href="https://levels.io/product-hunt-hacker-news-number-one/">Product Hunt</a>, it’ll get flooded with users (often &gt;1000 concurrent users per second).</p>
+<p>It’s never went down yet either, except for the cases when I broke it myself 🙂</p>
+<p>I love Linode’s dashboard too. I’ve tried AWS’s but it’s just too complicated for me. Like when I shut down an AWS instance, it loses all data? Sure that might sound logical to an engineer, but not to me. To me that’s just not very user friendly. Linode has a lot less features than AWS but in my case that’s good. It’s simple. You can deploy a server instantly with one button, install a Linux distribution on it and it’ll be up and running in 5 minutes.</p>
+<p><strong>Ubuntu</strong><br>
+My server runs Ubuntu 14.04 LTS as its OS. Why? It seemed like the most common Linux distribution when I picked it. And LTS stands for long-term support, which means even if you don’t upgrade to the next versions, it’ll receive bug fixes for quite a few years.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-31-01.25.24-1024x434.png" alt=""></p>
+<p><strong>Nginx</strong><br>
+On top of that, I run a basic Nginx server with the PHP-FPM gateway installed to enable PHP to run. I love Nginx because it’s very maintenance free and even if you don’t tweak it after installing, it’s usually just crazy fast out of the box.</p>
+<p><strong>PHP/Node.JS</strong><br>
+The back-end of the sites itself are mostly written in PHP. I’m always embarrassed when I have to tell people this, but to be fair PHP has gotten a lot better these days. I am feeling the pressure to start moving over to Node.JS though, although I’ve been saying that for awhile (it’s hard to switch engrained habits).</p>
+<p><strong>HTML/JS/SCSS</strong><br>
+The front-end of the sites is written in hand-coded HTML (like most people still do) and just raw JS. I do use jQuery to make stuff easier. I use some parts of SCSS to speed things up, but mostly it’s just me typing raw CSS code.</p>
+<p><strong>Deploying fast</strong><br>
+I like this setup, because I can deploy sites very fast. I’ll register a domain with <a href="http://namecheap.com/?ref=levels.io">NameCheap</a>, use their FreeDNS to add DNS entries to point to my Linode VPS IP address. I’ll clone an existing nginx.conf (Nginx config file) from another domain, change a few things and upload it. Then I connect to my server, enter the command below:</p>
+<blockquote>
+<p>sudo ln -s /srv/http/domain.com/app/nginx.conf /etc/nginx/sites/domain.com<br>
+sudo nginx -s restart</p>
+</blockquote>
+<p>This links the nginx.conf file to the nginx server and then reloads the server and it’ll be live. I can do that in about 15 minutes. Which is crazy cool to me.</p>
+<p>I remember it used to take me hours to add a new site/domain to DreamHost because I needed to get through their horribly slow web panel. SSH-ing into a server is definitely superior to a web panel. I figured that out fast.</p>
+<h2 id="folder-structure">Folder structure</h2>
+<p>Last year, I was obsessing about how my folder structure was supposed to look. My projects had become quite a mess and I started looking at popular frameworks to base a structure on. After months, I slowly evolved into using this structure:</p>
+<p><strong>/_assets</strong><br>
+This is the folder I start with. It contains all the rough pre-dev assets like mock ups in Photoshop and Sketch of the interface and logo designs. Then when the site is developed, I put stuff like screenshots of press mentions in this folder. It’s pretty much everything that shouldn’t be on the server.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-04.36.54-1024x484.png" alt=""></p>
+<p><strong>/public/assets/</strong><br>
+This includes all public asset files. That means pretty much everything used by the front-end. CSS for styling, JS for client-side scripting, images in PNG etc. This should all be publicly accessible. All JS/CSS files are pre-processed from the /app/ folder.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-04.44.50-1024x467.png" alt=""></p>
+<p><strong>/app/</strong><br>
+This includes all front-end (SCSS, JS), back-end code (PHP, Node.JS) and also the server configuration in the nginx.conf file that Nginx uses. This folder isn’t accessible publicly by itself (only /public/ is accessible publicly). Instead, I use Nginx’s config file as a natural router to route specific URLs to specific PHP files. That allows me to control what applications are accessible by clients.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-22.02.42-1024x316.png" alt=""></p>
+<p>I use <a href="https://incident57.com/codekit/?ref=levels.io">CodeKit</a> to monitor this folder and automatically pre-process/minify/compile the SCSS and JS files to the <strong>/public/assets/</strong> folder:</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-04.48.18-1024x516.png" alt=""></p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-29-17.35.40-1024x705.png" alt="Screenshot 2014-08-29 17.35.40"></p>
+<p><strong>/lib/</strong><br>
+This includes all back-end server-side libraries and stuff I didn’t make myself and don’t want to edit. For example Stripe’s library for payment processing and Twitter’s OAuth library. Libraries are included from this folder by apps in the /app/ folder.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-04.46.47-1024x332.png" alt=""></p>
+<p><strong>/workers/</strong><br>
+This includes all app files that are scheduled and do stuff in the background by cron jobs. Think about sending out email queues or downloading/uploading data on a daily basis, like scraping or backing up files. I guess you could call them agents or daemons too.</p>
+<p><strong>/logs/</strong><br>
+This includes simple .txt files to log stuff. If I do a scheduled cron job, I usually do it like this:</p>
+<blockquote>
+<p>*** * * * php -f /srv/http/domain.com/workers/doStuff.php &gt; /srv/http/domain.com/logs/doStuff.txt**</p>
+</blockquote>
+<p>This enables me to quickly check up on the result of any scheduled jobs.</p>
+<p><strong>/data/</strong><br>
+This includes all data used by the app. I actually shy away from using real database systems in the 12 startups. Instead I use JSON text files. Wow. Yes. What a shocker! So this is for example how <a href="http://nomadlist.io/?ref=levels.io">NomadList</a>‘s data looks. Every text file usually just contains a JSON encoded array of data. The string in the filename is an MD5 hash of what it’s about. With NomadList, that’s the city + state + country name.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-30-04.32.13-1024x899.png" alt=""></p>
+<p>So yep very rough. Is this a horrible idea? Sure. But I’m not a programmer and at this scale it’s fast to develop with. If there’s anything I hate more, it’s setting up a database structure. How the hell am I going to know what fields I will want to use? It’s slow and for me it seems super counter intuitive. Especially if you like to code fast.</p>
+<p>You can always write a script that puts this in a MySQL/MariaDB/PostgreSQL database later. I’d say if you’re getting sensitive user data though you will want to secure it in a more decent fashion.</p>
+<h2 id="my-coding-style">My coding style</h2>
+<p>Except for jQuery, I don’t use any frameworks. Why? Because many times, they just make things more complex. I kind of just write code. I do want to keep things clean and fast though. I like DRY KISSes: Don’t Repeat Yourself and Keep It Simple Stupid. When I need a function or piece of code I already wrote before, I grab it from a previous project. That saves some time.</p>
+<h2 id="to-do-lists">To-do lists</h2>
+<p>So how do I know what I’m doing in a day? I used to have serious difficulties getting tasks done. <a href="http://trello.com/?ref=levels.io">Trello</a> helps a lot. It’s a kan-ban type system that lets you make lists with cards in it. Each card can be a task. You can arrange lists whichever way you want. And you can have multiple boards for different projects. Just go <a href="http://trello.com/?ref=levels.io">try it now</a>, it’s free and awesome.</p>
+<p>I have a particular workflow with Trello. I think I saw somebody else on <a href="http://news.ycombinator.com/?ref=levels.io">Hacker News</a> do this and that’s where I copied it from. I have a list for this year, this month, this week, today and now. When I go do something I drag it in to the ‘now’ list. That gives me an immediate sense of action and knowing what to focus on.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-31-01.37.10-1024x316.png" alt=""></p>
+<p>When I finish the task, I drag it to the list on the left. This list holds all completed tasks for this week. At the end of the week, I move this entire list out of the ‘to-do’ board to the ‘finished’ board.</p>
+<p><img src="https://levels.io/content/images/2014/08/Screenshot-2014-08-31-01.43.30-1024x480.png" alt=""></p>
+<p>Now it’s out of my way. This list is important because it gives you a sense of satisfaction and loose measurement of how productive your week is. And the fun thing is, after a while of doing this, you can go to the ‘finished’ board and see everything you did for the last X weeks. And it makes you feel quite productive and proud of yourself! ^_^</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So that’s how I work! Not really special but since many people asked I thought this might help.</p>
+<p>Like I said it’s probably not following any best practices. But it works. I actually ship products.</p>
+<p>I think the most important thing to remember is that it doesn’t really matter how people do things. When I used to make electronic music, the forums would be full of people asking “which tools do XXX use?” and “which program do you make this bassline with”, and in the end it wouldn’t matter. It doesn’t matter if you use PHP, Node.JS, Ruby or whatever hip new language. Everyone uses different tools and has their own ways and tricks. It’s really about what you’re best, quickest and most comfortable with.</p>
+<p>When you are unified with your tools, you can really make anything ^_o</p>
+<p>P.S. I&rsquo;m on <a href="https://twitter.com/levelsio">Twitter</a> too if you&rsquo;d like to follow more of my stories. And I wrote a book called <a href="https://makebook.io/">MAKE</a> about building startups without funding. <a href="https://levels.io/archive/">See a list of my stories</a> or <a href="https://levels.io/contact-me/">contact me</a>. To get an alert when I write a new blog post, you can subscribe below:</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/information/24-2-29%E9%9D%9E%E5%81%8F%E5%B7%AE%E7%9A%84%E5%BD%92%E4%B8%80%E5%8C%96/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/information/24-3-1%E8%80%81mac%E5%8F%98%E8%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%8E%98%E9%87%91/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title> - 知识</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="阿明" /><meta name="description" content="更换了Macbook pro，使用了近5年的Macbook Air终于宣告退役。最近将Air改造成一台私有服务器继续发挥它的价值。 所需要的配置和" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.117.0 with theme even" />
+
+
+<link rel="canonical" href="https://aming.xyz/information/24-3-1%E8%80%81mac%E5%8F%98%E8%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%8E%98%E9%87%91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.032dc16a03e59c9d45c66a813271bda036a867e81b10c58f0ca34a9279eeb01b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="更换了Macbook pro，使用了近5年的Macbook Air终于宣告退役。最近将Air改造成一台私有服务器继续发挥它的价值。 所需要的配置和" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aming.xyz/information/24-3-1%E8%80%81mac%E5%8F%98%E8%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8-%E6%8E%98%E9%87%91/" /><meta property="article:section" content="information" />
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="更换了Macbook pro，使用了近5年的Macbook Air终于宣告退役。最近将Air改造成一台私有服务器继续发挥它的价值。 所需要的配置和">
+
+<meta itemprop="wordCount" content="1612">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="更换了Macbook pro，使用了近5年的Macbook Air终于宣告退役。最近将Air改造成一台私有服务器继续发挥它的价值。 所需要的配置和"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">知识</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">科技资讯</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">知识</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">科技资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+          <span class="more-meta"> 约 1612 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>更换了Macbook pro，使用了近5年的Macbook Air终于宣告退役。最近将Air改造成一台私有服务器继续发挥它的价值。</p>
+<p>所需要的配置和软件也很简单： 首先是SSH只要在Mac<code>偏好设置&gt;共享&gt;远程管理</code>中开启即可</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/7/16d09612b35914a0~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png" alt=""></p>
+<p>由于一般宽带没有公网IP如果需要远程访问有三种方式：</p>
+<ol>
+<li>
+<p>联系运营商索要公网IP,也有网友<a href="https://link.juejin.cn/?target=https%3A%2F%2Fp1-jj.byteimg.com%2Ftos-cn-i-t2oaga2asx%2Fgold-user-assets%2F2019%2F9%2F7%2F16d0965062d88e1f~tplv-t2oaga2asx-image.image" title="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/9/7/16d0965062d88e1f~tplv-t2oaga2asx-image.image">破解光猫</a>设置桥接方式获取到公网IP</p>
+</li>
+<li>
+<p>使用花生壳等内网穿透服务</p>
+</li>
+<li>
+<p>如果你有一台有公网IP的服务器可以使用<a href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ffatedier%2Ffrp%2Fblob%2Fmaster%2FREADME_zh.md" title="https://github.com/fatedier/frp/blob/master/README_zh.md">frp</a></p>
+</li>
+</ol>
+<p>为了节省时间和自己服务灵活性我选择使用frp做内网穿透</p>
+<ol>
+<li>从frp <a href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ffatedier%2Ffrp%2Freleases" title="https://github.com/fatedier/frp/releases">release</a> 下载对应系统程序 解压后我们在需要做穿透的mac上编辑配置frpc.ini文件：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span data-line-num=&#34;1&#34;&gt;[common]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;2&#34;&gt;server_addr = 公网服务器的ip&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;3&#34;&gt;server_port = 7000&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;4&#34;&gt;admin_addr = 127.0.0.1&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;5&#34;&gt;admin_port = 7400&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;6&#34;&gt;token = token&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;7&#34;&gt;tls_enable = &lt;span&gt;true&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;8&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;9&#34;&gt;&lt;span&gt;#下面是我需要开启的服务，按自己需求自定义&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;10&#34;&gt;[ssh]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;11&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;12&#34;&gt;local_ip = 127.0.0.1&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;13&#34;&gt;local_port = 22&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;14&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;15&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;16&#34;&gt;[mysql]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;17&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;18&#34;&gt;local_port = 3306&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;19&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;20&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;21&#34;&gt;[postgres]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;22&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;23&#34;&gt;local_port = 5432&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;24&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;25&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;26&#34;&gt;[mongo]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;27&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;28&#34;&gt;local_port = 27017&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;29&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;30&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;31&#34;&gt;[jenkins]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;32&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;33&#34;&gt;local_port = 9090&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;34&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;35&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;36&#34;&gt;[jupyter]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;37&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;38&#34;&gt;local_port = 8888&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;39&#34;&gt;remote_port = 远程访问端口&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;40&#34;&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;41&#34;&gt;[aria2]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;42&#34;&gt;&lt;span&gt;type&lt;/span&gt; = tcp&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;43&#34;&gt;local_port = 6800&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;44&#34;&gt;remote_port = 远程访问端口 &lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;45&#34;&gt;&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里我在Air上穿透了测试数据库，并将一些服务(jenkins,jupyter)从原有的云服务器中转移到Air上减少资源占用，还开启的aria2下载工具，这样可以随时随地远程下载文件到我的Air中</p>
+<p>配置完成后在终端运行</p>
+<p>开启服务 <code>./frpc -c frpc.ini</code></p>
+<p>接下载同样在有公网IP的服务器上下载客户端，编辑frps.ini,配置相对简单</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span data-line-num=&#34;1&#34;&gt;[common]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;2&#34;&gt;bind_port = 7000&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;3&#34;&gt;allow_ports = 需要穿透的端口，对应frpc的remote_port&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;4&#34;&gt;token = 对应frpc的token&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样在服务端运行</p>
+<p><code>./frps -c frps.ini</code></p>
+<p>这时就实现了内网穿透，Air已经基本是一台服务器了</p>
+<p>这时还需要两个软件让Air变成完全体，就是 <a href="https://link.juejin.cn/?target=http%3A%2F%2Fsupervisord.org%2F" title="http://supervisord.org/">supervisor</a> 和 <a href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fintegralpro%2Fnosleep%2Freleases" title="https://github.com/integralpro/nosleep/releases">noSleep</a></p>
+<p><strong>在终端和公网服务器停掉之前运行的frpc和frps</strong></p>
+<p>Supervisor一个进程管理工具，它可以很方便的监听、启动、停止、重启一个或多个进程。用Supervisor管理的进程，当一个进程意外被杀死，supervisort监听到进程死后，会自动将它重新拉起，很方便的做到进程自动恢复的功能。</p>
+<p>Supervisor的安装方式有很对这里不再赘述</p>
+<p>安装完成后在配置文件夹下(一般是/supervisor.d/)</p>
+<p><code>touch frp.ini</code> 或 <code>frp.conf</code></p>
+<p>具体使用那个后退需要在/etc/supervisord.conf中最后一行查看也可自行修改配置路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span data-line-num=&#34;1&#34;&gt;[include]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;2&#34;&gt;files = /etc/supervisor.d/*.conf&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编辑frp.conf</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span data-line-num=&#34;1&#34;&gt;[program:frpc]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;2&#34;&gt;&lt;span&gt;command&lt;/span&gt;=/Users/***/frp_0.28.2_darwin_amd64/frpc -c /Users/***/frp_0.28.2_darwin_amd64/frpc.ini&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;3&#34;&gt;user=you mac username&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;4&#34;&gt;autostart=&lt;span&gt;true&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;5&#34;&gt;autorestart=&lt;span&gt;true&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;6&#34;&gt;startsecs=30&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;7&#34;&gt;startretries=5&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>保存后运行 <code>supervisorctl update</code> 更新配置</p>
+<p><code>supervisorctl status</code>查看运行状态</p>
+<p>这时当你的电脑重启或frp意外停止supervisor都会帮你重新启动frp</p>
+<p>在公网服务器同样安装supervisor，添加配置<code>frps.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span data-line-num=&#34;1&#34;&gt;[program:frps]&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;2&#34;&gt;&lt;span&gt;command&lt;/span&gt;=/etc/frp/frps -c /etc/frp/frps.ini&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;3&#34;&gt;user=you ubuntu username&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;4&#34;&gt;autostart=&lt;span&gt;true&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;5&#34;&gt;autorestart=&lt;span&gt;true&lt;/span&gt;&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;6&#34;&gt;startsecs=30&lt;/span&gt;
+</span></span><span class="line"><span class="cl">&lt;span data-line-num=&#34;7&#34;&gt;startretries=5&lt;/span&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>执行</p>
+<p><code>supervisorctl update</code></p>
+<p>这时通过</p>
+<p><code>ssh 公网user@公网IP -p 6000</code></p>
+<p>就可以访问你的内网Air了，如果你还穿透了其他服务如jenkins remote_port = 19090,使用</p>
+<p><code>公网ip:19090</code></p>
+<p>就可以访问到Air中运行的jenkins服务</p>
+<p>在实际使用过程中发现就算<code>偏好设置&gt;节能设置</code>为永不休眠，盒盖也会发生断网情况，所以下载<a href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fintegralpro%2Fnosleep%2Freleases" title="https://github.com/integralpro/nosleep/releases">noSleep</a>并运行可以保持Air待机状态，这样就算合盖可以顺畅访问Air了。</p>
+<p>Air这时就是一台带有公网IP的服务器了，想做什么就可以自由发挥了。</p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/information/24-3-1%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E6%9C%80%E5%B0%8F%E5%8F%AF%E8%A1%8C%E4%BA%A7%E5%93%81---how-i-build-my-minimum-viable-products/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/information/24-3-2%E6%88%91%E5%A6%82%E4%BD%95%E6%B2%BB%E6%84%88%E6%88%91%E7%9A%84%E7%84%A6%E8%99%91%E5%A4%A7%E9%83%A8%E5%88%86---how-i-cured-my-anxiety-mostly/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://aming.xyz/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2024
+   <span>阿明</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

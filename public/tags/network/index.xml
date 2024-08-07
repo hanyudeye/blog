@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>network on 阿明 - 收集生活的感悟</title>
+    <link>https://aming.xyz/tags/network/</link>
+    <description>Recent content in network on 阿明 - 收集生活的感悟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Feb 2020 13:08:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://aming.xyz/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>计算机网络简介</title>
+      <link>https://aming.xyz/technology/network/</link>
+      <pubDate>Thu, 13 Feb 2020 13:08:49 +0800</pubDate>
+      
+      <guid>https://aming.xyz/technology/network/</guid>
+      <description>&lt;p&gt;
+一个人，你再强，你最多也只能掌握两个人的知识，干两个人的活，比方啊。但是你有些事情不会做，或者人手不够怎么办，那就多找几个人不就完了吗。
+&lt;/p&gt;
+&lt;p&gt;
+计算机也是一样，你把计算机连成一个团体，那么所有在团体中的计算机就都能受益了，可以互相帮助。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

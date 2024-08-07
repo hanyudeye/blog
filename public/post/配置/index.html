@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>软件配置，好记性不如烂笔头</title>
+</head>
+
+<body>
+    <div id="post" class="post">
+        <article>
+            <header>
+                <h1 class="post-title">软件配置，好记性不如烂笔头</h1>
+            </header>
+            <h2 id="在wsl中设置子系统的默认用户">在wsl中设置子系统的默认用户</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ubuntu.exe config --default-user <span class="o">{</span>username<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="cloudflare-开放-turnstile-验证码服务httpsblogcloudflarecomturnstile-ga"><a href="https://blog.cloudflare.com/turnstile-ga/">Cloudflare 开放 Turnstile 验证码服务</a></h2>
+<h2 id="配置-window-10-zsh-终端">配置 window 10 zsh 终端</h2>
+<p>F:\msys64\msys2_shell.cmd -defterm -no-start -use-full-path -here -mingw64</p>
+<p>配置默认 shell
+msys2_shell.cmd</p>
+<p>set &ldquo;LOGINSHELL=zsh&rdquo;</p>
+<h2 id="i3wm-高分辨率显示器配置缩放">i3wm 高分辨率显示器配置缩放</h2>
+<p>You can create ~/.Xresources</p>
+<p>Xft.dpi:180</p>
+<p>使用 96 的整数倍通常效果最好，例如 192 表示 200% 缩放</p>
+<p>xdpyinfo|grep -B 2 resolution
+此命令可以提供推荐值</p>
+<h2 id="应用程序在高分辨率屏幕进行缩放">应用程序在高分辨率屏幕进行缩放</h2>
+<p>Exec=netease-cloud-music &ndash;force-device-scale-factor=2 %U</p>
+<h2 id="vscode">Vscode</h2>
+<h3 id="键盘快捷键-keyboard">键盘快捷键 keyboard</h3>
+<p>C:\Users\Administrator\AppData\Roaming\Code\User\keybindings.json</p>
+<h4 id="折叠">折叠</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;z z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;editor.foldAll&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+k ctrl+0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;-editor.foldAll&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;z a&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;editor.unfoldAll&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+k ctrl+j&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;-editor.unfoldAll&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;z c&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;editor.fold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+shift+oem_4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;-editor.fold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;z u&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;editor.unfold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+shift+oem_6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;-editor.unfold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus &amp;&amp; foldingEnabled&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+        </article>
+    </div>
+</body>
+
+</html>
