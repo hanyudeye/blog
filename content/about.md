@@ -6,6 +6,7 @@ menu: "main"
 
 test 1 
 test 2
+test 3
 ## 关于
 
 1. 本站启用标题搜索，按键 `Ctrl + /` 可以搜索文章标题。
