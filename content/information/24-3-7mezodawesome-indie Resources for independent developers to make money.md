@@ -1,43 +1,16 @@
 ---
 layout: default
 toc: false
-title: mezodawesome-indie Resources for independent developers to make money
+title: 独立开发者
 date:  2024-03-07T09:36:13+08:00
 categories: ['']
 ---
 
-
-## Awesome Indie [![Awesome](https://camo.githubusercontent.com/50cf39121274b3db22bf1bd72cbe25af9078e037441cb5b5bdef1cc9dc5eb2f7/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/sindresorhus/awesome) 令人敬畏的独立 ![Awesome](https://camo.githubusercontent.com/50cf39121274b3db22bf1bd72cbe25af9078e037441cb5b5bdef1cc9dc5eb2f7/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667) 
+<!--more-->
 
 Resources to help independent developers make money.  
 帮助独立开发者赚钱的资源。
 
-Making money from your own code has never been easier, but it's still hard. Here, I try to curate a list of resources to help everyone interested in making money from their digital products get inspired and give it a try. Be it monetizing side-projects, bootstrapping business ideas, etc.  
-从自己的代码中赚钱从未如此简单，但仍然很难。在这里，我试图策划一个资源列表，以帮助每个有兴趣从他们的数字产品中赚钱的人获得灵感，并给予尝试。无论是货币化的副项目，引导商业想法，等等。
-
-Projects don't need to be big, actually, it's better if they are not, they just need to be profitable. They might provide a passive income after the initial bulk of work, and who knows, maybe even help you reach financial independence.  
-项目不需要很大，实际上，如果他们不是更好，他们只需要盈利。他们可能会在最初的大量工作之后提供被动收入，谁知道呢，甚至可能帮助你实现经济独立。
-
-Going indie does have lots of lifestyle perks :)  
-独立制作确实有很多生活方式的好处：）
-
-All these resources might help inspire you and put you on the right track but in the end what matters is to **MAKE and TRY stuff**. So devour this content responsibly :)  
-所有这些资源可能有助于激励你，让你走上正确的道路，但最终重要的是制造和尝试东西。所以请负责任地阅读此内容：）
-
-Contributions are more than welcome.  
-捐款是非常欢迎的。
-
-by **[@mezod](https://twitter.com/mezood)** (Doing things every day with **[everyday.app](https://everyday.app/)**)  
-by @mezod（每天用everyday.app做事情）
-
-**Notes: 备注：**
-
--   If \[$\], it means it's not free and probably means I haven't tried it but still decided to add it because of the several references.  
-    如果是\[$\]，这意味着它不是免费的，可能意味着我还没有尝试过它，但仍然决定添加它，因为有几个引用。
--   This repo was once [#1 on Github Trending](https://medium.com/@mezood/making-money-from-your-own-code-has-never-been-easier-but-its-still-hard-2242ddaae6a1)! :\_)  
-    这个repo曾经是Github趋势的第一名！：\_）
--   [Icepy](https://github.com/icepy) translated this repo to [Chinese](https://github.com/icepy/awesome-indie) :)  
-    Icepy将此repo翻译成中文：）
 
 ## Contents 内容
 
@@ -58,12 +31,10 @@ by @mezod（每天用everyday.app做事情）
 
 -   **[IndieHackers](https://www.indiehackers.com/businesses)**
     
-    Learn from profitable businesses and side projects. IndieHackers is probably the catalyst for this new wave of interest on making an independent income. It is a collection of interviews to successful developers about their products. IndieHackers has been especially interesting to follow since it's been an indie project itself. [Courtland Allen](https://twitter.com/csallen?lang=ca) has been very transparent about [how he built it](https://www.indiehackers.com/blog). The last news make one think that the forum/community will grow.  
     从盈利的企业和副项目中学习。IndieHackers可能是这一新一波独立收入兴趣的催化剂。这是一个成功的开发人员关于他们的产品的采访的集合。IndieHackers一直特别有趣，因为它本身就是一个独立项目。考特兰艾伦对他是如何建立它非常透明。最后的消息让人认为论坛/社区将增长。
     
 -   **[Barnacl.es](https://barnacl.es/)**
     
-    News for bootstrappers, not VC hackers. Hacker-News like forum. [Peter Bhat Harkins](https://twitter.com/pushcx) started it in early 2016 and I've found it of great value ever since. Also, it runs on [great software](https://github.com/jcs/lobsters), which is always a thing to appreciate!  
     这是给引导者的消息，而不是给VC黑客的。Hacker-News喜欢论坛。Peter Bhat Harkins在2016年初开始了它，从那以后我发现它非常有价值。此外，它运行在伟大的软件，这总是一件值得欣赏的事情！
     
 -   **[bootstrapped.fm Forum  bootstrapped.fm论坛](http://discuss.bootstrapped.fm/)**

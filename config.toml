@@ -1,14 +1,11 @@
-baseURL = "https://aming.xyz"
+baseURL = "https://aming.xyz/blog"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-# title = "阿明 - 收集生活的感悟"
-title = "知识"
+title = "阿明"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
 theme = "even"
-#theme = "xyz"
-# theme = "aming"
 enableGitInfo = false # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
@@ -23,7 +20,7 @@ disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # essential                     # 必需
+[[params.author]]                  # essential                     # 必需
   name = "阿明"
 
 # [sitemap]                 # essential                     # 必需
@@ -32,20 +29,20 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "首页"
+  name = "思维"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]             # config your menu              # 配置目录
- name = "科技资讯"
+ name = "IT"
  weight = 30
  identifier = "information"
  url = "/information/"
-# [[menu.main]]
-#   name = "归纳"
-#   weight = 50
-#   identifier = "categories"
-#   url = "/categories/"
+[[menu.main]]
+  name = "生活"
+  weight = 5
+  identifier = "doing"
+  url = "/doing/"
 
 # [[menu.main]]
   # name = "搬运工"
@@ -68,10 +65,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   gitRepo = ""
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  #logoTitle = "放松，安静 ，搬运工 2023"        # default: the title value    # 默认值: 上面设置的 title 值
-  logoTitle = "知识"        # default: the title value    # 默认值: 上面设置的 title 值
+  logoTitle = "阿明"        # default: the title value    # 默认值: 上面设置的 title 值
+  # logoTitle = "阿明"        # default: the title value    # 默认值: 上面设置的 title 值
   keywords = ["阿明博客","记录生活"]
-  description = "收集生活的感悟."
+  description = "思维比只是更重要，收集生活的感悟."
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archivePaginate = 30
@@ -127,7 +124,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
  [outputs]
  # 增加 JSON 配置
- home=["HTML","RSS","JSON"]
+   home=["HTML","RSS","JSON"]
 
 
   [params.publicCDN]        # load these files from public cdn                          # 启用公共 CDN，需自行定义
@@ -250,3 +247,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     startLevel = 1
   [markup.goldmark.renderer]
     unsafe= true
+
+[taxonomies]
+  author="阿明"
