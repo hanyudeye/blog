@@ -1,4 +1,4 @@
-baseURL = "https://aming.xyz/blog"
+baseURL = "https://aming.xyz"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "阿明"
@@ -173,7 +173,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [params.valine]
-    enable = false
+    enable = true
     appId = 'TdGIcEOeCFzkY9wFrWradER3-MdYXbMMI'
     appKey = 'd8n8A5mxAtUvfsM6IEo4HjCB'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
@@ -191,15 +191,16 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     options = ""            # default: "{theme: 'simple'}"
 
   [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
-    enable = false
-    siteUV = true
-    sitePV = true
+    enable = true
+    siteUV = false
+    sitePV = false
     pagePV = true
 
   [params.reward]                                         # 文章打赏
-    enable = false
-    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
-    alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
+    enable = true
+    #wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    wechat = "/wechat.png"           # 微信二维码
+    alipay = "/alipay.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
     a-email = "mailto:1191552161@qq.com"
