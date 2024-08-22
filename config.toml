@@ -20,7 +20,7 @@ disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # essential                     # 必需
+[[params.author]]                  # essential                     # 必需
   name = "阿明"
 
 # [sitemap]                 # essential                     # 必需
@@ -124,7 +124,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
  [outputs]
  # 增加 JSON 配置
- home=["HTML","RSS","JSON"]
+   home=["HTML","RSS","JSON"]
 
 
   [params.publicCDN]        # load these files from public cdn                          # 启用公共 CDN，需自行定义
@@ -247,3 +247,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     startLevel = 1
   [markup.goldmark.renderer]
     unsafe= true
+
+[taxonomies]
+  author="阿明"
