@@ -199,8 +199,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   [params.reward]                                         # 文章打赏
     enable = true
     #wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
-    wechat = "/wechat.png"           # 微信二维码
-    alipay = "/alipay.png"           # 支付宝二维码
+    wechat = "https://aming.xyz/blog/wechat.png"           # 微信二维码
+    alipay = "https://aming.xyz/blog/alipay.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
     a-email = "mailto:1191552161@qq.com"
