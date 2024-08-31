@@ -69,6 +69,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # logoTitle = "阿明"        # default: the title value    # 默认值: 上面设置的 title 值
   keywords = ["阿明博客","记录生活"]
   description = "思维比只是更重要，收集生活的感悟."
+  logoImage="/logo.png"
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archivePaginate = 30
@@ -160,8 +161,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientSecret = ""       # Your client secret
 
   [params.utterances]       # https://utteranc.es/
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
+    owner = "hanyudeye"              # Your GitHub ID
+    repo = "blog"               # The repo to store comments
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
     owner = ""              # Your GitHub ID
@@ -173,7 +174,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [params.valine]
-    enable = true
+    enable = false
     appId = 'TdGIcEOeCFzkY9wFrWradER3-MdYXbMMI'
     appKey = 'd8n8A5mxAtUvfsM6IEo4HjCB'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
@@ -191,13 +192,13 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     options = ""            # default: "{theme: 'simple'}"
 
   [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
-    enable = true
+    enable =false
     siteUV = false
     sitePV = false
     pagePV = true
 
   [params.reward]                                         # 文章打赏
-    enable = true
+    enable = false
     #wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
     wechat = "https://aming.xyz/blog/wechat.png"           # 微信二维码
     alipay = "https://aming.xyz/blog/alipay.png"           # 支付宝二维码
