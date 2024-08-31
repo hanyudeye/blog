@@ -1,4 +1,4 @@
-baseURL = "https://aming.xyz"
+baseURL = "https://aming.xyz/blog"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "阿明"
