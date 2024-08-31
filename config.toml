@@ -66,7 +66,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "阿明"        # default: the title value    # 默认值: 上面设置的 title 值
-  # logoTitle = "阿明"        # default: the title value    # 默认值: 上面设置的 title 值
   keywords = ["阿明博客","记录生活"]
   description = "思维比只是更重要，收集生活的感悟."
   logoImage="/logo.png"
