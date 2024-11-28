@@ -38,11 +38,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
  weight = 30
  identifier = "information"
  url = "/information/"
-# [[menu.main]]
-#   name = "生活"
-#   weight = 50
-#   identifier = "doing"
-#   url = "/doing/"
+
+[[menu.main]]
+  name = "人物"
+  weight = 50
+  identifier = "people"
+  url = "/people/"
 
 # [[menu.main]]
   # name = "搬运工"
