@@ -54,6 +54,7 @@ categories: ['']
 原位粘贴CTRL+SHIFT+V
 
 自由变换CTRL+T
+<!-- tip --> 可以实现精确移动
 
 再次变换CTRL+SHIFT+T
 
