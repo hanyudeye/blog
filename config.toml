@@ -29,27 +29,27 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "认知"
+  name = "杂记"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]             # config your menu              # 配置目录
- name = "资讯"
+ name = "成长"
  weight = 30
- identifier = "information"
- url = "/information/"
+ identifier = "grow"
+ url = "/grow/"
 
 [[menu.main]]
-  name = "人物"
+  name = "节约"
   weight = 50
-  identifier = "people"
-  url = "/people/"
+  identifier = "save"
+  url = "/save/"
 
-# [[menu.main]]
-  # name = "搬运工"
-  # weight = 80
-  # identifier = "carry"
-  # url = "/carry/"
+[[menu.main]]
+  name = "技能"
+  weight = 80
+  identifier = "skills"
+  url = "/skills/"
 
 [params]
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
@@ -199,9 +199,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     alipay = "https://aming.xyz/blog/alipay.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:1191552161@qq.com"
+    a-email = "mailto:hanyudeye@163.com"
     # b-stack-overflow = "http://localhost:1313"
-    # c-twitter = "http://localhost:1313"
+    c-twitter = "https://x.com/wuming12443151"
     # d-facebook = "http://localhost:1313"
     # e-linkedin = "http://localhost:1313"
     # f-google = "http://localhost:1313"
