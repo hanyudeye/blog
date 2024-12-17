@@ -371,3 +371,13 @@ weight="1"
 当行菜单常用的方法
 .HasChildren: 判断是否包含子菜单. 如果有子菜单则返回true
 ### 自定义hugo主题--标签和分类
+
+### 插入bilibili视频
+
+在想插入 B 站视频的地方使用 Shortcodes:
+
+![](images/2024-12-18-06-21-50.png)
+![](../images/2024-12-18-06-21-50.png)
+
+(AV 号不带 av/AV，BV 号必须带 bv/BV，PV 号控制分 P，默认为 1)
+比如 {{< bilibili BV18a4y1t7ej >}} 或者 {{< bilibili 2271122 >}}
