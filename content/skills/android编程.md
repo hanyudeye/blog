@@ -7,3 +7,8 @@ categories: ['']
 ---
 
 
+我们开发的是android 应用程序，而不是系统程序，所以要用到Android提供的库。
+
+<!--more-->
+
+
