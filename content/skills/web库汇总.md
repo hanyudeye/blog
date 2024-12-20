@@ -25,3 +25,6 @@ https://github.com/public-apis/public-apis
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 ```
 
+## 组件
+
+- 生成Favicon [favicon generator (Google)](https://www.google.com/search?q=favicon+generator) 。
