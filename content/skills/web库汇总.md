@@ -28,3 +28,9 @@ https://github.com/public-apis/public-apis
 ## 组件
 
 - 生成Favicon [favicon generator (Google)](https://www.google.com/search?q=favicon+generator) 。
+
+## tailwindcss
+
+``` html
+<script src="https://cdn.tailwindcss.com"></script>
+```

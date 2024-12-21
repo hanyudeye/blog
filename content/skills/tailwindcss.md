@@ -6,9 +6,10 @@ date:  2024-05-13T10:51:27+08:00
 categories: ['']
 ---
 
-#  Tailwind CSS
+#  什么是 Tailwind CSS
 
-Tailwind CSS 是一个强大的工具，用于快速构建现代网页界面，包括移动端样式。
+- **Tailwind CSS** 是一个功能类优先的 CSS 框架。
+- 它不像传统框架（如 Bootstrap）那样提供预先设计好的组件，而是通过 **原子化的 CSS 类** 快速构建自定义设计。
 
 <!--more-->
 
@@ -34,45 +35,6 @@ module.exports = {
 }
 ```
 
-### 2. CDN
-
-## 响应式设计
-
-- sm 适用于最小宽度为 640px 的设备；
-- md 适用于最小宽度为 768px 的设备；
-- lg 适用于最小宽度为 1024px 的设备；
-- xl 适用于最小宽度为 1280px 的设备；
-- 2xl 适用于最小宽度为 1536px 的设备。
-
-``` html
-<div class="bg-blue-500 sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500 xl:bg-purple-500">
-  这是一个响应式背景色
-</div>
-```
-
- 
-下面是一个详细的 **Tailwind CSS 教程笔记**，涵盖了从基础到进阶的用法，逐步解释其功能与特性。
-
----
-
-## **什么是 Tailwind CSS?**
-- **Tailwind CSS** 是一个功能类优先的 CSS 框架。
-- 它不像传统框架（如 Bootstrap）那样提供预先设计好的组件，而是通过 **原子化的 CSS 类** 快速构建自定义设计。
-
----
-
-## **安装与配置**
-
-### 1. 安装 Tailwind CSS
-#### 使用 npm 安装
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
-```
-
-#### 配置文件生成
-运行 `npx tailwindcss init` 会生成一个默认的配置文件 `tailwind.config.js`，它允许你自定义颜色、间距、字体等。
-
 ### 2. 添加 Tailwind 到 CSS 文件
 在项目的主 CSS 文件中（如 `styles.css`），添加以下内容：
 ```css
@@ -92,8 +54,6 @@ npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch
 NODE_ENV=production npx tailwindcss -o ./dist/output.css --minify
 ```
 
----
-
 ## **核心概念**
 
 ### 1. **Utility-first Classes**
@@ -109,8 +69,83 @@ NODE_ENV=production npx tailwindcss -o ./dist/output.css --minify
   - `p-4`：内边距为 `1rem`。
   - `rounded`：圆角。
 
----
+### 设置宽度
 
+1. **固定宽度**
+
+- 使用 `w-{size}` 类来设置固定宽度，其中 `{size}` 可以是预定义的尺寸，如 `w-64` 表示宽度为 `64px`。
+
+```html
+<div class="w-64">固定宽度为 64px 的 div</div>
+```
+
+2. **百分比宽度**
+
+- 使用 `w-{percentage}` 类来设置百分比宽度，例如 `w-1/2` 表示宽度为父元素宽度的一半。
+
+```html
+<div class="w-1/2">宽度为父元素宽度的一半</div>
+```
+
+3. **自动宽度**
+
+- 使用 `w-auto` 类来设置自动宽度，元素会根据内容自动调整宽度。
+
+```html
+<div class="w-auto">自动调整宽度</div>
+```
+
+4. **最大宽度**
+
+- 使用 `max-w-{size}` 类来设置元素的最大宽度，例如 `max-w-lg` 表示最大宽度为 `lg` 尺寸（大屏幕设备上的最大宽度）。
+
+```html
+<div class="max-w-lg">最大宽度为 lg（1024px）</div>
+```
+
+### 设置高度
+
+1. **固定高度**
+
+- 使用 `h-{size}` 类来设置固定高度，其中 `{size}` 可以是预定义的尺寸，如 `h-32` 表示高度为 `32px`。
+
+```html
+<div class="h-32">固定高度为 32px 的 div</div>
+```
+
+2. **百分比高度**
+
+- 使用 `h-{percentage}` 类来设置百分比高度，例如 `h-1/2` 表示高度为父元素高度的一半。
+
+```html
+<div class="h-1/2">高度为父元素高度的一半</div>
+```
+
+3. **自动高度**
+
+- 使用 `h-auto` 类来设置自动高度，元素会根据内容自动调整高度。
+
+```html
+<div class="h-auto">自动调整高度</div>
+```
+
+4. **最大高度**
+
+- 使用 `max-h-{size}` 类来设置元素的最大高度，例如 `max-h-screen` 表示最大高度为屏幕高度。
+
+```html
+<div class="max-h-screen">最大高度为屏幕高度</div>
+```
+
+### 组合使用
+
+你可以根据需要组合这些类来达到所需的效果，例如设置一个固定宽度和高度的元素：
+
+```html
+<div class="w-64 h-32">固定宽度 64px，固定高度 32px 的 div</div>
+```
+
+通过这些类，你可以轻松地调整和控制元素的尺寸，在使用 Tailwind CSS 进行网页开发时，这些类能够极大地提升你的开发效率。
 ### 2. **颜色**
 Tailwind 内置了一组丰富的颜色系统：
 - **背景颜色**：
@@ -126,24 +161,26 @@ Tailwind 内置了一组丰富的颜色系统：
   <div class="border border-yellow-400">边框颜色是黄色</div>
   ```
   
-自定义颜色可通过 `tailwind.config.js` 文件扩展：
-```javascript
-module.exports = {
-  theme: {
+- 自定义颜色可通过 `tailwind.config.js` 文件扩展：
+
+  ```javascript
+  module.exports = {
+   theme: {
     extend: {
       colors: {
         customPurple: '#7C3AED',
       },
+     },
     },
-  },
-};
-```
-然后使用：
-```html
-<div class="bg-customPurple text-white">自定义紫色</div>
-```
+  };
+  ```
 
----
+  然后使用：
+
+  ```html
+      <div class="bg-customPurple text-white">自定义紫色</div>
+  ```
+
 
 ### 3. **间距（Spacing）**
 Tailwind 提供了统一的间距单位：
@@ -157,8 +194,6 @@ Tailwind 提供了统一的间距单位：
   <div class="m-8">Margin 为 2rem</div>
   <div class="mx-auto my-4">X 轴自动对齐，Y 轴 Margin 为 1rem</div>
   ```
-
----
 
 ### 4. **布局**
 - **Flexbox**：
@@ -183,7 +218,6 @@ Tailwind 提供了统一的间距单位：
   - `grid-cols-3`：创建 3 列。
   - `gap-4`：设置网格间距。
 
----
 
 ### 5. **排版（Typography）**
 - **字体大小**：
@@ -200,8 +234,6 @@ Tailwind 提供了统一的间距单位：
   <p class="leading-loose">行高较大</p>
   ```
 
----
-
 ### 6. **圆角与边框**
 - **圆角**：
   ```html
@@ -215,8 +247,6 @@ Tailwind 提供了统一的间距单位：
   <div class="border-2 border-blue-500">更粗的蓝色边框</div>
   ```
 
----
-
 ### 7. **响应式设计**
 Tailwind 内置了响应式断点：
 - **断点前缀**：
@@ -225,11 +255,10 @@ Tailwind 内置了响应式断点：
     这是响应式文字
   </div>
   ```
+  - `sm`:  小屏（640px ）。
   - `md:`：中屏（768px）。
   - `lg:`：大屏（1024px）。
   - `xl:`：超大屏（1280px）。
-
----
 
 ### 8. **伪类**
 通过 `hover`、`focus`、`active` 等伪类设置状态样式：
@@ -243,8 +272,6 @@ Tailwind 内置了响应式断点：
   ```html
   <input class="border focus:border-blue-500">
   ```
-
----
 
 ### 9. **动画与过渡**
 - **过渡效果**：
@@ -262,9 +289,6 @@ Tailwind 内置了响应式断点：
   <div class="animate-bounce">跳跃效果</div>
   <div class="animate-spin">旋转效果</div>
   ```
-
----
-
 ## **进阶功能**
 
 ### 1. **插件系统**
@@ -282,8 +306,6 @@ module.exports = {
 };
 ```
 
----
-
 ### 2. **JIT 模式**
 通过 Just-In-Time 模式，Tailwind 可以按需生成 CSS，优化性能。
 启用方法：
@@ -293,7 +315,6 @@ module.exports = {
 };
 ```
 
----
 
 ### 3. **暗黑模式**
 Tailwind 内置了暗黑模式支持：
@@ -309,8 +330,5 @@ module.exports = {
   暗黑模式支持
 </div>
 ```
-
----
-
 ### 总结
 Tailwind CSS 是一个灵活的框架，通过原子化类名可以快速构建自定义设计。学习它的关键是熟悉类名及其含义，通过练习和项目应用，你将能更高效地使用 Tailwind CSS 构建出高质量的界面。
