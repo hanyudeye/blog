@@ -1,5 +1,14 @@
+---
+layout: default
+toc: false
+title: flex 和 grid 布局的区别是什么
+date:  2024-12-21T18:28:11+08:00
+categories: ['']
+---
+
  
 Flex布局（Flexbox）和Grid布局（CSS Grid）是现代CSS中用于布局设计的两种主要方法，它们各自有不同的特点和适用场景。下面是它们的主要区别和特点：
+<!--more-->
 
 ### Flex布局（Flexbox）
 
