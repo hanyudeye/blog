@@ -11,5 +11,4 @@ menu: "main"
 ## 联系方式
 
 - 微信: hanyudeye
-- X: wuming12443151
 
