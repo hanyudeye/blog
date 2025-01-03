@@ -1,9 +1,9 @@
 ---
 layout: default
 toc: false
-title: scss-best-practices-to-keep-in-mind
+title: scss 最佳实践
 date:  2024-05-13T10:39:40+08:00
-categories: ['']
+categories: ['程序员']
 ---
 
 # SCSS 样式

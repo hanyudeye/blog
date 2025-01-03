@@ -3,7 +3,7 @@ layout: default
 toc: false
 title: 我用到的edge浏览器中的功能
 date:  2024-12-26T09:39:35+08:00
-categories: ['']
+categories: ['生产力']
 ---
 
 edge 浏览器对 chrome 进行了扩展，我觉得挺好用的，虽然有人说是性能魔鬼，但我用着还行，没有关注到。 

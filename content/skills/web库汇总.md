@@ -3,7 +3,7 @@ layout: default
 toc: false
 title: web库汇总
 date:  2024-12-14T09:50:01+08:00
-categories: ['']
+categories: ['程序员']
 ---
 
 提供一些 web 库的名字，资源链接因为可能升级，所以不太稳定，可以根据名字查找新资源。

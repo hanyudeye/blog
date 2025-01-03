@@ -3,7 +3,7 @@ layout: default
 toc: false
 title: ps必备的快捷键大全（超详细） - 知乎
 date:  2024-03-15T07:21:14+08:00
-categories: ['']
+categories: ['美工']
 ---
 
 

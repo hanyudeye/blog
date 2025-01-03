@@ -3,7 +3,7 @@ layout: default
 toc: false
 title: 什么是web
 date:  2024-12-20T15:30:15+08:00
-categories: ['']
+categories: ['程序员']
 ---
 
 web: 就是 利用 数字信号，网线 进行  文档信息节点间的传输。
