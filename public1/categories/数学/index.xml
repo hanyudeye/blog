@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on 阿明</title>
+    <link>https://aming.xyz/blog/categories/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 May 2024 10:00:12 +0800</lastBuildDate>
+    <atom:link href="https://aming.xyz/blog/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数学</title>
+      <link>https://aming.xyz/blog/post/%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Fri, 24 May 2024 10:00:12 +0800</pubDate>
+      <guid>https://aming.xyz/blog/post/%E6%95%B0%E5%AD%A6/</guid>
+      <description>数学的基础理论 当处理到数量、结构、变化和空间等问题时，可以使用数学上的理论 数字的加减，多少，可以解决生活中 跟 量 相关的难题，比如音律，现代对经</description>
+    </item>
+  </channel>
+</rss>

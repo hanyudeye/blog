@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7074&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>死链检索工具 - 阿明</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+ <meta name="color-scheme" content="light dark">
+
+<meta name="author" content="
+
+" /><meta name="description" content="要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。
+" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.131.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:7074/skills/%E6%AD%BB%E9%93%BE%E6%A3%80%E7%B4%A2%E5%B7%A5%E5%85%B7/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.85b146e75238ce677fd61c2b991641670bde0f84cd77272c29c673fff577048b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="http://localhost:7074/skills/%E6%AD%BB%E9%93%BE%E6%A3%80%E7%B4%A2%E5%B7%A5%E5%85%B7/">
+  <meta property="og:site_name" content="阿明">
+  <meta property="og:title" content="死链检索工具">
+  <meta property="og:description" content="要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="skills">
+    <meta property="article:published_time" content="2025-01-04T09:40:40+08:00">
+    <meta property="article:modified_time" content="2025-01-04T09:40:40+08:00">
+
+  <meta itemprop="name" content="死链检索工具">
+  <meta itemprop="description" content="要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。">
+  <meta itemprop="datePublished" content="2025-01-04T09:40:40+08:00">
+  <meta itemprop="dateModified" content="2025-01-04T09:40:40+08:00">
+  <meta itemprop="wordCount" content="1515">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="死链检索工具">
+  <meta name="twitter:description" content="要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阿明</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">杂记</li>
+      </a><a href="/grow/">
+        <li class="mobile-menu-item">成长</li>
+      </a><a href="/save/">
+        <li class="mobile-menu-item">节约</li>
+      </a><a href="/skills/">
+        <li class="mobile-menu-item">技能</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo"><img src="/logo.png" alt="" srcset="" style="width: 50px; border-radius: 50%;"></a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+      <a class="menu-item-link" href="/">杂记</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/grow/">成长</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/save/">节约</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/skills/">技能</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/about/">关于</a>
+    </li>
+    <li class="menu-item">
+      <button id="theme-toggle">切换模式</button>
+    </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">死链检索工具</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2025-01-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/"> 程序员 </a>
+            </div>
+          <span class="more-meta"> 约 1515 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。</p>
+<h3 id="1-使用在线死链检测工具">1. <strong>使用在线死链检测工具</strong></h3>
+<p>有很多免费的在线工具可以帮助你扫描网页并列出所有失效链接。以下是一些常见的工具：</p>
+<ul>
+<li>
+<p><strong>Broken Link Checker (<a href="https://www.brokenlinkcheck.com/">https://www.brokenlinkcheck.com/</a>)</strong></p>
+<ul>
+<li>免费工具，能够扫描整个网站并报告死链。</li>
+<li>支持 HTML 和其他常见的网页格式。</li>
+</ul>
+</li>
+<li>
+<p><strong>W3C Link Checker (<a href="https://validator.w3.org/checklink">https://validator.w3.org/checklink</a>)</strong></p>
+<ul>
+<li>由 W3C 提供的死链检测工具，能够检查网页中的链接是否有效。</li>
+</ul>
+</li>
+<li>
+<p><strong>Dead Link Checker (<a href="https://www.deadlinkchecker.com/">https://www.deadlinkchecker.com/</a>)</strong></p>
+<ul>
+<li>允许你快速扫描整个网站，并给出详细的报告，包括每个失效链接的详细信息。</li>
+</ul>
+</li>
+<li>
+<p><strong>Online Broken Link Checker (<a href="https://www.onlinebrokenlinkchecker.com/">https://www.onlinebrokenlinkchecker.com/</a>)</strong></p>
+<ul>
+<li>支持批量检测网站死链，操作简单，报告清晰。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-使用网页爬虫工具">2. <strong>使用网页爬虫工具</strong></h3>
+<p>如果你想进行更深入的死链检测，并且具备一定的技术能力，可以使用爬虫工具进行网站抓取和链接检查。</p>
+<ul>
+<li>
+<p><strong>Screaming Frog SEO Spider</strong></p>
+<ul>
+<li>这是一款强大的 SEO 工具，它不仅可以用来分析网站的结构，还能检测网站中的所有死链。</li>
+<li>它会遍历网站，报告 404 错误或其他类型的失效链接。</li>
+<li>适用于 Windows、macOS 和 Linux，免费版本最多可以扫描 500 个页面，适用于中小型网站。</li>
+</ul>
+<p><strong>使用步骤：</strong></p>
+<ol>
+<li>下载并安装 Screaming Frog。</li>
+<li>输入你博客网站的 URL，点击开始扫描。</li>
+<li>扫描完成后，在报告中查找 <code>Client Error</code> 或 <code>Server Error</code> 状态的链接，它们是失效链接。</li>
+</ol>
+</li>
+<li>
+<p><strong>Xenu&rsquo;s Link Sleuth</strong></p>
+<ul>
+<li>另一个免费的死链检测工具，支持扫描整个网站并报告所有失效链接。它可以生成 HTML 格式的报告，便于查看和分析。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-通过-google-search-console-检查死链">3. <strong>通过 Google Search Console 检查死链</strong></h3>
+<p>如果你已经将博客网站添加到 <strong>Google Search Console</strong>，它可以帮助你检测并报告网站中的死链和 404 错误。</p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>登录到 <a href="https://search.google.com/search-console/">Google Search Console</a>，并选择你的博客网站。</li>
+<li>在左侧菜单中选择 <strong>“覆盖率”</strong>（Coverage）。</li>
+<li>查看 <strong>“错误”</strong>（Error）部分，Google 会列出一些常见的错误页面，包括 <strong>404 错误</strong>。</li>
+<li>你可以根据错误报告进行进一步的修复，比如修改死链或将链接重定向到有效页面。</li>
+</ol>
+<h3 id="4-使用网站分析插件">4. <strong>使用网站分析插件</strong></h3>
+<p>如果你使用的是 <strong>WordPress</strong> 或其他流行的博客平台，可以通过插件来自动检测和修复死链。</p>
+<ul>
+<li>
+<p><strong>WordPress 插件：</strong></p>
+<ul>
+<li><strong>Broken Link Checker</strong> 插件：自动扫描并检测 WordPress 网站中的失效链接。插件会在后台监控，并提示你需要修复的死链。</li>
+</ul>
+</li>
+<li>
+<p><strong>Wix 插件</strong>：如果你在 Wix 上搭建博客，可以使用一些第三方的 SEO 插件，它们也有死链检测功能。</p>
+</li>
+</ul>
+<h3 id="5-手动检查网页链接">5. <strong>手动检查网页链接</strong></h3>
+<p>对于小型网站或博客，手动检查可能是最简单的方法。你可以通过以下方法手动进行死链检测：</p>
+<ul>
+<li>
+<p><strong>通过浏览器插件</strong>：一些浏览器插件（如 <strong>Check My Links</strong>）可以帮助你扫描页面中的链接，并标出死链。</p>
+<p><strong>Check My Links 使用方法：</strong></p>
+<ol>
+<li>在 <strong>Chrome Web Store</strong> 中安装 <strong>Check My Links</strong> 插件。</li>
+<li>打开你要检查的页面，点击插件图标，它会显示页面中的所有链接并标记出死链。</li>
+</ol>
+</li>
+<li>
+<p><strong>手动点击链接</strong>：通过点击博客中的每个链接来确认它是否有效。虽然这种方法适用于页面不多的网站，但对于大型网站效率较低。</p>
+</li>
+</ul>
+<h3 id="6-自动化脚本检测高级">6. <strong>自动化脚本检测（高级）</strong></h3>
+<p>如果你熟悉编程，你可以编写 Python 脚本来自动检测死链。Python 的 <code>requests</code> 或 <code>beautifulsoup</code> 库能够帮助你获取网页中的链接并检查它们的状态。</p>
+<p><strong>示例代码（使用 requests 库）：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">check_links</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Dead link found: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2"> - Status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Active link: </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Error with link </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">scrape_and_check</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&#34;html.parser&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">check_links</span><span class="p">(</span><span class="n">link</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">scrape_and_check</span><span class="p">(</span><span class="s2">&#34;https://your-blog-website.com&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个脚本会爬取页面中的所有 <code>&lt;a&gt;</code> 标签，提取链接并检查它们的有效性。你可以进一步修改脚本，检查多个页面的链接。</p>
+<h3 id="总结">总结</h3>
+<ol>
+<li><strong>使用在线工具</strong>：比如 Broken Link Checker、W3C Link Checker，快速检测死链。</li>
+<li><strong>使用爬虫工具</strong>：如 Screaming Frog、Xenu 的 Link Sleuth，全面扫描整个网站。</li>
+<li><strong>通过 Google Search Console</strong> 查找死链和 404 错误。</li>
+<li><strong>安装插件</strong>：比如 WordPress 的 Broken Link Checker 插件或浏览器扩展插件。</li>
+<li><strong>手动检查</strong>：对于小型博客，直接点击链接或使用浏览器插件（如 Check My Links）来检查。</li>
+<li><strong>自动化脚本</strong>：如果你熟悉编程，可以编写 Python 脚本进行自动化死链检测。</li>
+</ol>
+<p>使用这些方法可以帮助你发现并修复博客网站中的死链，提升网站质量和用户体验。</p>
+    </div>
+
+    <footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/skills/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8scoop/">
+            <span class="next-text nav-default">Windows环境下的包管理器Scoop</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="hanyudeye/blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="mailto:hanyudeye@163.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://x.com/wuming12443151" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+  <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:7074/skills/%E6%AD%BB%E9%93%BE%E6%A3%80%E7%B4%A2%E5%B7%A5%E5%85%B7//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    2018 -
+    2025
+    <span>
+      
+      </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.0f4e3d50d02d7543f6d62d94f24841680bf9537ffbd95cb4fcb3b3f6b1fc7e77.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

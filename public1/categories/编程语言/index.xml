@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程语言 on 阿明</title>
+    <link>https://aming.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 编程语言 on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Jun 2024 09:36:13 +0800</lastBuildDate>
+    <atom:link href="https://aming.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML</title>
+      <link>https://aming.xyz/blog/information/html/</link>
+      <pubDate>Wed, 26 Jun 2024 09:36:13 +0800</pubDate>
+      <guid>https://aming.xyz/blog/information/html/</guid>
+      <description>&lt;h1 id=&#34;html-教程&#34;&gt;HTML 教程&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>

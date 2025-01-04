@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>People on 阿明</title>
+    <link>http://localhost:9064/people/</link>
+    <description>Recent content in People on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Nov 2024 12:44:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:9064/people/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>川普</title>
+      <link>http://localhost:9064/people/%E5%B7%9D%E6%99%AE/</link>
+      <pubDate>Thu, 28 Nov 2024 12:44:10 +0800</pubDate>
+      <guid>http://localhost:9064/people/%E5%B7%9D%E6%99%AE/</guid>
+      <description>&lt;p&gt;In 1990, Trump was $900M in personal debt.&lt;/p&gt;&#xA;&lt;p&gt;1990 年，特朗普的个人债务高达 9 亿美元。&lt;/p&gt;&#xA;&lt;p&gt;His casinos lost $3M per WEEK.&lt;/p&gt;&#xA;&lt;p&gt;他的赌场每周损失300万美元。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

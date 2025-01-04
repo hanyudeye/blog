@@ -3,7 +3,6 @@ layout: default
 toc: false
 title: scss 最佳实践
 date:  2024-05-13T10:39:40+08:00
-categories: ['程序员']
 ---
 
 # SCSS 样式

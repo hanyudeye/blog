@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3670&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title> - 阿明</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+ <meta name="color-scheme" content="light dark">
+
+<meta name="author" content="
+
+" /><meta name="description" content="内置支持 Markdown &amp;ndash; 3. 如何使用 Hugo 创建个人博客 下面我将为大家演示如何使用 Hugo 快速搭建一个个人博客。 步骤 1：安装 Hugo 首先，你需要在你的电脑上安装 Hugo。H" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.131.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:3670/skills/hugo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.85b146e75238ce677fd61c2b991641670bde0f84cd77272c29c673fff577048b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="http://localhost:3670/skills/hugo/">
+  <meta property="og:site_name" content="阿明">
+  <meta property="og:title" content="阿明">
+  <meta property="og:description" content="内置支持 Markdown – 3. 如何使用 Hugo 创建个人博客 下面我将为大家演示如何使用 Hugo 快速搭建一个个人博客。 步骤 1：安装 Hugo 首先，你需要在你的电脑上安装 Hugo。H">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="skills">
+
+  <meta itemprop="name" content="阿明">
+  <meta itemprop="description" content="内置支持 Markdown – 3. 如何使用 Hugo 创建个人博客 下面我将为大家演示如何使用 Hugo 快速搭建一个个人博客。 步骤 1：安装 Hugo 首先，你需要在你的电脑上安装 Hugo。H">
+  <meta itemprop="wordCount" content="1103">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="阿明">
+  <meta name="twitter:description" content="内置支持 Markdown – 3. 如何使用 Hugo 创建个人博客 下面我将为大家演示如何使用 Hugo 快速搭建一个个人博客。 步骤 1：安装 Hugo 首先，你需要在你的电脑上安装 Hugo。H">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阿明</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">杂记</li>
+      </a><a href="/grow/">
+        <li class="mobile-menu-item">成长</li>
+      </a><a href="/save/">
+        <li class="mobile-menu-item">节约</li>
+      </a><a href="/skills/">
+        <li class="mobile-menu-item">技能</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/%20/" class="logo"><img src="/logo.png" alt="" srcset="" style="width: 50px; border-radius: 50%;"></a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+      <a class="menu-item-link" href="/">杂记</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/grow/">成长</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/save/">节约</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/skills/">技能</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/about/">关于</a>
+    </li>
+    <li class="menu-item">
+      <button id="theme-toggle">切换模式</button>
+    </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+          <span class="more-meta"> 约 1103 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <h4 id="内置支持-markdown"><strong>内置支持 Markdown</strong></h4>
+<p>&ndash;</p>
+<h3 id="3-如何使用-hugo-创建个人博客"><strong>3. 如何使用 Hugo 创建个人博客</strong></h3>
+<p>下面我将为大家演示如何使用 Hugo 快速搭建一个个人博客。</p>
+<h4 id="步骤-1安装-hugo"><strong>步骤 1：安装 Hugo</strong></h4>
+<p>首先，你需要在你的电脑上安装 Hugo。Hugo 支持多种操作系统，包括 Windows、macOS 和 Linux。你可以根据操作系统的不同，选择合适的安装方式。</p>
+<p><strong>在 macOS 上使用 Homebrew 安装 Hugo</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>在 Windows 上使用 Scoop 安装 Hugo</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="n">hugo</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>在 Linux 上使用 apt 安装 Hugo</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="步骤-2创建新站点"><strong>步骤 2：创建新站点</strong></h4>
+<p>安装好 Hugo 后，打开终端（Terminal），使用以下命令创建一个新的 Hugo 站点：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site myblog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此命令会在当前目录下创建一个名为 <code>myblog</code> 的新文件夹，里面包含了 Hugo 的基础结构。</p>
+<h4 id="步骤-3选择主题并安装"><strong>步骤 3：选择主题并安装</strong></h4>
+<p>Hugo 有一个主题库，你可以选择一个喜欢的主题来快速美化你的博客。在 Hugo 官方网站或 GitHub 上，你可以找到成千上万的主题。</p>
+<p>例如，使用以下命令来克隆一个主题：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> myblog
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后，你需要在 <code>config.toml</code> 文件中指定你所使用的主题：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;ananke&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="步骤-4创建文章"><strong>步骤 4：创建文章</strong></h4>
+<p>你可以使用 Hugo 提供的命令来创建新文章：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/my-first-post.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这会在 <code>content/posts/</code> 目录下创建一个 Markdown 文件，你可以在其中编写文章内容。</p>
+<h4 id="步骤-5启动开发服务器"><strong>步骤 5：启动开发服务器</strong></h4>
+<p>在本地开发过程中，你可以使用以下命令启动 Hugo 的开发服务器：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过浏览器访问 <code>http://localhost:1313</code>，你可以预览你的博客，并查看内容的更新效果。</p>
+<h4 id="步骤-6发布博客"><strong>步骤 6：发布博客</strong></h4>
+<p>当你准备好将博客发布到网上时，你可以将其构建为静态文件，使用以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时，Hugo 会将网站的所有静态文件生成到 <code>public/</code> 文件夹中，你可以将这些文件上传到任何静态网站托管平台，比如 GitHub Pages、Netlify 或 Vercel。</p>
+<hr>
+<h3 id="4-hugo-与-wordpress-等其他博客工具的对比"><strong>4. Hugo 与 WordPress 等其他博客工具的对比</strong></h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Hugo</th>
+<th>WordPress</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>构建方式</strong></td>
+<td>静态生成</td>
+<td>动态生成</td>
+</tr>
+<tr>
+<td><strong>速度</strong></td>
+<td>非常快，几秒钟内即可生成页面</td>
+<td>需要数据库支持，加载速度较慢</td>
+</tr>
+<tr>
+<td><strong>易用性</strong></td>
+<td>简单，适合开发者使用</td>
+<td>适合任何人使用，易于安装和配置</td>
+</tr>
+<tr>
+<td><strong>扩展性</strong></td>
+<td>强大的主题和插件支持</td>
+<td>丰富的插件和主题生态</td>
+</tr>
+<tr>
+<td><strong>安全性</strong></td>
+<td>高，静态网站无需数据库，减少攻击面</td>
+<td>安全性较低，易受攻击</td>
+</tr>
+</tbody>
+</table>
+<p>可以看出，Hugo 与 WordPress 相比，提供了更快的加载速度、更强的安全性以及更高的可定制性，但相对而言，WordPress 更适合非技术人员使用，且拥有更丰富的插件生态。</p>
+<hr>
+<h3 id="5-结束语"><strong>5. 结束语</strong></h3>
+<p>Hugo 是一个功能强大、易于使用的静态网站生成器，非常适合技术博客、个人博客以及需要高性能网站的用户。它不仅具备快速构建、灵活配置的优势，而且支持多语言和高度自定义，非常适合自媒体创作者搭建一个简洁、快速且安全的博客。</p>
+<p>如果你是一名自媒体创作者，想要拥有一个快速且现代化的博客平台，Hugo 无疑是一个值得考虑的工具。你可以通过 Hugo 快速发布你的内容，专注于创作，而不必担心服务器、数据库等技术问题。</p>
+<p>希望通过这篇文章，你能够更好地了解 Hugo，并成功搭建属于自己的博客！</p>
+
+    </div>
+
+    <footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/skills/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E5%90%89%E4%BB%96%E5%90%89%E4%BB%96%E8%87%AA%E5%AD%A6%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86%E8%B6%85%E9%95%BF%E5%B9%B2%E8%B4%A7---%E7%9F%A5%E4%B9%8E/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">零基础如何自学吉他？吉他自学看这一篇就够了！（超长干货） - 知乎</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="hanyudeye/blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="mailto:hanyudeye@163.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://x.com/wuming12443151" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+  <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:3670/skills/hugo//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    2018 -
+    2025
+    <span>
+      
+      </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.0f4e3d50d02d7543f6d62d94f24841680bf9537ffbd95cb4fcb3b3f6b1fc7e77.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

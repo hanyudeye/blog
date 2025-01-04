@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7074&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>阿明</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+ <meta name="color-scheme" content="light dark">
+
+<meta name="author" content="
+
+" /><meta name="description" content="思维比只是更重要，收集生活的感悟." /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.131.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:7074/grow/" />
+  <link href="http://localhost:7074/grow/index.xml" rel="alternate" type="application/rss+xml" title="阿明" />
+  <link href="http://localhost:7074/grow/index.xml" rel="feed" type="application/rss+xml" title="阿明" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.85b146e75238ce677fd61c2b991641670bde0f84cd77272c29c673fff577048b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="http://localhost:7074/grow/">
+  <meta property="og:site_name" content="阿明">
+  <meta property="og:title" content="Grows">
+  <meta property="og:description" content="思维比只是更重要，收集生活的感悟.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Grows">
+  <meta itemprop="description" content="思维比只是更重要，收集生活的感悟.">
+  <meta itemprop="datePublished" content="2025-01-03T16:31:34+08:00">
+  <meta itemprop="dateModified" content="2025-01-03T16:31:34+08:00">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Grows">
+  <meta name="twitter:description" content="思维比只是更重要，收集生活的感悟.">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阿明</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">杂记</li>
+      </a><a href="/grow/">
+        <li class="mobile-menu-item">成长</li>
+      </a><a href="/save/">
+        <li class="mobile-menu-item">节约</li>
+      </a><a href="/skills/">
+        <li class="mobile-menu-item">技能</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo"><img src="/logo.png" alt="" srcset="" style="width: 50px; border-radius: 50%;"></a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+      <a class="menu-item-link" href="/">杂记</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/grow/">成长</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/save/">节约</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/skills/">技能</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/about/">关于</a>
+    </li>
+    <li class="menu-item">
+      <button id="theme-toggle">切换模式</button>
+    </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9A%84%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88/">普通人的财务管理方案</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2025-01-03 </span>
+      <div class="post-category">
+          <a href="/categories/%E8%B4%A2%E5%8A%A1/"> 财务 </a>
+          </div>
+        <span class="more-meta"> 约 1664 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>通过制定一些简单而有效的财务管理方案，每个人都可以更好地管理自己的财务，实现财富的积累和增长。以下是一个适用于普通人的财务管理方案，帮助你从财务规划、支出管理、储蓄投资等方面进行有效管理：</p>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9A%84%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E6%96%B9%E6%A1%88/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E9%97%B4%E6%96%AD%E6%80%A7%E4%BC%91%E6%81%AF/">间断性休息</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2025-01-03 </span>
+      <div class="post-category">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/"> 生活 </a>
+          </div>
+        <span class="more-meta"> 约 1649 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      间断性休息（也叫做“分段休息”）是一种有效的工作方式，旨在通过定时休息和调整状态，帮助提升工作效率，缓解身体疲劳，特别是长时间办公或高度集中
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E9%97%B4%E6%96%AD%E6%80%A7%E4%BC%91%E6%81%AF/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E6%88%90%E5%8A%9F%E5%AD%A6%E4%B9%A6%E7%B1%8D/">成功学书籍</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-27 </span>
+      <div class="post-category">
+          <a href="/categories/%E4%B9%A6%E7%B1%8D/"> 书籍 </a>
+          </div>
+        <span class="more-meta"> 约 903 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>成功学书籍可以给人自信，激励自己按照之前决定继续前进</p>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E6%88%90%E5%8A%9F%E5%AD%A6%E4%B9%A6%E7%B1%8D/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E4%B8%80%E7%94%9F%E5%BF%85%E8%AF%BB%E7%9A%84%E7%99%BE%E6%9C%AC%E5%9B%BE%E4%B9%A6%E6%B8%85%E5%8D%95/">一生必读的百本图书清单</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-24 </span>
+      <div class="post-category">
+          <a href="/categories/%E4%B9%A6%E7%B1%8D/"> 书籍 </a>
+          </div>
+        <span class="more-meta"> 约 8161 字 </span>
+        <span class="more-meta"> 预计阅读 17 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>美国亚马逊图书编辑，历经好几个月的热烈讨论，每个人为自己心中的人生必读书激烈讨论，终于挑选出<strong>一生必读的百本图书清单</strong>。</p>
+<p>图书编辑总监萨拉·纳尔逊表示，<strong>这是一份手作的推荐清单，没有用到点击率分析等技术手段</strong>；希望选的书有代表，能引领读者通往更多的书。而仔细读完这份清单会发现，它最大的亮点在可读性；提炼这份一生必读的百本图书清单，是要建立一个文学生活的阅读进程图，而不是像学校开出的指定阅读作业。</p>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E4%B8%80%E7%94%9F%E5%BF%85%E8%AF%BB%E7%9A%84%E7%99%BE%E6%9C%AC%E5%9B%BE%E4%B9%A6%E6%B8%85%E5%8D%95/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E5%AD%A6%E4%BC%9A%E5%AD%A6%E4%B9%A0/">学会学习</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-21 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 352 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>学习就是学会 未知的东西，有些东西简单，要学习的内容少，就一学就会，有些东西庞杂，内容繁多，就要注意学习方法。</p>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E5%AD%A6%E4%BC%9A%E5%AD%A6%E4%B9%A0/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E4%B8%AD%E9%93%B6%E9%A6%99%E6%B8%AF%E5%8A%9E%E5%8D%A1%E6%94%BB%E7%95%A5%E8%B5%84%E6%96%99%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">中银香港办卡攻略（资料和注意事项）</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-19 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 1713 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>中银香港是国人办卡和持有成本相对较低，且使用也比较方便的银行之一。作为中国银行的子公司，相对来说也更加可靠。</p>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E4%B8%AD%E9%93%B6%E9%A6%99%E6%B8%AF%E5%8A%9E%E5%8D%A1%E6%94%BB%E7%95%A5%E8%B5%84%E6%96%99%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E5%AD%A6%E4%BC%9A%E5%86%99%E4%BD%9C/">学会写作</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-18 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 252 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>写作可以反思一天的生活状态，检验今天是否有进步（相对上下文），还能记录时光。</p>
+<blockquote>
+<p>当你老了，可以坐上 文章的时光机，游历自己的人生。</p>
+</blockquote>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E5%AD%A6%E4%BC%9A%E5%86%99%E4%BD%9C/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E5%88%9B%E4%B8%9A/">创业</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-18 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 101 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E5%88%9B%E4%B8%9A/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E4%BF%9D%E6%8C%81%E5%81%A5%E5%BA%B7%E4%B8%8E%E9%A2%84%E9%98%B2%E7%96%BE%E7%97%85/">健康</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-18 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 761 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      保持健康的一些行为 休息 赫曼米勒 Aeron 没有头枕，因为他们官方认为，如果你需要头靠在头枕上了，那是你需要休息了 久坐 腰背部：瑜伽婴儿式加猫氏伸展，做三
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E4%BF%9D%E6%8C%81%E5%81%A5%E5%BA%B7%E4%B8%8E%E9%A2%84%E9%98%B2%E7%96%BE%E7%97%85/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/grow/%E6%8A%95%E8%B5%84%E5%B7%A5%E5%85%B7/">学习投资</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-12-17 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+        <span class="more-meta"> 约 1123 字 </span>
+        <span class="more-meta"> 预计阅读 3 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>自从金融业发展起来后，普通人可以进行资产或产业投资，而获取资产增值产生的红利。当然，如果资产或产业缩水，投入的资金也会进行减少。</p>
+<blockquote>
+<p>所以投资一般要有敏锐的市场眼光，投资未来的趋势</p>
+</blockquote>
+    </div>
+    <div class="read-more">
+      <a href="/grow/%E6%8A%95%E8%B5%84%E5%B7%A5%E5%85%B7/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    
+    <a class="next" href="/grow/page/2/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="mailto:hanyudeye@163.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://x.com/wuming12443151" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+  <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:7074/grow//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    2018 -
+    2025
+    <span>
+      
+      </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.0f4e3d50d02d7543f6d62d94f24841680bf9537ffbd95cb4fcb3b3f6b1fc7e77.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

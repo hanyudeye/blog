@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Languages on 阿明</title>
+    <link>http://localhost:1313/language/</link>
+    <description>Recent content in Languages on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Mar 2024 06:33:42 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>黑客与画家</title>
+      <link>http://localhost:1313/language/hackandpainter/</link>
+      <pubDate>Wed, 20 Mar 2024 06:33:42 +0800</pubDate>
+      <guid>http://localhost:1313/language/hackandpainter/</guid>
+      <description>Why nerds are unpopular when we were in junior high school, my friend RICH And I I know a lot of people who were nerds in school,and they all tell the same story : there is a strong correlation between being smart and being a nerd , and an even stronger inverse correlation between being a nerd and being popular. Being smart seems to make you unpopular. why? To someone</description>
+    </item>
+  </channel>
+</rss>

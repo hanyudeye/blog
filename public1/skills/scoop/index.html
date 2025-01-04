@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3670&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>Scoop - 阿明</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+ <meta name="color-scheme" content="light dark">
+
+<meta name="author" content="
+
+" /><meta name="description" content="Scoop 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 apt 或 yum，它通过命令行轻松地管理和安装各种开源软件。 1. Scoop 的工作原理 Scoop 提供了一种简化的方式" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.131.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:3670/skills/scoop/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.85b146e75238ce677fd61c2b991641670bde0f84cd77272c29c673fff577048b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="http://localhost:3670/skills/scoop/">
+  <meta property="og:site_name" content="阿明">
+  <meta property="og:title" content="Scoop">
+  <meta property="og:description" content="Scoop 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 apt 或 yum，它通过命令行轻松地管理和安装各种开源软件。 1. Scoop 的工作原理 Scoop 提供了一种简化的方式">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="skills">
+    <meta property="article:published_time" content="2025-01-02T10:22:54+08:00">
+    <meta property="article:modified_time" content="2025-01-02T10:22:54+08:00">
+
+  <meta itemprop="name" content="Scoop">
+  <meta itemprop="description" content="Scoop 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 apt 或 yum，它通过命令行轻松地管理和安装各种开源软件。 1. Scoop 的工作原理 Scoop 提供了一种简化的方式">
+  <meta itemprop="datePublished" content="2025-01-02T10:22:54+08:00">
+  <meta itemprop="dateModified" content="2025-01-02T10:22:54+08:00">
+  <meta itemprop="wordCount" content="1185">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scoop">
+  <meta name="twitter:description" content="Scoop 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 apt 或 yum，它通过命令行轻松地管理和安装各种开源软件。 1. Scoop 的工作原理 Scoop 提供了一种简化的方式">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阿明</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">杂记</li>
+      </a><a href="/grow/">
+        <li class="mobile-menu-item">成长</li>
+      </a><a href="/save/">
+        <li class="mobile-menu-item">节约</li>
+      </a><a href="/skills/">
+        <li class="mobile-menu-item">技能</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/%20/" class="logo"><img src="/logo.png" alt="" srcset="" style="width: 50px; border-radius: 50%;"></a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+      <a class="menu-item-link" href="/">杂记</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/grow/">成长</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/save/">节约</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/skills/">技能</a>
+    </li><li class="menu-item">
+      <a class="menu-item-link" href="/about/">关于</a>
+    </li>
+    <li class="menu-item">
+      <button id="theme-toggle">切换模式</button>
+    </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Scoop</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2025-01-02 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98/"> 程序员 </a>
+            </div>
+          <span class="more-meta"> 约 1185 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p><strong>Scoop</strong> 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 <code>apt</code> 或 <code>yum</code>，它通过命令行轻松地管理和安装各种开源软件。</p>
+<h3 id="1-scoop-的工作原理">1. <strong>Scoop 的工作原理</strong></h3>
+<p>Scoop 提供了一种简化的方式来安装和管理 Windows 上的程序。它不会像传统的 Windows 安装方式那样使用 <code>.exe</code> 安装程序，而是通过预先打包好的<strong>应用程序版本</strong>，使得安装过程更加轻量、便捷。</p>
+<p>Scoop 的一个关键特点是它不涉及<strong>系统级的配置</strong>（如修改注册表或环境变量），这使得它对于开发者和有特殊需求的用户来说非常方便。</p>
+<h3 id="2-scoop-的优点">2. <strong>Scoop 的优点</strong></h3>
+<ul>
+<li><strong>简洁</strong>：Scoop 通过命令行管理应用程序，非常适合喜欢用命令行操作的用户。</li>
+<li><strong>轻便</strong>：它不使用传统的安装程序，而是直接安装压缩包或便携版本，减少了安装过程的复杂性。</li>
+<li><strong>易于更新</strong>：Scoop 提供了便捷的命令来更新已安装的软件。</li>
+<li><strong>无依赖</strong>：许多程序都可以直接使用，没有像某些传统安装包那样依赖其他工具或配置。</li>
+<li><strong>支持很多常用工具</strong>：Scoop 提供了对多种开发工具和程序的支持，包括 Git、Node.js、Python、VS Code 等。</li>
+</ul>
+<h3 id="3-安装-scoop">3. <strong>安装 Scoop</strong></h3>
+<p>要使用 Scoop，首先需要安装它。安装过程相对简单，按以下步骤操作：</p>
+<h4 id="安装步骤">安装步骤：</h4>
+<ol>
+<li>
+<p><strong>打开 PowerShell</strong>：</p>
+<ul>
+<li>在 Windows 上，按 <code>Win + X</code> 然后选择“Windows PowerShell（管理员）”。</li>
+</ul>
+</li>
+<li>
+<p><strong>启用执行策略</strong>：
+执行以下命令以允许脚本在 PowerShell 中运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-scope</span> <span class="n">CurrentUser</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>安装 Scoop</strong>：
+使用以下命令来安装 Scoop：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">iwr </span><span class="n">-useb</span> <span class="n">get</span><span class="p">.</span><span class="py">scoop</span><span class="p">.</span><span class="py">sh</span> <span class="p">|</span> <span class="nb">iex
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个命令会通过 PowerShell 下载并运行 Scoop 的安装脚本。</p>
+</li>
+<li>
+<p><strong>确认安装</strong>：
+安装完成后，可以运行以下命令确认 Scoop 是否成功安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="p">-</span><span class="n">-version</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="4-安装-windows-程序">4. <strong>安装 Windows 程序</strong></h3>
+<p>通过 Scoop 安装程序非常简单，只需使用以下命令格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="p">&lt;</span><span class="n">应用程序名称</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>例如，安装 <strong>Google Chrome</strong> 浏览器：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="n">googlechrome</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装 <strong>Visual Studio Code</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">install</span> <span class="n">vscode</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-管理已安装的程序">5. <strong>管理已安装的程序</strong></h3>
+<ul>
+<li>
+<p><strong>查看已安装的程序</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">list</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>更新已安装的软件</strong>：
+Scoop 支持一键更新所有已安装的软件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">update</span> <span class="p">*</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>卸载程序</strong>：
+如果想要卸载某个程序，可以使用以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">scoop</span> <span class="n">uninstall</span> <span class="p">&lt;</span><span class="n">应用程序名称</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="6-scoop-的限制">6. <strong>Scoop 的限制</strong></h3>
+<p>虽然 Scoop 提供了便捷的程序安装方法，但也有一些局限性：</p>
+<ul>
+<li>仅支持通过<strong>命令行</strong>操作，不适合不熟悉命令行的用户。</li>
+<li>主要针对开源或便携版本的程序，某些商业软件可能无法通过 Scoop 安装。</li>
+<li>默认情况下，Scoop 安装的应用程序不进行系统级的配置，因此需要用户自行配置一些应用程序的环境变量等。</li>
+</ul>
+<h3 id="7-总结">7. <strong>总结</strong></h3>
+<p>Scoop 是一个轻量且高效的 Windows 包管理工具，特别适合开发者和喜欢使用命令行的用户。通过 Scoop，用户可以方便地安装和管理各种常见软件，无需繁琐的图形界面安装程序。它特别适合开源软件和开发工具的安装，对于需要频繁安装、卸载和更新软件的用户非常有帮助。</p>
+<h2 id="优化">优化</h2>
+<h3 id="自定义安装目录">自定义安装目录</h3>
+<p>Scoop 还允许你自定义安装路径，这样你可以将程序安装到不同的磁盘或文件夹中，十分适合磁盘空间不足的情况。</p>
+<p>例如，你可以将 Scoop 的程序安装目录设置为 <code>D:\scoop</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">[</span><span class="no">System.Environment</span><span class="p">]::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;SCOOP&#39;</span><span class="p">,</span> <span class="s1">&#39;D:\scoop&#39;</span><span class="p">,</span> <span class="p">[</span><span class="no">System.EnvironmentVariableTarget</span><span class="p">]::</span><span class="n">User</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装其他版本">安装其他版本</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">scoop bucket add versions <span class="c1"># add the &#39;versions&#39; bucket if you haven&#39;t already</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scoop install python27 python
+</span></span><span class="line"><span class="cl">python --version <span class="c1"># -&gt; Python 3.6.2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># switch to python 2.7.x</span>
+</span></span><span class="line"><span class="cl">scoop reset python27
+</span></span><span class="line"><span class="cl">python --version <span class="c1"># -&gt; Python 2.7.13</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># switch back (to 3.x)</span>
+</span></span><span class="line"><span class="cl">scoop reset python
+</span></span><span class="line"><span class="cl">python --version <span class="c1"># -&gt; Python 3.6.2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/skills/%E5%A6%82%E4%BD%95%E8%87%AA%E5%88%B6%E7%9C%BC%E9%95%9C%E6%B8%85%E6%B4%81%E5%89%82/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">如何自制眼镜清洁剂</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/skills/%E6%88%91%E7%94%A8%E5%88%B0%E7%9A%84edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%9F%E8%83%BD/">
+            <span class="next-text nav-default">我用到的edge浏览器中的功能</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="hanyudeye/blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="mailto:hanyudeye@163.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://x.com/wuming12443151" class="iconfont icon-twitter" title="twitter"></a>
+  <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+  <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:3670/skills/scoop//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    2018 -
+    2025
+    <span>
+      
+      </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.0f4e3d50d02d7543f6d62d94f24841680bf9537ffbd95cb4fcb3b3f6b1fc7e77.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

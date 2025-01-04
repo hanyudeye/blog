@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skills on 阿明</title>
+    <link>http://localhost:7074/skills/</link>
+    <description>Recent content in Skills on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Jan 2025 09:40:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:7074/skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>死链检索工具</title>
+      <link>http://localhost:7074/skills/%E6%AD%BB%E9%93%BE%E6%A3%80%E7%B4%A2%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 04 Jan 2025 09:40:40 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E6%AD%BB%E9%93%BE%E6%A3%80%E7%B4%A2%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;p&gt;要检索博客网站中没有用的链接（即死链或失效链接），可以采用以下几种方法。无论是手动检查还是自动化工具，都可以帮助你识别这些无效链接，从而提高网站的质量和用户体验。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows环境下的包管理器Scoop</title>
+      <link>http://localhost:7074/skills/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8scoop/</link>
+      <pubDate>Fri, 03 Jan 2025 14:45:45 +0800</pubDate>
+      <guid>http://localhost:7074/skills/windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8scoop/</guid>
+      <description>Scoop 是一个适用于 Windows 的命令行包管理器，类似于 Linux 系统中的 apt 或 yum，它通过命令行轻松地管理和安装各种开源软件。 1. Scoop 的工作原理 Scoop 提供了一种简化的方式</description>
+    </item>
+    <item>
+      <title>静态网站生成器hugo</title>
+      <link>http://localhost:7074/skills/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</link>
+      <pubDate>Fri, 03 Jan 2025 13:44:02 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E5%99%A8hugo/</guid>
+      <description>&lt;p&gt;Hugo 是目前最受欢迎的静态网站生成器之一，她能够快速构建含有某种主题的博客、个人网站、文档站点或企业网站，她内置支持 Markdown文件类型的文章。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>如何自制眼镜清洁剂</title>
+      <link>http://localhost:7074/skills/%E5%A6%82%E4%BD%95%E8%87%AA%E5%88%B6%E7%9C%BC%E9%95%9C%E6%B8%85%E6%B4%81%E5%89%82/</link>
+      <pubDate>Fri, 03 Jan 2025 09:13:44 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%A6%82%E4%BD%95%E8%87%AA%E5%88%B6%E7%9C%BC%E9%95%9C%E6%B8%85%E6%B4%81%E5%89%82/</guid>
+      <description>自制眼镜清洁剂非常简单且经济，而且你可以使用家里常见的几种材料。下面我会提供一种简单的眼镜清洁剂配方，并给出具体步骤： 自制眼镜清洁剂的材料：</description>
+    </item>
+    <item>
+      <title>我用到的edge浏览器中的功能</title>
+      <link>http://localhost:7074/skills/%E6%88%91%E7%94%A8%E5%88%B0%E7%9A%84edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 26 Dec 2024 09:39:35 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E6%88%91%E7%94%A8%E5%88%B0%E7%9A%84edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%8A%9F%E8%83%BD/</guid>
+      <description>&lt;p&gt;edge 浏览器对 chrome 进行了扩展，我觉得挺好用的，虽然有人说是性能魔鬼，但我用着还行，没有关注到。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>flex 和 grid 布局的区别是什么</title>
+      <link>http://localhost:7074/skills/flex-%E5%92%8C-grid-%E5%B8%83%E5%B1%80%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sat, 21 Dec 2024 18:28:11 +0800</pubDate>
+      <guid>http://localhost:7074/skills/flex-%E5%92%8C-grid-%E5%B8%83%E5%B1%80%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>&lt;p&gt;Flex布局（Flexbox）和Grid布局（CSS Grid）是现代CSS中用于布局设计的两种主要方法，它们各自有不同的特点和适用场景。下面是它们的主要区别和特点：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>化学</title>
+      <link>http://localhost:7074/skills/%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Sat, 21 Dec 2024 18:27:52 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%8C%96%E5%AD%A6/</guid>
+      <description>空气 (混合物质) 氧气 液氧(-170多度)，固氧(-218度)均为淡蓝色 不易溶于水 密度大于空气 C+O2=&amp;gt;CO2 (点燃) S+O2=&amp;gt;SO2 (点燃,硫) 燃烧（剧烈化学反应） 二氧</description>
+    </item>
+    <item>
+      <title>什么是web</title>
+      <link>http://localhost:7074/skills/%E4%BB%80%E4%B9%88%E6%98%AFweb/</link>
+      <pubDate>Fri, 20 Dec 2024 15:30:15 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E4%BB%80%E4%B9%88%E6%98%AFweb/</guid>
+      <description>&lt;p&gt;web: 就是 利用 数字信号，网线 进行  文档信息节点间的传输。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>android编程</title>
+      <link>http://localhost:7074/skills/android%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Wed, 18 Dec 2024 21:36:01 +0800</pubDate>
+      <guid>http://localhost:7074/skills/android%E7%BC%96%E7%A8%8B/</guid>
+      <description>&lt;p&gt;我们开发的是android 应用程序，而不是系统程序，所以要用到Android提供的库。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>创意资讯</title>
+      <link>http://localhost:7074/skills/%E5%88%9B%E6%84%8F%E8%B5%84%E8%AE%AF/</link>
+      <pubDate>Wed, 18 Dec 2024 14:57:33 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%88%9B%E6%84%8F%E8%B5%84%E8%AE%AF/</guid>
+      <description>&lt;p&gt;一些大开脑洞，富有创意的资讯&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ios手机优化</title>
+      <link>http://localhost:7074/skills/ios%E6%89%8B%E6%9C%BA%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Wed, 18 Dec 2024 14:19:56 +0800</pubDate>
+      <guid>http://localhost:7074/skills/ios%E6%89%8B%E6%9C%BA%E4%BC%98%E5%8C%96/</guid>
+      <description>&lt;p&gt;本文讲解在 ios 系统上的优化，使手机能有些学习功能&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>安卓编程</title>
+      <link>http://localhost:7074/skills/%E5%AE%89%E5%8D%93%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Wed, 18 Dec 2024 07:10:12 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%AE%89%E5%8D%93%E7%BC%96%E7%A8%8B/</guid>
+      <description>&lt;p&gt;进行安卓编程&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>web库汇总</title>
+      <link>http://localhost:7074/skills/web%E5%BA%93%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 14 Dec 2024 09:50:01 +0800</pubDate>
+      <guid>http://localhost:7074/skills/web%E5%BA%93%E6%B1%87%E6%80%BB/</guid>
+      <description>&lt;p&gt;提供一些 web 库的名字，资源链接因为可能升级，所以不太稳定，可以根据名字查找新资源。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>jQuery使用教程</title>
+      <link>http://localhost:7074/skills/jquery%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 14 Dec 2024 09:47:09 +0800</pubDate>
+      <guid>http://localhost:7074/skills/jquery%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>jQuery 方便了JavaScript的使用，提供了封装库 ajax 后台请求 jQuery 中的 $.ajax() 函数是一个强大的工具，用于通过 HTTP 请求与服务器进行异步通信。它是 jQuery 库中处理 Ajax</description>
+    </item>
+    <item>
+      <title>图片处理</title>
+      <link>http://localhost:7074/skills/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 13 Dec 2024 14:30:41 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;p&gt;目前有多个AI网站可以处理图片，提供图像生成、编辑、分析等功能。以下是一些广受欢迎的AI平台：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>命令</title>
+      <link>http://localhost:7074/skills/%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 13 Dec 2024 10:35:03 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;命令的产生是在 计算机早期，没有图形化界面的时候诞生的&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>photoshop作品</title>
+      <link>http://localhost:7074/skills/photoshop%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Fri, 13 Dec 2024 07:39:50 +0800</pubDate>
+      <guid>http://localhost:7074/skills/photoshop%E5%AD%A6%E4%B9%A0/</guid>
+      <description>&lt;p&gt;使用ps ，加教程，学习绘图&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>github page 如何把网站放在 2级域名，如何配置</title>
+      <link>http://localhost:7074/skills/github-page-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%BD%91%E7%AB%99%E6%94%BE%E5%9C%A8-2%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 26 Oct 2024 07:12:27 +0800</pubDate>
+      <guid>http://localhost:7074/skills/github-page-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%BD%91%E7%AB%99%E6%94%BE%E5%9C%A8-2%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE/</guid>
+      <description>在 GitHub Pages 上配置二级域名可以通过自定义域名设置完成，步骤如下： 1. 在 GitHub 仓库中设置 CNAME 文件 打开你的网站项目的 GitHub 仓库。 创建一个名为 CNAME 的文件（没有扩展名）</description>
+    </item>
+    <item>
+      <title>github-action 的使用</title>
+      <link>http://localhost:7074/skills/github-action/</link>
+      <pubDate>Wed, 07 Aug 2024 15:40:07 +0800</pubDate>
+      <guid>http://localhost:7074/skills/github-action/</guid>
+      <description>要创建一个Hugo站点并使用 GitHub Actions 部署到 GitHub Pages，你可以按照以下步骤进行设置。以下是一个完整的 GitHub Actions 配置文件示例： 1. 创建 Hugo 站点 如果你还没有 Hugo</description>
+    </item>
+    <item>
+      <title>日常使用的比较推荐的软件</title>
+      <link>http://localhost:7074/skills/lovesoft/</link>
+      <pubDate>Wed, 26 Jun 2024 09:36:13 +0800</pubDate>
+      <guid>http://localhost:7074/skills/lovesoft/</guid>
+      <description>&lt;p&gt;这些是Windows下我推荐使用的软件&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>经济</title>
+      <link>http://localhost:7074/skills/%E7%BB%8F%E6%B5%8E/</link>
+      <pubDate>Fri, 24 May 2024 09:39:18 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E7%BB%8F%E6%B5%8E/</guid>
+      <description>什么是经济 好像人类生产的所有东西，都跟人或人的周边有关 经济或财富，不受控的话，会向资本家转移。 经济是指人类在有限资源的约束下，如何生产、分配</description>
+    </item>
+    <item>
+      <title>Tailwind CSS (顺风)</title>
+      <link>http://localhost:7074/skills/tailwindcss/</link>
+      <pubDate>Mon, 13 May 2024 10:51:27 +0800</pubDate>
+      <guid>http://localhost:7074/skills/tailwindcss/</guid>
+      <description>&lt;h1 id=&#34;什么是-tailwind-css&#34;&gt;什么是 Tailwind CSS&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tailwind CSS&lt;/strong&gt; 是一个功能类优先的 CSS 框架。&lt;/li&gt;&#xA;&lt;li&gt;它不像传统框架（如 Bootstrap）那样提供预先设计好的组件，而是通过 &lt;strong&gt;原子化的 CSS 类&lt;/strong&gt; 快速构建自定义设计。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>scss 最佳实践</title>
+      <link>http://localhost:7074/skills/8-scss-best-practices-to-keep-in-mind/</link>
+      <pubDate>Mon, 13 May 2024 10:39:40 +0800</pubDate>
+      <guid>http://localhost:7074/skills/8-scss-best-practices-to-keep-in-mind/</guid>
+      <description>SCSS 样式 1. 移动端优先 做响应式项目的时候，一般会先写 PC 版本的样式，但这会使移动端样式的书写变得特别痛苦。因此，我们应该先进行移动端样式的书写，在</description>
+    </item>
+    <item>
+      <title>ps必备的快捷键大全（超详细） - 知乎</title>
+      <link>http://localhost:7074/skills/ps%E5%BF%85%E5%A4%87%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8%E8%B6%85%E8%AF%A6%E7%BB%86---%E7%9F%A5%E4%B9%8E/</link>
+      <pubDate>Fri, 15 Mar 2024 07:21:14 +0800</pubDate>
+      <guid>http://localhost:7074/skills/ps%E5%BF%85%E5%A4%87%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8%E8%B6%85%E8%AF%A6%E7%BB%86---%E7%9F%A5%E4%B9%8E/</guid>
+      <description>mac 版 PS 将 Ctrl 替换为 CMD 即可 一、文件 新建CTRL+N 打开CTRL+O 打开为ALT+CTRL+O 关闭CTRL+W 保存CTRL+S 另存为CTRL+SH</description>
+    </item>
+    <item>
+      <title>零基础如何自学吉他？吉他自学看这一篇就够了！（超长干货） - 知乎</title>
+      <link>http://localhost:7074/skills/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E5%90%89%E4%BB%96%E5%90%89%E4%BB%96%E8%87%AA%E5%AD%A6%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86%E8%B6%85%E9%95%BF%E5%B9%B2%E8%B4%A7---%E7%9F%A5%E4%B9%8E/</link>
+      <pubDate>Wed, 21 Feb 2024 06:10:58 +0800</pubDate>
+      <guid>http://localhost:7074/skills/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E5%90%89%E4%BB%96%E5%90%89%E4%BB%96%E8%87%AA%E5%AD%A6%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86%E8%B6%85%E9%95%BF%E5%B9%B2%E8%B4%A7---%E7%9F%A5%E4%B9%8E/</guid>
+      <description>基本乐理懂一些，会弹些曲子，指弹曲子像押尾、松井、eddie小哥的曲子会一些，在学校玩过乐队做过吉他手，也接过大大小小的表演，在b站和其他网</description>
+    </item>
+  </channel>
+</rss>

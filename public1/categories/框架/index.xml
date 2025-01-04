@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>框架 on 阿明</title>
+    <link>https://aming.xyz/blog/categories/%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 框架 on 阿明</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Aug 2024 21:47:04 +0800</lastBuildDate>
+    <atom:link href="https://aming.xyz/blog/categories/%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React 是什么</title>
+      <link>https://aming.xyz/blog/information/react/</link>
+      <pubDate>Tue, 06 Aug 2024 21:47:04 +0800</pubDate>
+      <guid>https://aming.xyz/blog/information/react/</guid>
+      <description>react 是什么 : 是一个使用 javascript 来构建 DOM界面 的框架，开源，不用 html 超链接 刷新影响应用的体验。 这个框架提倡 界面组件化， 单向数据流 组件能保存状态(Sta</description>
+    </item>
+  </channel>
+</rss>

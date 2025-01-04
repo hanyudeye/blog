@@ -3,7 +3,6 @@ layout: default
 toc: false
 title: 静态网站生成器hugo
 date:  2025-01-03T13:44:02+08:00
-categories: ['程序员']
 ---
 
 

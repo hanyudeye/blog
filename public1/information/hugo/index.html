@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5387&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <style>
+   #fastSearch {
+       visibility: hidden;
+       position: absolute;
+       right: 0px;
+       top: 0px;
+       display: inline-block;
+       width: 300px;
+   }
+
+   #fastSearch input { 
+       padding: 4px 10px;
+       width: 100%;
+       height: 31px;
+       font-size: 1.6em;
+       color: #fff;
+       font-weight: bold;
+       background-color: #000;
+       border-radius: 3px 3px 0px 0px;
+       border: none;
+       outline: none;
+       text-align: left;
+       display: inline-block;
+   }
+
+   #searchResults li { 
+       list-style: none; 
+       margin-left: 0em;
+       background-color: #333; 
+       border-bottom: 1px dotted #000;
+       color: #fff;
+   }
+   #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
+   #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; color:#fff; }
+   #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+
+  </style>
+
+  <title>hugo - 阿明</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="
+
+" /><meta name="description" content="设置固定访问端口 图片路径 绝对路径 /static/images/a.jpg 相对路径 /content/post/demo/a.jpg 在文件 demo.md 中 文件名要与图片目录名字一致 pasteImage配置 1 2 3 { &amp;#34;pasteImage.path&amp;#34;: &amp;#34;${projectRoot}/static/images/&amp;#34;, } hugo theme 帮助文档链接 https://hugo.aiaide.com/ 主题" /><meta name="keywords" content="阿明博客, 记录生活" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.131.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:5387/information/hugo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.6b784db09811dc049d9683418c604b1808f9e48874e35599006117ffb9db577b.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="http://localhost:5387/information/hugo/">
+  <meta property="og:site_name" content="阿明">
+  <meta property="og:title" content="hugo">
+  <meta property="og:description" content="设置固定访问端口 图片路径 绝对路径 /static/images/a.jpg 相对路径 /content/post/demo/a.jpg 在文件 demo.md 中 文件名要与图片目录名字一致 pasteImage配置 1 2 3 { &#34;pasteImage.path&#34;: &#34;${projectRoot}/static/images/&#34;, } hugo theme 帮助文档链接 https://hugo.aiaide.com/ 主题">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="information">
+    <meta property="article:published_time" content="2023-12-22T12:57:08+08:00">
+    <meta property="article:modified_time" content="2023-12-22T12:57:08+08:00">
+
+  <meta itemprop="name" content="hugo">
+  <meta itemprop="description" content="设置固定访问端口 图片路径 绝对路径 /static/images/a.jpg 相对路径 /content/post/demo/a.jpg 在文件 demo.md 中 文件名要与图片目录名字一致 pasteImage配置 1 2 3 { &#34;pasteImage.path&#34;: &#34;${projectRoot}/static/images/&#34;, } hugo theme 帮助文档链接 https://hugo.aiaide.com/ 主题">
+  <meta itemprop="datePublished" content="2023-12-22T12:57:08+08:00">
+  <meta itemprop="dateModified" content="2023-12-22T12:57:08+08:00">
+  <meta itemprop="wordCount" content="3360">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="hugo">
+  <meta name="twitter:description" content="设置固定访问端口 图片路径 绝对路径 /static/images/a.jpg 相对路径 /content/post/demo/a.jpg 在文件 demo.md 中 文件名要与图片目录名字一致 pasteImage配置 1 2 3 { &#34;pasteImage.path&#34;: &#34;${projectRoot}/static/images/&#34;, } hugo theme 帮助文档链接 https://hugo.aiaide.com/ 主题">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">阿明</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">认知</li>
+      </a><a href="/information/">
+        <li class="mobile-menu-item">资讯</li>
+      </a><a href="/people/">
+        <li class="mobile-menu-item">人物</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo"><img src="/logo.png" alt="" srcset="" style="width: 50px; border-radius: 50%;"></a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">认知</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/information/">资讯</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/people/">人物</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">hugo</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-12-22 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+          <span class="more-meta"> 约 3360 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <h2 id="设置固定访问端口">设置固定访问端口</h2>
+<h2 id="图片路径">图片路径</h2>
+<ol>
+<li>
+<p>绝对路径 /static/images/a.jpg
+<img src="/images/a.jpg" alt=""></p>
+</li>
+<li>
+<p>相对路径 /content/post/demo/a.jpg
+在文件 demo.md 中
+<img src="a.jpg" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>文件名要与图片目录名字一致</p>
+</blockquote>
+<p>pasteImage配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;pasteImage.path&#34;</span><span class="p">:</span> <span class="s2">&#34;${projectRoot}/static/images/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="hugo-theme">hugo theme</h2>
+<p>帮助文档链接 <a href="https://hugo.aiaide.com/">https://hugo.aiaide.com/</a></p>
+<p><img src="images/2023-12-22-13-03-15.png" alt=""></p>
+<blockquote>
+<p>主题结构与生成的静态结构基本一致</p>
+</blockquote>
+<h3 id="自定义hugo主题--从内容页开始">自定义hugo主题&ndash;从内容页开始</h3>
+<p>为博文设计模板
+/themes/study-theme/layouts/_default/single.html文件是所有内容页面默认的模板页面</p>
+<p>single.html文件默认为空, 修改内容如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{.Content}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>模板中的{{.Title}}和{{.Content}}都是模板页面级的变量, 他们的值来至内容页中”Front Matter”中对应的字段. 具体本示例中就是/content/post/page1.md中的内容</p>
+<p>Front Matter中常用的变量
+title: 内容标题
+date: 该页面的时间, 一般用来存放页面的创建时间.
+draft: 如果true, 表示页面为草稿页, 内容不会呈现在网站中, 除非添加 –buildDrafts 给hugo命令.
+keywords: 页面的关键字
+description: 内容描述, 主要用于SEO优化.
+weight: 列表页的文章排序, 值越小越靠前, 默认是按时间先后排序的, 也就是date中的值
+模板页中常用的变量
+.Title: 获取Front Matter中title的值
+.Content: 获取文章的内容
+.Date: 获取Front Matter中date的值
+.Description: 获取Front Matter中description的值, 一般用于meta中的description字段
+.Keywords: 获取Front Matter中keywords的值, 用于meta中的keyword字段
+.Permalink: 获取页面的链接地址(URL)
+.Next: 下一个页面
+.Prev: 上一个页面
+.WordCount: 内容的字数
+.ReadingTime: 阅读内容的预估时间
+.Pages: 当前列表页面下的内容页面的集合, 该变量在内容页模板的上下文中值为nil
+.Site: 站点变量, 该变量下包含很多站点级别的属性和方法.
+这些变量可以在官网找到 <a href="https://gohugo.io/variables/page/">https://gohugo.io/variables/page/</a> 具体的含义可以逐步去试一下.</p>
+<h3 id="自定义hugo主题--内容列表页">自定义hugo主题&ndash;内容列表页</h3>
+<p>内容页面的划分
+根据内容页存放的位置, 内容页分为两种, 一种是存放在content根目录下面的内容页, 叫单页面(Single Page), 一种是存放在content子目录下的内容页, 叫章节页面(Section Page). 两者的区别是: 他们的Section属性不同, 章节页面的Section属性的值为页面所在的目录名, 单页面的Section属性的值为空字符串, Type属性为page.</p>
+<p>这里给内容页面添加列表页主要是给章节页面添加列表页.</p>
+<p>为所有的内容页面添加一个列表页.
+在前一篇DEMO的基础上我们多添加了几篇博文, 和一个_index.md文件. content目录的结构如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">└── content
+</span></span><span class="line"><span class="cl">    └── post
+</span></span><span class="line"><span class="cl">        ├─ _index.md
+</span></span><span class="line"><span class="cl">        ├─ page1.md
+</span></span><span class="line"><span class="cl">        ├─ page2.md
+</span></span><span class="line"><span class="cl">        ├─ page3.md
+</span></span><span class="line"><span class="cl">        └─ page4.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>_index.md就是post目录下面所有博文的列表页. 它对应的默认模板文件在: layouts/_default/list.html.</p>
+<p>现在修改list.html内容如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>列表页面<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- {{ with .Site.GetPage &#34;/post&#34; }}&lt;a href=&#34;{{.Permalink}}&#34;&gt;{{ .Title }}&lt;/a&gt;{{ end }} --&gt;</span>
+</span></span><span class="line"><span class="cl">    {{  range .Pages }}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;.Permalink&#34;</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{  end  }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>range: 可以用来遍历集合, .Pages变量获取的是当前当前章节下说有的内容页的集合. 如本例中, 访问post章节下的列表页, 这时.Pages包含的就是post目录下的所有文章.</p>
+<p>在遍历的时候, 每次循环的上下文就是每个内容页面, 内容页面模板中的变量都可以使用的.</p>
+<p>为内容页面添加上一页和下一页
+这里主要使用到了内容页模板中的 .NextInSection 和 .PrevInSection 变量, 他们表示当前章节中, 按时间倒序排列的文章集合的后一篇文章和前一篇文章.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;post&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-title&#34;</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{.Content}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{with .NextInSection}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{.Permalink}}&#34;</span><span class="p">&gt;</span>前一页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">                {{end}}
+</span></span><span class="line"><span class="cl">                {{with NextInSection}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{.Permalink}}&#34;</span><span class="p">&gt;</span>后一页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{end}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="自定义hugo主题--网站首页">自定义hugo主题&ndash;网站首页</h3>
+<p>首页也属于列表页, 只是他是一个特殊的列表页. 如果没有给首页添加模板, 首页使用内容页的模板.</p>
+<p>DEMO的目录结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">├─content
+</span></span><span class="line"><span class="cl">│  ├─news
+</span></span><span class="line"><span class="cl">│  └─post
+</span></span><span class="line"><span class="cl">├─data
+</span></span><span class="line"><span class="cl">├─layouts
+</span></span><span class="line"><span class="cl">├─static
+</span></span><span class="line"><span class="cl">└─themes
+</span></span><span class="line"><span class="cl">    └─study-theme
+</span></span><span class="line"><span class="cl">        ├─archetypes
+</span></span><span class="line"><span class="cl">        ├─layouts
+</span></span><span class="line"><span class="cl">        │  ├─index.html
+</span></span><span class="line"><span class="cl">        │  ├─partials
+</span></span><span class="line"><span class="cl">        │  └─_default
+</span></span><span class="line"><span class="cl">        └─static
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>首页模板的位置
+/themes/study-theme/layouts/index.html 首页模板使用单独的模板, 模板的名字也是固定的 index.html. 也可以给首页添加一个markdown文件, 位置在content根目录下, /content/_index.md. 这个不是必须的.</p>
+<p>在首页中展示各章节的文章列表
+首页是整个网站的一个索引, 我们一般会在首页中展示各个板块的文章列表, 在本DEMO中我们添加了两个板块, 也就是/content目录中的news 和 post这两个章节目录, 现在我们把这两个章节的内容添加到首页中.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>网站首页<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span> 新闻列表 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range where .Site.RegularPages &#34;Section&#34; &#34;news&#34; }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span> 博文列表 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range where .Site.RegularPages &#34;Section&#34; &#34;post&#34; }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里主要用到两点</p>
+<p>.Site.RegularPages 表示网站下面的所有节点内容, 具体到本例, 就是news和post目录下的所有文章
+where 是一个函数, 用来查询集合中符合条件的项目.
+where 的语法: where COLLECTION KEY [OPERATOR] MATCH</p>
+<p>where .Site.RegularPages &ldquo;Section&rdquo; &ldquo;news&rdquo; 的含义就是, 查找出section属性的值为news的项目</p>
+<h3 id="自定义hugo主题--导航菜单">自定义hugo主题&ndash;导航菜单</h3>
+<p>设置导航菜单的位置
+在根目录下的 config.toml 文件中配置导航菜单, config 文件支持三种文件格式: toml, yaml, json, 可以使用自己熟悉的格式. 使用对应的格式需要修改对应的扩展名. 不推荐使用 JSON 格式, 因为 json 不支持注释, 在配置文件中添加注释是非常有必要的.</p>
+<p>通过.Site.Menus 变量获取到设置的菜单信息, 下面以 toml 格式为例展示导航菜单的使用.</p>
+<p>添加主导航菜单和页脚导航菜单</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 主导航菜单</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;首页&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;博文&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/post&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;新闻&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/news&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;3&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;关于&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/about&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;4&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 页脚导航菜单</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">foot</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;网站首页&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;4&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">foot</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;博文集合&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/post&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;3&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">foot</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;新闻列表&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/news&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">foot</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;关于我们&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/about&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;1&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>获取菜单的代码如下”</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>主导航菜单<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Site.Menus.main }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{.URL}}&#34;</span><span class="p">&gt;</span>{{.Name}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>页脚导航菜单<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Site.Menus.foot }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{.URL}}&#34;</span><span class="p">&gt;</span>{{.Name}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>.Site.Menus后面接的是在 config.toml 中定义的表名</p>
+<p>定义多级菜单</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;首页&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;博文&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/post&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;新闻&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/news&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;3&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;关于&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span><span class="p">=</span><span class="s2">&#34;/about&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;4&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;子菜单&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;5&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">parent</span><span class="p">=</span><span class="s2">&#34;子菜单&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;子菜单1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">parent</span><span class="p">=</span><span class="s2">&#34;子菜单&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span><span class="p">=</span><span class="s2">&#34;子菜单2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="s2">&#34;1&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>获取菜单的代码如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>主导航菜单<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ range .Site.Menus.main }} 
+</span></span><span class="line"><span class="cl">  {{if .HasChildren}}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{.Name}}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ range .Children }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .URL }}&#34;</span><span class="p">&gt;</span>{{ .Name }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ else }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{.URL}}&#34;</span><span class="p">&gt;</span>{{.Name}}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{end}} {{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>子菜单项比普通的菜单项多了一个属性parent, 用于设置父菜单的ID, 这里用的是Name的值, 如果name的值不重复, 一旦重复就会产生意想不到的效果. 正确的做法是使用Identifier的值.</p>
+<p>导航菜单常用的属性
+.Name: 菜单想的名称, 如果Name的值重复了, 要想使其生效, 需要为其设置Identifier属性
+.Identifier: 菜单想的唯一标识, 值不能重复.
+.Weight: 用于设置菜单项的排序, 值越小排名越靠前.
+.Parent: 设置父菜单的ID.
+.URL: 设置菜单项直向的URL地址.
+当行菜单常用的方法
+.HasChildren: 判断是否包含子菜单. 如果有子菜单则返回true</p>
+<h3 id="自定义hugo主题--标签和分类">自定义hugo主题&ndash;标签和分类</h3>
+
+    </div>
+
+    <footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/information/24-2-27%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%A6%82%E4%BD%95%E8%87%AA%E5%AD%A6%E5%90%89%E4%BB%96%E5%90%89%E4%BB%96%E8%87%AA%E5%AD%A6%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86%E8%B6%85%E9%95%BF%E5%B9%B2%E8%B4%A7---%E7%9F%A5%E4%B9%8E/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">零基础如何自学吉他？吉他自学看这一篇就够了！（超长干货） - 知乎</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="hanyudeye/blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    
+    <div id="fastSearch">
+        <input id="searchInput" tabindex="0">
+        <ul id="searchResults">
+        </ul>
+    </div>
+
+    
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/fuse.js/6.6.2/fuse.js"></script>
+
+    
+    <script type="text/javascript" src="/js/fastsearch.min.81bf06518bf8bd21129a4a5d609f2f110cfa8dc28a93cb6724a700453753f48b.js"></script><footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="mailto:1191552161@qq.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://github.com/hanyudeye" class="iconfont icon-github" title="github"></a>
+  <a href="https://space.bilibili.com/442867644" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:5387/information/hugo//index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    2018 -
+    2024
+    <span>
+      
+      </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js"></script>
+  <script src="https://cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
