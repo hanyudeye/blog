@@ -26,4 +26,6 @@ Bookkeeping can be used to calculate the current financial situation.
 
 ## income 收入
 
-
+| 日期 | 收入原因 | 收入金额 |
+| :--- | :------: | :------: |
+| 1    | 田亩费用 |   900    |
