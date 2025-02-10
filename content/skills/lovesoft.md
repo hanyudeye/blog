@@ -53,3 +53,13 @@ edge 浏览器，用来分割窗口，鼠标手势，还有侧栏，方便打开
 
 visual code ，装上 vspacecode ，方便编辑文本
 
+## deepseek
+
+使用 浏览器插件 page  assist
+
+## Ollama命令
+
+- 添加模型 ollama pull <model_name>
+- 列出所有可用的模型 ollama list
+- 运行模型 ollama run <model_name>
+- 设置模型存储路径 export OLLAMA_HOME="/mnt/d/OllamaModels"
