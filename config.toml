@@ -29,27 +29,27 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "杂记"
+  name = "少即是多"
   weight = 10
   identifier = "home"
   url = "/"
 [[menu.main]]             # config your menu              # 配置目录
- name = "成长"
+ name = "多反而少"
  weight = 30
  identifier = "grow"
  url = "/grow/"
 
-[[menu.main]]
-  name = "节约"
-  weight = 50
-  identifier = "save"
-  url = "/save/"
-
-[[menu.main]]
-  name = "技能"
-  weight = 80
-  identifier = "skills"
-  url = "/skills/"
+# [[menu.main]]
+#   name = "节约"
+#   weight = 50
+#   identifier = "save"
+#   url = "/save/"
+# 
+# [[menu.main]]
+#   name = "技能"
+#   weight = 80
+#   identifier = "skills"
+#   url = "/skills/"
 
 # [[menu.main]]
 #   name = "分类"
