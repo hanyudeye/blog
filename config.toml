@@ -29,21 +29,28 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "关注内心"
+  name = "生活吃喝"
   weight = 10
   identifier = "home"
   url = "/"
-[[menu.main]]             # config your menu              # 配置目录
- name = "多反而少"
+
+[[menu.main]]  
+  name = "生活吃喝"
+  weight = 10
+  identifier = "生活吃喝"
+  url = "/生活吃喝/"
+
+[[menu.main]]  
+ name = "程序员"
  weight = 30
- identifier = "grow"
- url = "/grow/"
+ identifier = "程序员"
+ url = "/程序员/"
 
 # [[menu.main]]
-#   name = "节约"
+#   name = "舞文弄字"
 #   weight = 50
-#   identifier = "save"
-#   url = "/save/"
+#   identifier = "舞文弄字"
+#   url = "/舞文弄字/"
 # 
 # [[menu.main]]
 #   name = "技能"
