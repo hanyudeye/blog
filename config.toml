@@ -29,13 +29,13 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "小记录"
+  name = "生活散事"
   weight = 10
   identifier = "home"
   url = "/"
 
 [[menu.main]]  
-  name = "生活吃喝"
+  name = "认知人生"
   weight = 10
   identifier = "生活吃喝"
   url = "/生活吃喝/"
