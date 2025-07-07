@@ -1,7 +1,7 @@
 baseURL = "https://aming.xyz"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "阿明-关注自己的性格，关注内心，关注成长"
+title = "阿明博客"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
