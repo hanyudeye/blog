@@ -1,3 +1,6 @@
 [submodule "themes/even"]
 	path = themes/even
 	url = git@github.com:hanyudeye/hugo-theme-even.git
+[submodule "content"]
+	path = content
+	url = git@github.com:hanyudeye/thinking.git
