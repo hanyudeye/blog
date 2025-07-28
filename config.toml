@@ -46,6 +46,14 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
  identifier = "程序员"
  url = "/程序员/"
 
+ [[menu.main]]  
+ name = "推广"
+ weight = 40
+ identifier = "推广"
+ url = "/ad/"
+
+
+
 # [[menu.main]]
 #   name = "舞文弄字"
 #   weight = 50
