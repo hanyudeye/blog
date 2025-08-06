@@ -3,7 +3,6 @@ archetypes/
 resources/
 data/
 layouts/
-publish.sh
 .hugo_build.lock
 xyz/
 even-old
