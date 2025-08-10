@@ -1,4 +1,4 @@
-# 明确禁止常见 AI 抓取爬虫
+# 禁止常见 AI 抓取爬虫
 User-agent: GPTBot
 Disallow: /
 
