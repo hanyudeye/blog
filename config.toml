@@ -3,7 +3,8 @@ languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "阿明博客"
 preserveTaxonomyNames = true
-enableRobotsTXT = true
+# 使用自定义robots 文件
+enableRobotsTXT = false
 enableEmoji = true
 theme = "even"
 enableGitInfo = false # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
