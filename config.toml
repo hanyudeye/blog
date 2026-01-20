@@ -16,7 +16,9 @@ pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 10                                              # 首页每页显示的文章数
+# 新增 pagination 节点，用 pagerSize 替代 paginate
+[pagination]
+  pagerSize = 10  # 数值和原来的 paginate 保持一致即可
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
@@ -31,27 +33,27 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
 [[menu.main]]             # config your menu              # 配置目录
   name = "生活散事"
-  weight = 10
+  weight = 20
   identifier = "home"
   url = "/"
 
 [[menu.main]]  
-  name = "认知人生"
+  name = "周记"
   weight = 10
-  identifier = "生活吃喝"
-  url = "/生活吃喝/"
+  identifier = "weeks"
+  url = "/weeks/"
 
-[[menu.main]]  
- name = "程序员"
- weight = 30
- identifier = "程序员"
- url = "/程序员/"
+# [[menu.main]]  
+#  name = "程序员"
+#  weight = 30
+#  identifier = "程序员"
+#  url = "/程序员/"
 
- [[menu.main]]  
- name = "推广"
- weight = 40
- identifier = "推广"
- url = "/ad/"
+#  [[menu.main]]  
+#  name = "推广"
+#  weight = 40
+#  identifier = "推广"
+#  url = "/ad/"
 
 
 
