@@ -23,8 +23,9 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: false
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Configure git
         run: |
@@ -33,11 +34,27 @@ jobs:
 
       - name: Update content submodule
         run: |
-          git submodule update --remote --merge content
+          # 尝试常规更新
+          git submodule update --init --remote --force content || true
           
+          # 如果失败，强制重新克隆
+          if [ -d "content/.git" ]; then
+            cd content
+            git fetch --all
+            git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+            cd ..
+          fi
+
       - name: Update theme submodule
         run: |
-          git submodule update --remote --merge themes/even
+          git submodule update --init --remote --force themes/even || true
+          
+          if [ -d "themes/even/.git" ]; then
+            cd themes/even
+            git fetch --all
+            git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+            cd ..
+          fi
 
       - name: Check for changes
         id: verify-changed-files
@@ -49,6 +66,7 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "Changes detected:"
             git diff --name-only HEAD
+            git status
           fi
 
       - name: Commit and push changes
