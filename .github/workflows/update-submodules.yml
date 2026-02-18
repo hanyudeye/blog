@@ -1,16 +1,16 @@
 name: Update Submodules
 
 on:
-  # 当 content 或 themes 子模块的仓库发生推送时，通过 repository_dispatch 触发
-  repository_dispatch:
-    types: [content_updated, theme_updated]
-  
   # 每天定时检查一次子模块更新（保险机制）
   schedule:
-    - cron: '0 0 * * *'
-
+    - cron: '0 */6 * * *'  # 每 6 小时检查一次
+  
   # 允许手动触发
   workflow_dispatch:
+  
+  # 从 content 仓库触发的 repository_dispatch 事件
+  repository_dispatch:
+    types: [content_updated, theme_updated]
 
 permissions:
   contents: write
@@ -23,26 +23,32 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v4
         with:
-          submodules: false
+          submodules: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update content submodule
+      - name: Configure git
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git submodule update --remote content
+
+      - name: Update content submodule
+        run: |
+          git submodule update --remote --merge content
           
       - name: Update theme submodule
         run: |
-          git submodule update --remote themes/even
+          git submodule update --remote --merge themes/even
 
       - name: Check for changes
         id: verify-changed-files
         run: |
-          if git diff --quiet; then
+          if git diff --quiet HEAD; then
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected:"
+            git diff --name-only HEAD
           fi
 
       - name: Commit and push changes
@@ -50,7 +56,8 @@ jobs:
         run: |
           git add content themes/even
           git commit -m "chore: update submodules [skip ci]"
-          git push
+          git push origin master
+        continue-on-error: true
 
       - name: Trigger Hugo build
         if: steps.verify-changed-files.outputs.changed == 'true'
