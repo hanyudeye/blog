@@ -1,0 +1,62 @@
+name: Update Submodules
+
+on:
+  # 当 content 或 themes 子模块的仓库发生推送时，通过 repository_dispatch 触发
+  repository_dispatch:
+    types: [content_updated, theme_updated]
+  
+  # 每天定时检查一次子模块更新（保险机制）
+  schedule:
+    - cron: '0 0 * * *'
+
+  # 允许手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update content submodule
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git submodule update --remote content
+          
+      - name: Update theme submodule
+        run: |
+          git submodule update --remote themes/even
+
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git add content themes/even
+          git commit -m "chore: update submodules [skip ci]"
+          git push
+
+      - name: Trigger Hugo build
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches \
+            -d '{"ref":"master"}'
