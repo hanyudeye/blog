@@ -43,6 +43,12 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   identifier = "weeks"
   url = "/weeks/"
 
+[[menu.main]]
+  name = "分块贴片"
+  weight = 5
+  identifier = "tiles"
+  url = "/tiles/"
+
 # [[menu.main]]  
 #  name = "程序员"
 #  weight = 30
@@ -140,7 +146,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  customCSS = []
+  customCSS = ["tiles.css"]
   customJS = []
 
   uglyURLs = false          # please keep same with uglyurls setting
