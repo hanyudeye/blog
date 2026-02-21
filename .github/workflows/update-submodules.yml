@@ -10,7 +10,7 @@ on:
   
   # 从 content 仓库触发的 repository_dispatch 事件
   repository_dispatch:
-    types: [content_updated, theme_updated]
+    types: [content_updated]
 
 permissions:
   contents: write
@@ -32,29 +32,26 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
+      - name: Convert submodule URLs from SSH to HTTPS
+        run: |
+          # 将 SSH URL 转换为 HTTPS URL，以便使用 token 认证
+          git config --file=.gitmodules submodule.content.url https://github.com/hanyudeye/thinking.git
+          # 同步到 .git/config
+          git submodule sync
+          
+          # 配置 git 使用 token 进行 HTTPS 认证（使用 credential helper）
+          echo "https://${{ secrets.GITHUB_TOKEN }}@github.com" > $HOME/.git-credentials
+          git config --global credential.helper store
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+
       - name: Update content submodule
         run: |
-          # 尝试常规更新
-          git submodule update --init --remote --force content || true
-          
-          # 如果失败，强制重新克隆
+          # 如果子模块已存在但使用旧 URL，先清理
           if [ -d "content/.git" ]; then
-            cd content
-            git fetch --all
-            git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
-            cd ..
+            rm -rf content
           fi
-
-      - name: Update theme submodule
-        run: |
-          git submodule update --init --remote --force themes/even || true
-          
-          if [ -d "themes/even/.git" ]; then
-            cd themes/even
-            git fetch --all
-            git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
-            cd ..
-          fi
+          # 使用 HTTPS URL 和 token 更新子模块
+          git submodule update --init --remote --force content
 
       - name: Check for changes
         id: verify-changed-files
@@ -72,7 +69,7 @@ jobs:
       - name: Commit and push changes
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          git add content themes/even
+          git add content
           git commit -m "chore: update submodules [skip ci]"
           git push origin master
         continue-on-error: true
