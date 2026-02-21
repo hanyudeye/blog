@@ -31,6 +31,12 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
+          # 配置 pull 策略为 rebase，保持历史整洁
+          git config --global pull.rebase false
+
+      - name: Pull latest changes
+        run: |
+          git pull origin master || echo "No changes to pull"
 
       - name: Convert submodule URLs from SSH to HTTPS
         run: |
@@ -69,9 +75,16 @@ jobs:
       - name: Commit and push changes
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
+          # 在提交前再次拉取，确保基于最新代码
+          git pull origin master || echo "Pull failed, continuing anyway"
           git add content
           git commit -m "chore: update submodules [skip ci]"
-          git push origin master
+          # 尝试推送，如果失败则拉取并重试
+          if ! git push origin master; then
+            echo "Push failed, pulling latest changes and retrying..."
+            git pull origin master --no-edit || git pull origin master --no-rebase --no-edit
+            git push origin master
+          fi
         continue-on-error: true
 
       - name: Trigger Hugo build
