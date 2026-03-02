@@ -15,6 +15,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write  # 如果需要通过 API 触发其他 workflow
 
 jobs:
   update-submodules:
@@ -78,7 +79,7 @@ jobs:
           # 在提交前再次拉取，确保基于最新代码
           git pull origin master || echo "Pull failed, continuing anyway"
           git add content
-          git commit -m "chore: update submodules [skip ci]"
+          git commit -m "chore: update submodules"
           # 尝试推送，如果失败则拉取并重试
           if ! git push origin master; then
             echo "Push failed, pulling latest changes and retrying..."
@@ -87,11 +88,13 @@ jobs:
           fi
         continue-on-error: true
 
-      - name: Trigger Hugo build
-        if: steps.verify-changed-files.outputs.changed == 'true'
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches \
-            -d '{"ref":"master"}'
+      # 注意：推送到 master 分支会自动触发 hugo.yml workflow（因为它监听 push 事件）
+      # 如果需要显式通过 API 触发，可以取消下面的注释
+      # - name: Trigger Hugo build via API
+      #   if: steps.verify-changed-files.outputs.changed == 'true'
+      #   run: |
+      #     curl -X POST \
+      #       -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+      #       -H "Accept: application/vnd.github.v3+json" \
+      #       https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches \
+      #       -d '{"ref":"master"}'
