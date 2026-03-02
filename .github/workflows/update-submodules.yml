@@ -15,7 +15,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  actions: write  # 如果需要通过 API 触发其他 workflow
+  actions: write  # 需要此权限才能触发其他工作流
 
 jobs:
   update-submodules:
@@ -79,6 +79,7 @@ jobs:
           # 在提交前再次拉取，确保基于最新代码
           git pull origin master || echo "Pull failed, continuing anyway"
           git add content
+          # 移除 [skip ci] 以允许触发 hugo.yml 工作流
           git commit -m "chore: update submodules"
           # 尝试推送，如果失败则拉取并重试
           if ! git push origin master; then
@@ -88,13 +89,23 @@ jobs:
           fi
         continue-on-error: true
 
-      # 注意：推送到 master 分支会自动触发 hugo.yml workflow（因为它监听 push 事件）
-      # 如果需要显式通过 API 触发，可以取消下面的注释
-      # - name: Trigger Hugo build via API
-      #   if: steps.verify-changed-files.outputs.changed == 'true'
-      #   run: |
-      #     curl -X POST \
-      #       -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-      #       -H "Accept: application/vnd.github.v3+json" \
-      #       https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches \
-      #       -d '{"ref":"master"}'
+      - name: Trigger Hugo build via API (fallback)
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          # 使用 API 触发作为备用方案（push 事件应该会自动触发）
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/hugo.yml/dispatches \
+            -d '{"ref":"master"}')
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          if [ "$http_code" -eq 204 ]; then
+            echo "Successfully triggered Hugo build workflow via API"
+          else
+            echo "API trigger returned HTTP $http_code"
+            echo "Response: $body"
+            echo "Note: Hugo workflow should still be triggered by the push event"
+          fi
