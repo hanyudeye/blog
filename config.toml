@@ -33,21 +33,21 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
 [[menu.main]]             # config your menu              # 配置目录
   name = "生活散事"
-  weight = 20
+  weight = 10
   identifier = "home"
   url = "/"
 
-[[menu.main]]  
-  name = "周记"
-  weight = 10
-  identifier = "weeks"
-  url = "/weeks/"
+ [[menu.main]]  
+   name = "周记"
+   weight = 20
+   identifier = "weeks"
+   url = "/weeks/"
 
-[[menu.main]]
-  name = "分块贴片"
-  weight = 5
-  identifier = "tiles"
-  url = "/tiles/"
+# [[menu.main]]
+#   name = "分块贴片"
+#   weight = 5
+#   identifier = "tiles"
+#   url = "/tiles/"
 
 # [[menu.main]]  
 #  name = "程序员"
