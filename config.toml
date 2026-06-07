@@ -37,11 +37,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   identifier = "home"
   url = "/"
 
- [[menu.main]]  
-   name = "AI 学习"
-   weight = 20
-   identifier = "weeks"
-   url = "/weeks/"
+ # [[menu.main]]  
+ #   name = "AI 学习"
+ #   weight = 20
+ #   identifier = "weeks"
+ #   url = "/weeks/"
 
 # [[menu.main]]
 #   name = "分块贴片"
